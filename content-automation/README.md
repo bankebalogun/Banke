@@ -18,7 +18,10 @@ actually written and posted.
 
 - `data/topics.json` — the bank of scripts. Each entry has `category` (one of
   `ballet`, `opera`, `classical-music`, `video-games`), `pillar` (sub-theme),
-  `title`, `hook`, `script`, `cta`, and `sources` (an array of
+  `title` (format: `TOPIC — punchy subtitle`, all caps, matching your video
+  title-card style), `hook` (opening line, doubles as on-screen text),
+  `script` (the full ~1-1.5 min script — the last line is the punchline/button,
+  there's no separate CTA field anymore), and `sources` (an array of
   `{ label, url }`, `url` is `null` only for a couple of general-knowledge
   claims with no single canonical source).
 - `scripts/send-daily-script.js` — picks today's 5 topics. The selection
@@ -91,9 +94,10 @@ run silently exits. You'll get exactly one email a day, no duplicates.
 ## Adding or editing scripts
 
 Just edit `data/topics.json` — append a new object with the same shape
-(`id`, `pillar`, `category`, `title`, `hook`, `script`, `cta`, `platforms`,
+(`id`, `pillar`, `category`, `title`, `hook`, `script`, `platforms`,
 `sources`). `category` must be one of `ballet`, `opera`, `classical-music`,
-or `video-games`. No code changes needed; the rotation picks it up
+or `video-games`. End the script on its own punchline/button line rather
+than a generic CTA. No code changes needed; the rotation picks it up
 automatically. Keep `script` to roughly 100-150 words so it reads in under a
 minute at a natural pace, and always include at least one real, named
 source per script.

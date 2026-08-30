@@ -77,11 +77,8 @@ function buildScriptBlock(topic, index, total) {
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Hook (on-screen text / first line)</p>
       <p style="font-size:17px;font-weight:600;margin:0 0 20px;">${topic.hook}</p>
 
-      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Script (read aloud, ~1.5-2 min at a natural pace)</p>
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Script (read aloud, ~1-1.5 min at a natural pace — the last line is the button, no separate CTA needed)</p>
       ${scriptParagraph}
-
-      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Call to action</p>
-      <p style="margin:0 0 20px;">${topic.cta}</p>
 
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Sources (verify before filming)</p>
       <ul style="margin:0;padding-left:18px;font-size:13px;color:#4a4a4a;">${sourcesList}</ul>
@@ -145,7 +142,7 @@ async function main() {
   await transporter.sendMail({
     from: `"Daily Content Scripts" <${gmailUser}>`,
     to: recipient,
-    subject: `🎬 Today's ${todays.length} scripts: ${todays.map((t) => t.title).join(", ")}`,
+    subject: `🎬 Today's ${todays.length} scripts — ${todays[0].title.split(" — ")[0]} + ${todays.length - 1} more`,
     html: buildEmailHtml(todays),
   });
 
