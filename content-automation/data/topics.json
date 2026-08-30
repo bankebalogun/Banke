@@ -1,124 +1,151 @@
 [
   {
-    "id": "origin-sweeney-todd",
+    "id": "origin-coppelia",
     "pillar": "Behind the Curtain",
-    "title": "The Barber Who Was Never Real (Probably)",
-    "hook": "Sweeney Todd was a Victorian tabloid rumor before he was a musical — and Tim Burton is the third person to steal him.",
-    "script": "Sweeney Todd was a Victorian tabloid rumor before he was a musical. In 1846, a British 'penny dreadful' — basically the tabloid of its day — ran a serial about a barber on Fleet Street who slit throats and fed the bodies to his neighbor's meat pies. No court record ever confirmed a real Sweeney Todd existed. Didn't matter. The legend got adapted into stage melodrama for decades, until Stephen Sondheim turned it into a 1979 Broadway musical, and Tim Burton turned that into a 2007 film with Johnny Depp. Same urban legend, three centuries, three mediums. That's the pattern behind almost every 'classic' horror story you know: someone's rumor becomes someone else's art.",
-    "cta": "Follow for the true stories (and true rumors) hiding behind your favorite musicals.",
+    "category": "ballet",
+    "title": "The 1870 Ballet That Was Talking About AI Before AI Existed",
+    "hook": "I can't get over the fact that a 155-year-old ballet is basically about falling for artificial intelligence.",
+    "script": "I can't get over the fact that a 155-year-old ballet is basically about falling for artificial intelligence. Coppélia premiered in Paris in 1870, based on an E.T.A. Hoffmann story from 1816. The plot: Franz, a young man engaged to Swanilda, becomes obsessed with a beautiful woman named Coppélia he keeps seeing from a window. Except Coppélia isn't a woman — she's a lifelike mechanical doll built by an inventor named Dr. Coppélius. Swanilda figures it out, dresses up as the doll herself, and basically stages an intervention to snap Franz out of it. So more than 150 years before anyone was worried about people falling for AI companions, a ballet was already asking the exact same question: what happens when something artificial gets convincing enough that a person becomes emotionally attached to it. It's honestly one of my favorite examples of how far back this anxiety actually goes. And it's not just history — choreographers keep returning to it. There's a contemporary reimagining, Coppél-i.A., that takes the same premise and makes the doll an actual AI instead of a mechanical one, pulling the story fully into 2026. If you ever get the chance to see any staging of Coppélia, go. The original 1870 version already has more to say about technology and attachment than half the AI takes I see online today. There's also a real production detail I love: the original 1870 principal dancer, Giuseppina Bozzacchi, was only sixteen years old when she originated the role of Swanilda, which is wild to think about given how technically demanding the part still is today.",
+    "cta": "155 years later, we're still having the exact same argument, just with better graphics.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "opera",
     "sources": [
-      "The String of Pearls (1846-47 penny dreadful serial), the earliest known print source for the Sweeney Todd legend",
-      "Robert Mack, The Wonderful and Surprising History of Sweeney Todd (2007)",
-      "Stephen Sondheim & Hugh Wheeler, Sweeney Todd: The Demon Barber of Fleet Street (1979 musical, later staged by opera companies including New York City Opera in 1984)"
+      {
+        "label": "Coppélia (1870 ballet) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Copp%C3%A9lia"
+      },
+      {
+        "label": "The Sandman (E.T.A. Hoffmann, 1816) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Sandman_(short_story)"
+      }
     ]
   },
   {
-    "id": "origin-coppelia",
+    "id": "origin-carmen-flop",
     "pillar": "Behind the Curtain",
-    "title": "The 1870 Ballet That Predicted Your AI Girlfriend",
-    "hook": "In 1870, a ballet warned you about falling in love with an AI — and we're doing it again, right now.",
-    "script": "In 1870, a ballet called Coppelia was already warning you about falling in love with artificial intelligence. It's based on an 1816 E.T.A. Hoffmann story about a man obsessed with a beautiful doll he believes is a real woman — the same story Freud later used to define 'the uncanny.' The ballet turns it into comedy: a jealous fiancée dresses as the doll to prove her boyfriend can't tell real from fake. Cute in 1870. In 2026, we have actual AI companions people fall for, and the exact same question — can you love something built to seem human — is a live debate, not a punchline. The choreography changed. The anxiety didn't.",
-    "cta": "155 years later and we're having the same argument with better graphics. Follow for more.",
+    "category": "opera",
+    "title": "Carmen Flopped on Opening Night. Now It's the Most Performed Opera on Earth.",
+    "hook": "Carmen scandalized its opening-night audience so badly that critics trashed it — and it's now the most frequently performed opera in the world.",
+    "script": "Carmen scandalized its opening-night audience so badly that critics trashed it, and it's now the most frequently performed opera in the world. It premiered in Paris on March 3rd, 1875, at the Opéra-Comique. A woman who smokes, seduces openly, and refuses to be controlled by any man in her life was genuinely shocking to a polite 1875 Parisian audience, and the reception broke every convention that venue was used to hosting. Composer Georges Bizet didn't get to see how far it would go. Within about a decade, though, Carmen was being staged across Europe and hailed as a masterpiece, and today its arias — the Habanera, the Toreador Song — are some of the most recognizable music in all of opera. What gets me is how completely the story's DNA has spread since: the 1954 film Carmen Jones, the modern hip-hop opera stagings that reimagine Carmen in entirely new cultural settings, even Beyoncé leaning on Carmen's visual language decades later. A story about a woman refusing to be tamed apparently keeps finding new audiences exactly because it refuses to be tamed either. I think about this whenever I hear people dismiss something as 'too much' or 'too bold' on a first release — sometimes the audience just hasn't caught up yet, and the work is completely fine exactly as it is.",
+    "cta": "Sometimes the flop was just ahead of its audience.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "ballet",
     "sources": [
-      "E.T.A. Hoffmann, Der Sandmann (1816 short story)",
-      "Sigmund Freud, Das Unheimliche / 'The Uncanny' (1919 essay, discusses Hoffmann's tale)",
-      "Arthur Saint-Léon (choreographer) & Léo Delibes (composer), Coppélia (1870, Paris Opera)"
+      {
+        "label": "Carmen — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carmen"
+      },
+      {
+        "label": "Georges Bizet — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Georges_Bizet"
+      }
     ]
   },
   {
     "id": "sample-carnina-burana",
     "pillar": "Sound & Sample",
-    "title": "That 'End of the World' Music in Every Trailer",
-    "hook": "That choir screaming in Latin in every movie trailer when something apocalyptic is about to happen? It's from 1936, and it's not even about the apocalypse.",
-    "script": "You know the sound: a massive choir, thunderous drums, everyone screaming in Latin like the world is ending. That's 'O Fortuna,' the opening movement of Carl Orff's Carmina Burana, written in 1936. It's actually about the wheel of fortune — the idea that luck rises and crushes you at random, based on poems written by medieval monks. It has nothing to do with robots, asteroids, or superhero battles. But it sounds so overwhelming that trailer editors have used it, and things that sound like it, for decades to signal 'stakes are maximum.' A piece about medieval fatalism became the default sound of Hollywood doom.",
-    "cta": "You've heard this a hundred times without knowing its name. Follow for more sound history.",
+    "category": "classical-music",
+    "title": "That 'End of the World' Music in Every Trailer Isn't Even About the Apocalypse",
+    "hook": "That choir screaming in Latin every time a movie trailer wants you to feel like the world is ending has nothing to do with the apocalypse.",
+    "script": "That choir screaming in Latin every time a movie trailer wants you to feel like the world is ending has nothing to do with the apocalypse. It's 'O Fortuna,' the opening and closing movement of Carl Orff's Carmina Burana, composed in 1935-36. Orff based it on a 13th-century medieval Latin poem from a real manuscript collection called the Carmina Burana, and the text is actually about the wheel of fortune — the idea that luck lifts you up and then crushes you completely at random, a very medieval, very fatalistic idea about how little control any of us really have. It premiered with the Frankfurt Opera in 1937 and became Orff's best-known work almost immediately. None of that is about robots, asteroids, or superhero battles. But the sheer scale of it — thunderous drums building into one overwhelming choral peak — made it the default sound trailer editors reach for whenever they need to signal 'maximum stakes,' regardless of what the story's actually about. A piece about medieval fatalism became the accidental soundtrack of Hollywood doom. What's wild is how little of that medieval, fatalistic meaning survives in how the piece actually gets used now — most people who've heard 'O Fortuna' a hundred times in trailers would have no idea it's about a 13th-century monk's complaint against fate rather than anything modern at all.",
+    "cta": "You've heard this a hundred times without ever knowing its name — now you do.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "classical-music",
     "sources": [
-      "Carl Orff, Carmina Burana (1936), opening/closing movement 'O Fortuna'",
-      "Carmina Burana manuscript (13th-century, Benediktbeuern monastery) — the medieval poems Orff set to music"
+      {
+        "label": "O Fortuna (Orff) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/O_Fortuna_(Orff)"
+      },
+      {
+        "label": "Carmina Burana (Orff) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carmina_Burana_(Orff)"
+      }
     ]
   },
   {
     "id": "hidden-videogame-scores",
     "pillar": "Hidden in Plain Sight",
-    "title": "Your Favorite Video Game Boss Fight Is Basically Opera",
-    "hook": "That boss fight music that made your hair stand up? Game composers are stealing straight from opera's emotional playbook.",
-    "script": "Big boss-fight scores in games like Final Fantasy or the gothic, choir-heavy soundtracks in games like Bloodborne aren't just 'epic music' — they're built using the same tools opera composers perfected centuries ago: full choirs for scale and dread, sudden dynamic shifts to signal a turning point, leitmotifs, a musical phrase tied to a specific character or threat, so you know who's coming before you see them. Wagner basically invented the leitmotif in 19th-century opera, and it's now standard practice in game and film scoring. You've been trained by opera technique to feel dread before a boss even appears on screen.",
-    "cta": "Follow for the classical music theory secretly running your favorite games.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
     "category": "video-games",
-    "sources": [
-      "Richard Wagner's use of leitmotif across Der Ring des Nibelungen (1848-74) — Grove Music Online: 'Leitmotif'",
-      "Game-score journalism on leitmotif technique in franchises like Final Fantasy and Bloodborne"
-    ]
-  },
-  {
-    "id": "origin-phantom-chandelier",
-    "pillar": "Behind the Curtain",
-    "title": "The Chandelier Actually Fell",
-    "hook": "The Phantom of the Opera isn't fully fiction — in 1896, a chandelier in the real Paris Opera actually fell and killed someone.",
-    "script": "The Phantom of the Opera isn't fully fiction. In 1896, one of the massive counterweights on the chandelier in the Paris Opera House snapped and crashed into the audience, killing a woman below. Author Gaston Leroux was a journalist who covered stories like this, and he wove that real disaster into his 1910 novel — along with real rumors of an underground lake beneath the opera house, which is also true, it was used to stabilize the foundation and by firefighters for training. Leroux just added a masked genius living down there. Andrew Lloyd Webber turned it into the longest-running show in Broadway history. One newspaper accident, one gothic novel, one empire.",
-    "cta": "The building is still standing in Paris. Follow for more real history behind fictional monsters.",
+    "title": "Your Favorite Boss-Fight Music Is Running on Opera's Playbook",
+    "hook": "That boss-fight music that makes your hair stand up is built on a technique opera perfected in the 1800s.",
+    "script": "That boss-fight music that makes your hair stand up is built on a technique opera perfected in the 1800s: the leitmotif. Richard Wagner is the composer most associated with it — across his four-opera cycle Der Ring des Nibelungen, written between 1853 and 1869, he used hundreds of short musical phrases, each one tied to a specific character, object, or idea, so the audience learns to recognize who or what is coming before it's shown on stage. Interestingly, Wagner himself never actually used the word 'leitmotif' publicly — he preferred calling it a 'Hauptmotiv,' or principal motif, and mostly avoided naming individual ones so they'd stay emotionally flexible. That exact technique is now completely standard in game and film scoring — big franchise boss themes, character-specific musical cues, a phrase that returns right when a threat reappears. You've been trained by 19th-century opera technique to feel dread before a boss even shows up on screen, and you probably never once thought about where that trick came from. Composers like John Williams openly cite Wagner's leitmotif technique as a direct influence on film scoring generally, which means the exact same trick runs through Star Wars, Marvel's biggest theme songs, and whatever boss fight you last played, all tracing back to the same 19th-century opera cycle.",
+    "cta": "Next big boss fight you play, listen for the specific musical phrase tied to that character — it's older than you'd think.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "opera",
     "sources": [
-      "Gaston Leroux, Le Fantôme de l'Opéra (1910 novel)",
-      "Palais Garnier (Paris Opera) historical records on the 1896 chandelier counterweight accident"
+      {
+        "label": "Leitmotif — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Leitmotif"
+      }
     ]
   },
   {
     "id": "riot-rite-of-spring",
     "pillar": "Opening Night Chaos",
-    "title": "This Ballet Caused an Actual Riot",
-    "hook": "In 1913, a ballet premiere in Paris caused a literal riot — punches thrown, police called, over choreography.",
-    "script": "May 29th, 1913, Paris. Stravinsky's ballet The Rite of Spring premieres, and within minutes the audience is shouting, laughing, and throwing things. The dissonant, pounding music and the jagged, deliberately un-graceful choreography — dancers stomping instead of floating — broke every rule audiences expected from ballet. Fights broke out in the aisles. Police were called mid-performance. Stravinsky reportedly fled out a side exit. Today it's considered one of the most important pieces of music of the 20th century, studied in every serious music program on earth. The thing that got people literally throwing punches is now in the canon. That's how you know it actually mattered.",
-    "cta": "Follow for more times art history got physical.",
+    "category": "ballet",
+    "title": "The Ballet That Caused an Actual Riot",
+    "hook": "One of the most important pieces of music of the 20th century started with the audience trying to fight each other.",
+    "script": "One of the most important pieces of music of the 20th century started with the audience nearly coming to blows. Stravinsky's ballet The Rite of Spring premiered in Paris on May 29th, 1913, choreographed by Nijinsky for Diaghilev's Ballets Russes. Within minutes of the curtain going up, the crowd was shouting over the music. The dissonant, pounding score and the deliberately jagged, un-graceful choreography — dancers stomping instead of floating — broke every single expectation a 1913 Parisian ballet audience walked in with. It escalated into actual pushing and shoving in the aisles, and some accounts say Stravinsky fled out a side door mid-performance. Diaghilev, the producer, was reportedly thrilled about it — notoriety was still publicity. What gets me about this story is how completely the reaction flipped. The exact same piece that caused people to nearly fight each other is now considered one of the foundational works of modern music, studied in basically every serious composition program on the planet. If a piece of art makes people that uncomfortable on day one, that's not always a sign it's bad. Sometimes it's a sign it's early. It's worth saying too that historians now think the word 'riot' actually got attached to this premiere years later, in reviews written around 1924 — the chaos was very real, but the legend around it kept growing well after the fact, which is honestly a pretty familiar pattern for how these stories get told.",
+    "cta": "If you've never actually listened to the full Rite of Spring, put it on — you'll hear immediately why it broke people in 1913.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "ballet",
     "sources": [
-      "Igor Stravinsky, The Rite of Spring (1913, premiered Théâtre des Champs-Élysées, Paris)",
-      "Richard Taruskin, Stravinsky and the Russian Traditions (1996)",
-      "Modris Eksteins, Rites of Spring: The Great War and the Birth of the Modern Age (1989)"
+      {
+        "label": "The Rite of Spring — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Rite_of_Spring"
+      }
+    ]
+  },
+  {
+    "id": "riot-madame-butterfly",
+    "pillar": "Opening Night Chaos",
+    "category": "opera",
+    "title": "Puccini's Opera Flopped So Hard He Rewrote the Whole Thing",
+    "hook": "Madama Butterfly's opening night was such a disaster that Puccini pulled it after a single performance.",
+    "script": "Madama Butterfly's opening night was such a disaster that Puccini pulled it after a single performance. It premiered at Milan's La Scala on February 17th, 1904, with genuinely excellent singers in the lead roles, and it still bombed — partly because Puccini finished the score so late that the cast barely had time to properly rehearse it. Rather than defend the original version or blame the audience, Puccini went back, split the second act into two, added material that became the bridge into what's now Act Three, and re-premiered the revised version just a few months later, in May 1904, in Brescia. That version succeeded immediately, and it's the version virtually every opera house performs today. What I love about this story is how undramatic Puccini's actual response was. No public feud, no defensive statements — just a genuine structural rewrite based on what clearly wasn't working. One of the most beloved operas ever written exists in its current form specifically because its composer treated a public failure as a solvable problem instead of a verdict on his talent. It's also just a good lesson in creative process generally — sometimes the problem genuinely isn't the ending, or the characters, or the melodies. Sometimes it's just pacing and structure, and once you fix that, everything else you already built works exactly the way you meant it to.",
+    "cta": "Even the greats got it wrong on the first try — the difference is what they did next.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Madama Butterfly — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Madama_Butterfly"
+      }
     ]
   },
   {
     "id": "sample-hiphop-classical",
     "pillar": "Sound & Sample",
-    "title": "Hip-Hop Has Been Sampling Classical Music for Decades",
-    "hook": "Rap and opera aren't opposites. Hip-hop producers have been quietly raiding classical music for samples since the genre started.",
-    "script": "Hip-hop and opera get treated like opposites — one's 'high art,' one's 'street.' But producers have been raiding classical and orchestral recordings for samples since the golden era: strings, choirs, dramatic orchestral swells chopped into beats to add weight a drum machine can't fake. It's the same instinct that built Carmen Jones in 1954 — an all-Black reimagining of Bizet's Carmen with jazz and blues inflections — and it's the same instinct behind today's hip-hop opera stagings, where classically trained singers perform over beats instead of orchestras. The 'high vs low art' divide was never really about the music. It was about who was allowed to make it.",
-    "cta": "Follow for where opera and hip-hop actually meet — it's more than you think.",
+    "category": "classical-music",
+    "title": "Hip-Hop Has Been Sampling Classical Music Since the Very Beginning",
+    "hook": "One of the earliest hip-hop records that mattered is built on a sample of Stravinsky.",
+    "script": "One of the earliest hip-hop records that mattered is built on a sample of Stravinsky. 'Planet Rock,' by Afrika Bambaataa and the Soulsonic Force in 1982, sampled Stravinsky's 1910 orchestral piece The Firebird — and it's considered one of the very first instances of classical music showing up inside hip-hop production. That same Firebird sound is also part of where the 'orchestra hit' came from, a sampled synth stab that became a staple sound across the entire genre for years afterward. Hip-hop and classical music get treated like opposites constantly — one 'high art,' one 'street' — but producers have been quietly pulling from orchestral recordings since the genre's earliest days, because strings, choirs, and dramatic orchestral swells add a weight a drum machine alone just can't fake. Nas, Kanye West, and Jay-Z have all pulled from classical sources at different points in their careers too. The 'high versus low art' divide was never really about the actual music. It was about who got permission to use it. It's a genuinely two-way relationship too — some of those same producers have talked openly about discovering classical composers specifically because they first heard them chopped into a beat, which flips the usual assumption about who's supposed to be introducing whom to 'serious' music.",
+    "cta": "Next time someone acts like hip-hop and classical music don't mix, mention 1982.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "classical-music",
     "sources": [
-      "Otto Preminger (dir.), Carmen Jones (1954 film)",
-      "General music-production journalism on orchestral/classical sampling in hip-hop (e.g. coverage of sample-based production techniques)"
+      {
+        "label": "Classical music in hip-hop — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Classical_music_in_hip-hop"
+      },
+      {
+        "label": "Orchestra hit — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Orchestra_hit"
+      }
     ]
   },
   {
@@ -126,67 +153,87 @@
     "pillar": "Classical Music Hiding in Video Games",
     "category": "video-games",
     "title": "The GTA Station That's Just Opera Arias",
-    "hook": "GTA III has a radio station that's just full arias from Mozart, Verdi, and Puccini — and it's the mob's favorite station in the whole game.",
-    "script": "Grand Theft Auto III, released in 2001, has nine radio stations you can flip between while driving. One of them, Double Clef FM, plays almost nothing but classical music and Italian opera — real excerpts tied to composers like Mozart, Verdi, and Puccini — hosted by a fictional DJ who name-drops Proust and Fellini to sound cultured while clearly getting the references slightly wrong. It's also, per the game's own lore, the preferred station of Liberty City's three Mafia families. Rockstar built an entire parody of old-money, faux-intellectual taste into a radio bit, using real opera to do it. Most players just drive past it without noticing the joke.",
-    "cta": "Follow for the real classical music hiding inside games you already played.",
+    "hook": "GTA III has a radio station that's just classical music and opera arias, and it's canonically the mob's favorite station in the entire game.",
+    "script": "GTA III, from 2001, has a radio station that's just classical music and opera arias, and it's canonically the mob's favorite station in the entire game. Double Clef FM plays real classical and Italian opera excerpts, hosted by a fictional DJ who name-drops things like reading Proust and Fellini films to sound cultured, while clearly getting some of the references slightly wrong on purpose. Per the game's own world-building, it's the preferred station of Liberty City's Mafia families specifically — the writers built an entire parody of old-money, faux-intellectual taste into a two-minute radio bit, using genuinely real opera and classical music to sell the joke. Most players just drive past it without ever clocking that it's satire, or that the music playing underneath the joke is completely real. I find stuff like this genuinely delightful — a AAA crime game from 2001 casually assumed players would recognize classical and opera music well enough for the parody DJ bit to actually land. The station even got its own DJ replaced within the game's internal timeline — canonically hosted by one character in 1998 and a different one by 2001 — which is a level of fictional radio-station lore most players never even notice exists.",
+    "cta": "Go turn on Double Clef FM next time you're in GTA III — you'll hear it immediately.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Grand Theft Auto III (Rockstar Games, 2001) — in-game radio station 'Double Clef FM'",
-      "GTA Wiki / GTA Songs Wiki community documentation of Double Clef FM's format and DJ"
+      {
+        "label": "Double Clef FM — Grand Theft Wiki",
+        "url": "https://www.grandtheftwiki.com/Double_Clef_FM"
+      },
+      {
+        "label": "Grand Theft Auto III — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III"
+      }
     ]
   },
   {
-    "id": "origin-carmen-flop",
-    "pillar": "Behind the Curtain",
-    "title": "Carmen Was a Flop. Then the Composer Died.",
-    "hook": "Carmen bombed on opening night. Its composer died three months later believing it was a failure. Now it's the most performed opera on Earth.",
-    "script": "Carmen premiered in Paris in 1875 to a scandalized, unimpressed audience — a woman smoking, seducing, and refusing to be tamed was too much for polite society. Critics trashed it. Composer Georges Bizet died of a heart attack just three months later, at 36, believing he'd written a failure. Within a decade, Carmen was being staged across Europe and hailed as a masterpiece. Today it's the most frequently performed opera in the world, and its DNA runs through everything from Beyoncé's 'Carmen'-referencing visuals to Carmen Jones to modern hip-hop opera stagings that recast Carmen in Black American settings. He never got to see any of it.",
-    "cta": "Sometimes the flop is just ahead of its audience. Follow for more opera history that hits different.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Georges Bizet, Carmen (1875, Opéra-Comique, Paris) — original premiere reception",
-      "Mina Curtiss, Bizet and His World (1958)",
-      "Hugh Macdonald, 'Bizet, Georges', Grove Music Online"
-    ]
-  },
-  {
-    "id": "ai-coppelia-companions",
-    "pillar": "AI Meets the Classics",
-    "title": "We're Living the Plot of Coppelia Right Now",
-    "hook": "A 155-year-old ballet about falling for something artificial is basically a documentary now.",
-    "script": "Coppelia's entire plot is: a man falls in love with a lifelike doll he believes is a real woman. In 1870, that was fantasy. Today, there are AI companion apps with millions of users, some of whom report genuine emotional attachment, grief when an app updates and the 'personality' changes, even reluctance to date real people because the AI is 'easier.' The ballet's joke was that the doll obviously wasn't real and everyone but the hero could tell. Our version is scarier: the systems are actually designed to be convincing, on purpose, by companies that profit when you stay attached. Same question the ballet asked. Much higher stakes now.",
-    "cta": "Follow for where 19th-century art already called our current tech anxieties.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
+    "id": "fashion-pointe-shoes",
+    "pillar": "Costume, Design & Fashion",
     "category": "ballet",
+    "title": "The Beautiful Part of Ballet Is Built on Real Physical Cost",
+    "hook": "Pointe work is designed to look weightless, and that's exactly what makes it deceiving.",
+    "script": "Pointe work — dancing balanced fully on the tips of the toes — is designed to look weightless, and that's exactly what makes it deceiving. Dancers usually spend a full year or more in pre-pointe training before they're even allowed into pointe shoes, partly because the bones in a young dancer's feet are often still too soft before around age 12 to 14, and starting too early can cause permanent injury. Even once you're trained for it, pointe work puts enormous stress on the feet: sprains, tendonitis, joint damage, and blisters are just part of the job, managed with careful technique, well-fitted shoes, and padding, not avoided entirely. The entire art form is a masterclass in hiding effort — audiences are supposed to see effortless, floating lightness, not the actual mechanics making it possible. I think about this every time I see a viral 'this looked so easy' clip online. Ballet was doing that specific illusion — extreme physical control disguised as ease — centuries before anyone had a word for it. Next time you watch a ballet, try to catch the moment right before a jump or a pointe sequence. That's the part they don't want you to notice. And none of that fragility is visible in performance — that's the entire craft. A dancer can be managing real pain in a shoe that's breaking down mid-performance while making the audience believe the hardest part of their night is smiling on cue.",
+    "cta": "The prettiest art forms usually have the highest physical cost hiding underneath them.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
     "sources": [
-      "E.T.A. Hoffmann, Der Sandmann (1816)",
-      "General technology journalism on AI companion apps and user attachment (e.g. Reuters, MIT Technology Review coverage of apps like Replika)"
+      {
+        "label": "Pointe technique — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pointe_technique"
+      },
+      {
+        "label": "Pointe shoe — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pointe_shoe"
+      }
+    ]
+  },
+  {
+    "id": "riot-rigoletto-censorship",
+    "pillar": "Opening Night Chaos",
+    "category": "opera",
+    "title": "This Opera Was Nearly Banned Before It Opened",
+    "hook": "Verdi wrote an opera about a corrupt, predatory ruler, and the censors tried to shut it down before anyone even saw it.",
+    "script": "Verdi wrote an opera about a corrupt, predatory ruler, and the censors tried to shut it down before anyone even saw it. Rigoletto is based on Victor Hugo's 1832 play Le roi s'amuse, which was itself banned by the French government after literally one performance for being too critical of the monarchy. When Verdi adapted it into an opera two decades later, Austrian censors controlling northern Italian theaters demanded major changes before its 1851 premiere at La Fenice in Venice — Verdi reportedly told his librettist to 'turn Venice upside down' to get the censors to approve it. They ended up relocating the setting and renaming the characters, turning the French king into the Duke of Mantua, to get it approved, while keeping the actual rot and abuse of power at the story's center fully intact. It premiered anyway, at that same theater, and became one of Verdi's biggest hits almost immediately. I think about this a lot: art criticizing power getting censored by power isn't a new problem at all. Opera's been fighting that exact fight for a very long time. What's almost funny in hindsight is that the version we all know today, Duke of Mantua and all, was itself a compromise — meaning even the 'original' Rigoletto most people picture was already a workaround negotiated under pressure, not Verdi's first choice at all.",
+    "cta": "The story survived by changing everything except the point it was actually making.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Rigoletto — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rigoletto"
+      },
+      {
+        "label": "Le roi s'amuse — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Le_roi_s%27amuse"
+      }
     ]
   },
   {
     "id": "sample-trailer-arias",
     "pillar": "Sound & Sample",
-    "title": "Your Favorite Movie Scene Is Secretly an Opera Aria",
-    "hook": "That aria playing while the villain monologues, or the couple reunites in slow motion — that's not incidental music. Directors do that on purpose.",
-    "script": "Filmmakers love dropping a full opera aria into a movie scene, on purpose, because opera arias are built to carry raw, unfiltered emotion at maximum volume — grief, obsession, triumph, with no subtlety required. Think of the death scenes, the villain reveals, the reunions in slow motion scored with a soprano hitting a note that seems too big for the room. That's directors borrowing 300 years of emotional technology built specifically to make an audience feel something they can't look away from. Opera was doing 'main character moment' before movies existed. Film just borrowed the soundtrack.",
-    "cta": "Name a movie scene that used opera and hit different. Follow for more.",
+    "category": "classical-music",
+    "title": "Directors Drop Full Opera Arias Into Movies on Purpose",
+    "hook": "That aria playing while a villain monologues or two people reunite in slow motion is not incidental — directors choose that on purpose.",
+    "script": "That aria playing while a villain monologues, or two people reunite in slow motion, is not incidental — directors choose that on purpose. Opera arias are built to carry raw, unfiltered emotion at full volume: grief, obsession, triumph, with zero requirement for subtlety. Filmmakers borrow that directly, because an aria can make a scene feel bigger and more inevitable than dialogue or a typical film score ever could on its own. It's basically 300 years of emotional technology, refined specifically to make an audience feel something they can't look away from, getting borrowed wholesale by an art form that's barely a century old by comparison. Opera was doing 'main character moment' long before movies existed to have one. I notice this constantly now — once you know to listen for it, you start catching it in movies that otherwise have nothing to do with opera at all. It also works because arias are usually written in a language most of the audience doesn't speak, which paradoxically makes the raw emotional delivery hit harder — you're responding entirely to the sound and the performance, with zero literal meaning competing for your attention.",
+    "cta": "Next movie you watch, listen for the moment they reach for something operatic instead of a normal score cue.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "classical-music",
     "sources": [
-      "Film-trailer scoring/'temp track' industry coverage on the use of pre-existing classical and opera recordings in marketing"
+      {
+        "label": "General film-scoring journalism on the use of pre-existing classical/opera recordings in dramatic film scenes",
+        "url": null
+      }
     ]
   },
   {
@@ -194,66 +241,87 @@
     "pillar": "Classical Music Hiding in Video Games",
     "category": "video-games",
     "title": "GTA IV's Secret Contemporary-Classical Station",
-    "hook": "GTA IV has a radio station that's basically a contemporary classical concert, and almost nobody plays it.",
-    "script": "Grand Theft Auto IV, from 2008, buried one of its most unusual radio stations in plain sight: The Journey, built around ambient and contemporary classical music instead of licensed pop or rock. It includes real recorded pieces like Philip Glass's 'Pruit Igoe,' alongside ambient composers like Tangerine Dream — music built to sit in the background and unsettle you slowly rather than hype you up for a car chase. It's a strange choice for an open-world crime game, and that's the point: Rockstar wanted a station that sounded like dread instead of adrenaline. Philip Glass, by the way, is a real, major 20th-century composer — this isn't a novelty track.",
-    "cta": "There's real contemporary classical music sitting in a game about stealing cars. Follow for more.",
+    "hook": "GTA IV buried a radio station that's basically a contemporary classical concert, and almost nobody plays it.",
+    "script": "GTA IV, from 2008, buried one of its strangest radio stations in plain sight. The Journey leans into ambient and contemporary classical music instead of the licensed pop and rock the rest of the game leans on — including real recorded pieces like Terry Riley's minimalist 1969 work 'A Rainbow in Curved Air.' It's music built to sit in the background and unsettle you slowly, rather than hype you up for a car chase, which is an unusual choice for an open-world crime game to include at all. That's clearly the point: Rockstar wanted at least one station that sounded like quiet dread instead of adrenaline, tucked into a game most people associate with the opposite energy entirely. Terry Riley, by the way, is a genuinely major, real minimalist composer — this isn't a novelty track buried as a joke, it's a legitimate piece of contemporary classical music sitting inside a game about stealing cars. It sits there completely unmarketed too — Rockstar never really pushed The Journey the way they pushed the game's hip-hop or rock stations, which makes finding it feel like discovering a genuinely hidden detail rather than being handed one.",
+    "cta": "There's real contemporary classical music sitting inside a game about grand theft auto — go find it.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Grand Theft Auto IV (Rockstar Games, 2008) — in-game radio station 'The Journey'",
-      "Philip Glass, 'Pruit Igoe' (from the score to Koyaanisqatsi, 1982), as featured on The Journey"
+      {
+        "label": "The Journey — GTA Wiki",
+        "url": "https://gta.fandom.com/wiki/The_Journey"
+      },
+      {
+        "label": "Grand Theft Auto IV — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV"
+      }
     ]
   },
   {
-    "id": "villain-sweeney-antihero",
-    "pillar": "Villains You Root For",
-    "title": "Sweeney Todd Invented Your Favorite Streaming Antihero",
-    "hook": "Dexter. Hannibal. Sweeney Todd did the 'likable serial killer' thing 150 years before your streaming queue did.",
-    "script": "Before Dexter, before Hannibal Lecter, there was a barber with a straight razor and a grudge. Sweeney Todd works because he's not a monster for no reason — he's a man destroyed by a corrupt judge, and revenge curdles him into something worse than the man he's avenging himself against. That's the exact template modern 'likable killer' shows use: give the audience a sympathetic wound, then let them enjoy the violence with a clean conscience. Sondheim's 1979 musical leans into it even harder by making him tragic and funny in the same scene. We didn't invent morally complicated murderers for prestige TV. We just gave them better lighting.",
-    "cta": "Which modern antihero is secretly a Sweeney Todd? Comment below. Follow for more villain lineage.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Stephen Sondheim & Hugh Wheeler, Sweeney Todd: The Demon Barber of Fleet Street (1979)"
-    ]
-  },
-  {
-    "id": "fashion-pointe-shoes",
-    "pillar": "Costume, Design & Fashion",
-    "title": "The Beautiful Part of Ballet Is Built on Real Pain",
-    "hook": "Pointe shoes look weightless. The reality is bruised toes, blood, and years of training your feet to do something they're not built for.",
-    "script": "Pointe work — dancing balanced on the very tips of the toes — looks effortless on stage, which is exactly the point: ballet is built around making extreme physical strain look like weightlessness. In reality, pointe shoes are stiffened with layers of fabric and glue, dancers pad their toes to survive blisters and bruised or lost toenails, and it takes years of specific training even for a young dancer's bones to be ready for it. The entire art form is a masterclass in hiding effort, which is also exactly what social media 'that looked so easy' content does today, minus the centuries of technique.",
-    "cta": "Follow for the real physical cost behind the prettiest art forms.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
+    "id": "hidden-anime-ballet",
+    "pillar": "Hidden in Plain Sight",
     "category": "ballet",
-    "sources": [
-      "Jennifer Homans, Apollo's Angels: A History of Ballet (2010)",
-      "Major ballet company physiotherapy/education resources on pointe training and injury"
-    ]
-  },
-  {
-    "id": "ai-automatons-history",
-    "pillar": "AI Meets the Classics",
-    "title": "The 1700s Had Their Own AI Panic",
-    "hook": "Before chatbots, there was a mechanical duck that could 'digest' food, and Europe lost its mind over it.",
-    "script": "In 1739, inventor Jacques de Vaucanson unveiled a mechanical duck that could flap its wings, eat grain, and appear to digest and excrete it — all clockwork, no real digestion, but audiences were stunned and unsettled by how lifelike it seemed. A few decades later, 'The Turk,' a supposed chess-playing automaton, toured Europe beating real chess masters and terrifying audiences who assumed a machine couldn't think — it later turned out a hidden human operator was inside. Every era invents something that seems to think or live on its own, panics about it, and eventually finds out how it's really built. Coppelia, decades later, was the ballet version of the same panic.",
-    "cta": "The AI anxiety cycle is 300 years old. Follow for more history repeating itself.",
+    "title": "The Anime That's Secretly a Ballet History Lesson",
+    "hook": "There's a whole anime built around real classical ballets, and it's a genuinely great entry point if you think ballet isn't for you.",
+    "script": "There's a whole anime built around real classical ballets, and it's a genuinely great entry point if you think ballet isn't for you. Princess Tutu, which aired from 2002 to 2003, structures its episodes around actual ballet and opera repertoire — Swan Lake and The Ugly Duckling are the biggest influences, with other classical scores woven throughout. The story follows a duck transformed into a ballerina who has to use dance, instead of violence, to solve the show's conflicts, which is a genuinely unusual structural choice for anime in general. Reviewers have described it as basically a fairy tale set to ballet, and it holds up as one of the more quietly ambitious shows from that era. What I love about this is that it's aimed at a general anime audience, not a ballet-literate one, so it ends up being one of the most accessible on-ramps into real ballet music and choreography ideas without ever requiring a theater ticket. If you've ever wanted an entry point into classical ballet but didn't know where to start, this is genuinely a good one, and it doesn't feel like homework. It ran for 26 episodes across two seasons and was also adapted into a manga, and even years later it still gets brought up constantly in conversations about anime that actually respects the art form it's borrowing from instead of just using it as set dressing.",
+    "cta": "Pop culture keeps smuggling classical art into places you'd never expect to find it.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "classical-music",
     "sources": [
-      "Gaby Wood, Living Dolls: A Magical History of the Quest for Mechanical Life (2002) — covers Vaucanson's digesting duck and 'The Turk'",
-      "Tom Standage, The Turk: The Life and Times of the Famous Eighteenth-Century Chess-Playing Machine (2002)"
+      {
+        "label": "Princess Tutu — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Princess_Tutu"
+      }
+    ]
+  },
+  {
+    "id": "ai-phantom-voice-cloning",
+    "pillar": "AI Meets the Classics",
+    "category": "opera",
+    "title": "The Phantom's Whole Trick Is Now Real Technology",
+    "hook": "Part of what makes the Phantom of the Opera unsettling is his ability to throw his voice so it seems to come from nowhere — and that's now a real, documented scam technique.",
+    "script": "Part of what makes the Phantom of the Opera unsettling is his ability to throw his voice so it seems to come from nowhere, destabilizing Christine's sense of what's actually real around her. I work in tech, so this one hit differently for me: the FTC has issued formal consumer warnings about AI voice cloning scams, where criminals use a short audio clip — sometimes pulled straight from something posted publicly online — to clone someone's exact voice well enough to fool their own family members on a phone call, often asking for money through a wire transfer or gift cards. The FTC's actual advice is almost embarrassingly simple: if someone who sounds like a person you know calls asking for money urgently, hang up and call that person back directly to check. A supernatural manipulation tactic from a 1910 gothic novel is now a documented, named category of real financial fraud. Fiction usually just explores a fear. This time, it basically drew the blueprint first. What gets me most is how little technology the scam actually needs — a few seconds of audio posted publicly, which describes basically everyone's social media presence at this point, is already enough raw material for a convincing clone.",
+    "cta": "If a 'loved one' ever calls asking for money urgently, hang up and call them back yourself — that one habit defeats this entire scam.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "FTC Consumer Advice — 'Fighting back against harmful voice cloning' (2024)",
+        "url": "https://consumer.ftc.gov/consumer-alerts/2024/04/fighting-back-against-harmful-voice-cloning"
+      },
+      {
+        "label": "NPR — 'Scammers are using AI-generated voice clones, the FTC warns' (2023)",
+        "url": "https://www.npr.org/2023/03/22/1165448073/voice-clones-ai-scams-ftc"
+      }
+    ]
+  },
+  {
+    "id": "hidden-bridgerton",
+    "pillar": "Hidden in Plain Sight",
+    "category": "classical-music",
+    "title": "Bridgerton Is Secretly Teaching You Classical Arrangement",
+    "hook": "That period drama everyone binges for the string-quartet covers of pop songs is quietly teaching you what a string quartet actually does.",
+    "script": "That period drama everyone binges for the string-quartet covers of pop songs is quietly teaching you what a string quartet actually does. Bridgerton became known for taking songs by artists like Ariana Grande and Taylor Swift and reimagining them as if a chamber ensemble were performing them at a Regency-era ball — most of those covers come from the Vitamin String Quartet, an American instrumental group that's been doing this kind of arrangement since 1999, working alongside composer Kris Bowers's original score for the show. It's a clever trick: viewers get the emotional hit of a song they already know, wrapped in instrumentation that feels period-accurate. But it's also, whether or not anyone notices, a genuine masterclass in arrangement — the exact same melody, completely reharmonized for four string instruments, quietly demonstrates what classical arrangement actually means, no music theory lecture required. It's turned into a real cultural moment too — Bridgerton has been credited with sparking new interest in classical and orchestral music among younger audiences who might never have sought it out otherwise. It's also smart business, honestly — those covers introduce younger listeners to string arrangement as a concept without ever using the word 'classical,' which tends to scare off exactly the audience the show is trying to hook.",
+    "cta": "You've been getting a free lesson in orchestration disguised as a soundtrack choice.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "GRAMMY.com — 'Bridgerton Composer Kris Bowers & Vitamin String Quartet Continue To Make Classical Music Pop'",
+        "url": "https://www.grammy.com/news/bridgerton-classical-pop-music-kris-bowers-vitamin-string-quartet"
+      },
+      {
+        "label": "Illinois Public Media — 'Bridging the Worlds of Classical and Pop on Bridgerton'",
+        "url": "https://will.illinois.edu/clefnotes/entry/bridging-the-worlds-of-classical-and-pop-on-bridgerton"
+      }
     ]
   },
   {
@@ -261,66 +329,79 @@
     "pillar": "Classical Music Hiding in Video Games",
     "category": "video-games",
     "title": "The GTA Classical Station That Doesn't Actually Exist",
-    "hook": "Everyone thinks GTA San Andreas has a classical radio station. It doesn't — and that mix-up says a lot about who we assume 'sounds classy.'",
-    "script": "There's a persistent rumor that Grand Theft Auto: San Andreas, from 2004, has a classical music station called CSR 103.9. It doesn't. CSR 103.9 is actually a new jack swing and contemporary R&B station, playing artists like SWV and Soul II Soul, hosted by a DJ character named Phillip 'PM' Michaels. The 'CSR' branding just sounds formal enough that people assume it must mean classical. Compare that to GTA III's Double Clef FM, which really is classical and opera, and you get a small, accidental experiment: give something a serious-sounding name, and people assume it's 'high art' regardless of what's actually playing.",
-    "cta": "Follow for more myths about what actually is (and isn't) classical.",
+    "hook": "There's a persistent rumor that GTA San Andreas has a classical radio station. It doesn't, and the mix-up says a lot about what people assume sounds 'classy.'",
+    "script": "There's a persistent rumor online that GTA San Andreas, from 2004, has a classical radio station called CSR 103.9. It doesn't. CSR 103.9 is actually a new jack swing and contemporary R&B station, hosted by a fictional DJ named Phillip 'PM' Michaels, playing music that reflects the early '90s setting the game takes place in. San Andreas does have eleven full stations and over 150 licensed tracks total, but none of them are actually classical — the formal-sounding 'CSR' branding alone seems to be enough to convince people it must mean classical, when it really doesn't. Compare that to GTA III, made three years earlier, which really does have a dedicated classical and opera station called Double Clef FM. Put those two facts side by side and you get a small, accidental experiment: give something a serious-sounding name, and people will assume it's 'high art' regardless of what's actually playing underneath it. I think the mix-up survives specifically because nobody actually goes looking to disprove it — it's the kind of 'fact' that sounds plausible enough that people just repeat it forward without ever tuning in to check.",
+    "cta": "If you've been telling people San Andreas has a classical station, it's time to correct that one.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Grand Theft Auto: San Andreas (Rockstar Games, 2004) — in-game radio station 'CSR 103.9'",
-      "GTA Wiki documentation of CSR 103.9's format and DJ Phillip 'PM' Michaels"
+      {
+        "label": "Soundtracks of Grand Theft Auto: San Andreas — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Soundtracks_of_Grand_Theft_Auto:_San_Andreas"
+      },
+      {
+        "label": "CSR 103.9 — GTA Wiki",
+        "url": "https://gta.fandom.com/wiki/CSR_103.9"
+      }
     ]
   },
   {
-    "id": "villain-phantom-monster",
-    "pillar": "Villains You Root For",
-    "title": "The Phantom Is Just Loki With Worse PR",
-    "hook": "A disfigured genius, obsessed and dangerous, who the audience still wants to win — that's not new. That's Erik. That's the Phantom.",
-    "script": "Erik, the Phantom, is a musical genius disfigured since birth, exiled underground, who kidnaps and manipulates the woman he loves while insisting it's romance. By any modern standard he's a stalker. And yet audiences for over a century have wanted him to win, at least a little. That's the exact mechanic behind Loki, behind Joker, behind every 'monster with a tragic backstory' character streaming platforms build entire marketing campaigns around. Give a dangerous man enough talent and enough pain, and audiences will negotiate with themselves about how bad he really is. Leroux figured that out in 1910. We just kept remaking it.",
-    "cta": "Follow for the 100-year-old blueprint behind your favorite 'complicated' villain.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Gaston Leroux, Le Fantôme de l'Opéra (1910)",
-      "Andrew Lloyd Webber, The Phantom of the Opera (1986 musical)"
-    ]
-  },
-  {
-    "id": "hidden-anime-ballet",
-    "pillar": "Hidden in Plain Sight",
-    "title": "There's an Anime That's Secretly a Ballet History Lesson",
-    "hook": "There's a whole anime built around classical ballets, where the plot literally borrows from Swan Lake and The Nutcracker.",
-    "script": "Princess Tutu is an early-2000s anime that structures entire episodes around specific classical ballets and operas — Swan Lake, The Nutcracker, Coppelia even gets referenced — using their plots, music, and choreography as the actual narrative engine of the show, not just background flavor. Characters dance real ballet steps synced to real classical scores. It's aimed at a general anime audience, but it's quietly one of the most accurate introductions to ballet repertoire you could stumble into without ever buying a ticket to a theater. Pop culture keeps smuggling classical art into places you'd never expect to find it.",
-    "cta": "Follow for more 'wait, that show is secretly educational' moments.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
+    "id": "composer-swan-lake-flop",
+    "pillar": "Composer Drama",
     "category": "ballet",
-    "sources": [
-      "Princess Tutu (2002-03 anime, dir. Junichi Sato) — episodes structured around Tchaikovsky's Swan Lake, The Nutcracker, and other ballet/opera scores"
-    ]
-  },
-  {
-    "id": "hidden-bridgerton",
-    "pillar": "Hidden in Plain Sight",
-    "title": "That Show You Love Is Secretly a Classical Music Lesson",
-    "hook": "That period drama you binge with the string quartet covers of pop songs is quietly teaching you what a string quartet even is.",
-    "script": "Bridgerton became famous for its orchestral and string quartet covers of pop songs — Ariana Grande, Taylor Swift, reimagined as if a 19th-century chamber ensemble was playing them at a ball. It's a clever trick: the show gets a modern emotional hit from a song you already know, wrapped in an instrumentation that makes it feel period-accurate. But it's also, accidentally, a masterclass in arrangement — the same melody, completely reharmonized for four string instruments, shows you what 'classical arrangement' actually means without anyone having to explain music theory. You've been getting a free lesson in orchestration disguised as a soundtrack choice.",
-    "cta": "Follow for more classical music hiding inside shows you already watch.",
+    "title": "Swan Lake Bombed the First Time Anyone Saw It",
+    "hook": "Swan Lake, arguably the most famous ballet on Earth, was considered a failure the first time it was ever staged.",
+    "script": "Swan Lake, arguably the most famous ballet on Earth, was considered a failure the first time it was ever staged. Tchaikovsky composed it in 1875-76, and it premiered at Moscow's Bolshoi Theatre on March 4th, 1877, choreographed by Julius Reisinger. That original production didn't land — the choreography and staging were widely seen as weak, and it didn't establish the reputation the ballet has today. It took until 1895, after Tchaikovsky's death, for choreographers Marius Petipa and Lev Ivanov to substantially rework the choreography into the version that finally became the beloved classic we now think of as 'Swan Lake.' So the score that's now considered one of the greatest pieces of ballet music ever written had to sit through a legitimately underwhelming first attempt before the right choreography caught up to it. That's honestly kind of comforting as a creative person — sometimes the work is already great, and it just needs the right presentation to land. Tchaikovsky's music never changed. Everything around it did. It's also a good reminder that 'premiere reception' and 'quality of the work' aren't the same measurement at all — audiences and critics are reacting to a specific production, a specific night, a specific set of choices, not necessarily the music underneath all of it.",
+    "cta": "The score was always the masterpiece. It just needed the right staging to prove it.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "classical-music",
     "sources": [
-      "GRAMMY.com, 'Bridgerton Composer Kris Bowers & Vitamin String Quartet Continue To Make Classical Music Pop For Season 3'",
-      "Classic FM, 'Bridgerton soundtrack: every pop song with a classical cover'"
+      {
+        "label": "Swan Lake — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Swan_Lake"
+      }
+    ]
+  },
+  {
+    "id": "fashion-gothic-horror",
+    "pillar": "Costume, Design & Fashion",
+    "category": "opera",
+    "title": "Horror Movies Are Wearing Opera's Old Wardrobe",
+    "hook": "That masked figure in a cape, moving through a candlelit space, is a visual trick horror borrowed directly from 19th-century gothic opera staging.",
+    "script": "That masked figure in a cape, moving through a candlelit underground space, half-glimpsed in shadow, is a visual trick horror borrowed directly from 19th-century gothic opera and the gothic literature that inspired it. Gaston Leroux's 1910 novel The Phantom of the Opera — with its masked genius living beneath the real Palais Garnier opera house in Paris — leans heavily on staging techniques that 19th-century theater had already perfected: dramatic lighting used to control exactly what an audience sees and when, and a figure's face deliberately withheld until the most effective possible moment. Modern horror cinematography does the exact same thing with a camera instead of a stage: reveal shots, backlit silhouettes, a villain kept hidden until precisely the worst moment to show them. It's not a coincidence that horror aesthetics and gothic opera aesthetics look so similar. Horror cinema essentially inherited an entire visual toolkit from the theater that came before it, and just swapped the medium. Even the underground setting itself became a visual shorthand horror still leans on constantly — a hidden space beneath a public, respectable building, where something the world doesn't want to look at directly gets to exist without shame.",
+    "cta": "Next horror movie you watch, notice how much of the tension is pure lighting and timing, not the monster itself.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "The Phantom of the Opera (novel) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_(novel)"
+      }
+    ]
+  },
+  {
+    "id": "history-clara-schumann",
+    "pillar": "Pure History",
+    "category": "classical-music",
+    "title": "The Virtuoso Everyone Introduced as Someone's Wife",
+    "hook": "One of the best pianists in 19th-century Europe kept getting introduced as someone else's wife instead of on her own name.",
+    "script": "One of the best pianists in 19th-century Europe kept getting introduced as someone else's wife instead of on her own name. Clara Schumann was a genuine virtuoso, touring publicly from age eleven and performing internationally in cities like Paris and Vienna, and she went on to have a 61-year concert career — one of the longest of the entire Romantic era. She was also a real composer, writing solo piano pieces, a piano concerto, and chamber music. And she was one of the first pianists ever to perform full concerts entirely from memory, which eventually became the standard every concert pianist follows today. Despite all of that, she's still primarily remembered by most people as 'Robert Schumann's wife' rather than as the touring virtuoso and composer she actually was on her own terms — even though her career, in raw longevity and reach, arguably outpaced his. Her own compositions are only now starting to get regularly programmed by major orchestras and pianists, more than a century later. She set the standard for how concert pianists perform, and most people have still never heard her name. She also kept performing and touring long after most of her contemporaries had slowed down, which is part of why her 61-year career is still cited as one of the longest of the entire Romantic era, male or female.",
+    "cta": "Look up Clara Schumann's own compositions sometime — not just her husband's.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Clara Schumann — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Clara_Schumann"
+      }
     ]
   },
   {
@@ -328,67 +409,83 @@
     "pillar": "Classical Music Hiding in Video Games",
     "category": "video-games",
     "title": "Gaming's Most Iconic Assassin Theme Is 200 Years Old",
-    "hook": "One of gaming's most iconic assassin themes is actually a 200-year-old piece written for a poem about a fugitive.",
-    "script": "Hitman: Blood Money, released in 2006, built its most memorable musical moment around a real classical piece: Schubert's 'Ellens Gesang III,' better known as 'Ave Maria,' composed in 1825 and based on a poem from Sir Walter Scott's 'The Lady of the Lake.' In the game, it's sung by a boy soloist over the main menu and during a mission called 'Requiem,' turning a serene, centuries-old piece into the sound of Agent 47 calmly walking into a room to kill someone. The contrast is the entire trick: nothing about the music says 'assassin,' which is exactly why it works so well against the violence on screen.",
-    "cta": "Follow for more classical pieces doing double duty in games you've actually played.",
+    "hook": "One of gaming's most recognizable stealth-game themes is actually a 200-year-old piece written for a poem about a fugitive.",
+    "script": "One of gaming's most recognizable stealth-game themes is actually a 200-year-old piece written for a completely unrelated poem. Hitman: Blood Money, from 2006, built its most memorable musical moment around Schubert's 'Ellens Gesang III,' better known today as 'Ave Maria,' composed in 1825 as part of a set of songs based on Walter Scott's 1810 poem The Lady of the Lake. In the game, it's sung by a boy soloist over the main menu and during a mission called 'Requiem,' pairing a serene, centuries-old piece of music with the tension of a stealth mission about to unfold. The contrast is the entire trick: nothing about the music suggests tension or stealth at all, which is exactly why it's so effective set against what's actually happening on screen. It's such a well-loved needle-drop that the same piece keeps showing up across later games in the franchise too. A song about a prayer to the Virgin Mary became one of gaming's most iconic pieces of tension-building music almost by accident. Schubert wrote it as part of a set of seven songs adapting Walter Scott's poem, and none of the other six ever crossed over into pop culture anywhere close to this level — this one specific song, out of seven, is doing an enormous amount of cultural work almost 200 years later.",
+    "cta": "If you've played Hitman, you already know this song by ear even if you never knew its name.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Franz Schubert, Ellens Gesang III ('Ave Maria'), D. 839 (1825)",
-      "Hitman: Blood Money (IO Interactive, 2006) — 'Ave Maria' featured in the main menu and the 'Requiem' mission"
+      {
+        "label": "Ave Maria (Schubert) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ave_Maria_(Schubert)"
+      },
+      {
+        "label": "Hitman: Blood Money — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Hitman:_Blood_Money"
+      }
     ]
   },
   {
-    "id": "villain-bluebeard-true-crime",
-    "pillar": "Villains You Root For",
-    "title": "The Opera About a Serial Killer's Wife Who Kept Opening Doors",
-    "hook": "There's an opera where a woman marries a man, finds a hidden room full of his ex-wives, and the whole show is just her deciding whether to open one more door.",
-    "script": "Bela Bartok's 1911 opera Bluebeard's Castle takes the old folk tale of a nobleman who murders his wives and turns it into pure psychological horror: his new bride finds seven locked doors in his castle, and behind each one is something worse than the last, ending with his previous wives, still alive, entombed in twilight. She opens every single door anyway. It's basically the original true-crime documentary compulsion, staged in 1911 — the horrifying pull to know exactly how bad it gets, even when you already suspect the answer. We didn't invent 'I know I shouldn't but I have to know.' Bartok scored it.",
-    "cta": "Would you have opened door seven? Follow for opera's darkest psychology.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Béla Bartók (music) & Béla Balázs (libretto), Duke Bluebeard's Castle (1911 opera)",
-      "Charles Perrault, La Barbe bleue (1697 folk tale source)"
-    ]
-  },
-  {
-    "id": "composer-swan-lake-flop",
-    "pillar": "Composer Drama",
-    "title": "Swan Lake Bombed on Opening Night Too",
-    "hook": "Swan Lake — arguably the most famous ballet on Earth — was considered a failure the first time anyone saw it.",
-    "script": "Tchaikovsky's Swan Lake premiered in Moscow in 1877 to weak reviews and a choreography and production widely considered mediocre by critics at the time. It was performed a modest number of times and largely faded. It wasn't until after Tchaikovsky's death, when choreographers Marius Petipa and Lev Ivanov staged a substantially reworked version in 1895, that Swan Lake became the version we now consider a masterpiece and a symbol of ballet itself. Tchaikovsky never saw the version that made him immortal in ballet history. The score was always brilliant. It just needed different people staging it to prove it.",
-    "cta": "Follow for more art that had to fail once before it could become iconic.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
+    "id": "pop-star-ballet-visuals",
+    "pillar": "Carmen's Hip-Hop Lineage",
     "category": "ballet",
-    "sources": [
-      "Pyotr Ilyich Tchaikovsky, Swan Lake (1877 premiere, Bolshoi Theatre, Moscow)",
-      "Roland John Wiley, Tchaikovsky's Ballets: Swan Lake, Sleeping Beauty, Nutcracker (1985)"
-    ]
-  },
-  {
-    "id": "history-clara-schumann",
-    "pillar": "Pure History",
-    "category": "classical-music",
-    "title": "The Virtuoso Everyone Called 'Someone's Wife'",
-    "hook": "One of the best pianists in 19th-century Europe kept getting introduced as someone else's wife.",
-    "script": "Clara Schumann was one of the most celebrated concert pianists in Europe throughout the 1800s, performing publicly from age 11 and continuing a full touring career for over 60 years — well past her husband Robert Schumann's death in 1856. She was also a serious composer in her own right, but wrote in her diary that she doubted a woman could be creative, a belief the era around her actively reinforced. For decades afterward she was primarily remembered as 'Robert Schumann's wife,' or later as Brahms's close friend, rather than as the touring virtuoso and composer she actually was. Her own compositions are only now getting regularly programmed by major orchestras and pianists.",
-    "cta": "Follow for the composers history filed under someone else's name.",
+    "title": "Why Pop Stars Keep Borrowing Ballet's Visuals",
+    "hook": "When a pop music video suddenly has pointe shoes and full theatrical staging in it, that's a deliberate choice, not a coincidence.",
+    "script": "When a pop music video suddenly has pointe shoes, dramatic stage lighting, or full theatrical staging in it, that's a deliberate choice, not a coincidence. Ballet carries centuries of association with discipline, precision, and untouchable elegance, and artists borrow that visual language on purpose to signal ambition and seriousness — the same instinct that used to make pop ballads reach for a full orchestral string section instead of a synth. It's the same move happening in the opposite direction as Carmen Jones and hip-hop opera: instead of a classical art form absorbing pop culture, pop culture is borrowing classical art's credibility right back. I find this genuinely interesting because it proves the wall between 'high art' and 'pop culture' was never really about the art itself — it was about marketing, and about who got to decide what counted as serious. Ballet and pop music have been trading tools back and forth for way longer than either side usually gets credit for. I'd honestly love to see more pop artists credit the choreographers and dance traditions they're borrowing from this heavily, the same way a producer would credit a sample — the visual language is doing real work in those videos, not just decoration.",
+    "cta": "High art and pop culture have been stealing from each other this whole time — most people just don't clock it.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Nancy B. Reich, Clara Schumann: The Artist and the Woman (1985)",
-      "Clara Schumann's diaries, as quoted in Reich's biography"
+      {
+        "label": "General pop-culture and music-video journalism on classical/ballet visual quotation in mainstream music videos",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "myth-faust-deal-with-devil",
+    "pillar": "Myth to Modern",
+    "category": "opera",
+    "title": "Every 'Deal With the Devil' Movie Owes This Opera Credit",
+    "hook": "The 'got what I wanted, paid an unbearable price later' trope in movies traces straight back to one legend and its most famous opera.",
+    "script": "The 'got what I wanted, paid an unbearable price later' trope in movies traces straight back to one legend and its most famous opera. The Faust legend — a scholar who trades his soul for knowledge, power, or pleasure — has been adapted constantly across Western art, and Charles Gounod's opera Faust, which premiered in Paris in March 1859, is one of the most performed operas ever written. Funny enough, Gounod himself later said it barely made an impression on audiences at first; it took real promotional effort from his publisher before it caught on and eventually became the most popular of his twelve operas. The core trade at the center of the story — get exactly what you want now, pay an unbearable price you didn't fully understand later — is the direct ancestor of basically every modern 'be careful what you wish for' story, from horror movies about cursed wishes to any film where a shortcut deal quietly destroys the person who made it. We apparently keep needing this lesson retold. Turns out we've needed it for a very long time. What's interesting is that Gounod's version specifically leans hard into the romance and tragedy of the bargain rather than pure horror, which is part of why it stayed so popular for so long — audiences didn't just want to be warned, they wanted to feel the temptation too.",
+    "cta": "Name a modern movie that's secretly a Faust story — I guarantee you can think of one immediately.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Faust (opera) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Faust_(opera)"
+      }
+    ]
+  },
+  {
+    "id": "ai-automatons-history",
+    "pillar": "AI Meets the Classics",
+    "category": "classical-music",
+    "title": "The 1700s Had Their Own AI Panic",
+    "hook": "Before chatbots, there was a mechanical duck that appeared to eat and digest grain, and it stunned all of Europe.",
+    "script": "Before chatbots, there was a mechanical duck that appeared to eat and digest grain, and it genuinely stunned people across Europe. In 1739, inventor Jacques de Vaucanson unveiled the Digesting Duck — a gold-plated automaton with over 400 moving parts in each wing, able to flap, drink water, and appear to digest and excrete grain. It was actually a clever illusion: food went into one internal container, and pre-loaded pellets came out of a separate one, with no real digestion happening at all, though Vaucanson genuinely hoped a truly digesting machine might be possible one day. A few decades later, a supposed chess-playing automaton called The Turk toured Europe from 1770 onward, beating real statesmen and chess masters, including reportedly Napoleon and Benjamin Franklin, and terrifying audiences who assumed a machine simply couldn't think that well. It later turned out a human chess master was hidden inside the whole time, operating it by hand. Every era invents something that seems to think or live on its own, panics about it briefly, and eventually finds out exactly how it's really built. Coppélia, decades later, is basically the ballet version of that same panic. The Turk's operator was eventually exposed in 1827 during a match in Baltimore, when unusually high heat inside the cabinet reportedly caused the hidden chess master to nearly pass out — a very human, very unglamorous end to decades of an illusion that had genuinely fooled heads of state.",
+    "cta": "The AI-anxiety cycle is nearly 300 years old — we just keep rebuilding the duck.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Digesting Duck — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Digesting_Duck"
+      },
+      {
+        "label": "Mechanical Turk — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mechanical_Turk"
+      }
     ]
   },
   {
@@ -397,99 +494,17 @@
     "category": "video-games",
     "title": "The Rolling-Ball Game With a Concert-Hall Soundtrack",
     "hook": "The weirdest game about rolling a sticky ball around Japan also has one of the most genre-blending soundtracks ever made.",
-    "script": "Katamari Damacy, the 2004 game where you roll a ball that picks up increasingly large objects until you're absorbing buildings, has a soundtrack that jumps between jazz, samba, J-pop, and lush, orchestral, classical-styled pieces within the same track list. Tracks like 'Angel Rain' lean fully into string-driven orchestral arrangement — more concert hall than arcade game. It's an odd pairing on paper: a goofy physics toy about a tiny prince, scored partly like a chamber concert. But it works, because the sincerity of the music makes the game's absurd premise feel strangely emotional instead of just silly.",
-    "cta": "Follow for more games taking their music more seriously than their premise.",
+    "script": "The weirdest game about rolling a sticky ball around Japan also has one of the most genre-blending soundtracks ever made. Katamari Damacy, the 2004 puzzle game where a tiny prince rolls a magical ball that picks up increasingly large objects until it can absorb entire mountains, has a soundtrack that jumps between jazz, samba, J-pop, and lush, string-driven orchestral pieces within the same track list. Tracks like 'Angel Rain' lean fully into orchestral arrangement — more concert hall than arcade game. It's an odd pairing on paper: a surreal, satirical physics toy about a diminutive prince, scored partly like a genuine chamber concert. The game became a surprise critical hit specifically because of how stylized and sincere the whole package felt, music included, and it's still cited as an influence on the quirky, colorful tone of a lot of games that came after it. Sometimes the music takes a silly premise more seriously than the game itself does, and that's exactly what makes it work. The soundtrack was popular enough on its own that it got released as a standalone album, which is still relatively rare for a video game score, especially one that leans this hard into orchestral and jazz territory instead of typical game-music synths.",
+    "cta": "Put on the Katamari Damacy soundtrack sometime without the game running — it holds up completely on its own.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Katamari Damacy (Namco, 2004) — Katamari Original Soundtrack Damacy",
-      "General video-game-music documentation of the series' genre-blending, orchestral-inclusive scores"
-    ]
-  },
-  {
-    "id": "riot-madame-butterfly",
-    "pillar": "Opening Night Chaos",
-    "title": "Puccini's Opera Flopped So Hard He Rewrote It",
-    "hook": "Madame Butterfly's opening night was such a disaster that people in the audience were mooing like cows.",
-    "script": "Madame Butterfly premiered at Milan's La Scala in February 1904, and it was a genuine catastrophe. Composer Giacomo Puccini had rivals in the crowd who reportedly heckled, and audience members allegedly imitated animal noises during quiet emotional moments to mock the score. Puccini pulled the opera after one performance, went back, restructured it, split it into acts, and re-premiered it months later. That version became one of the most beloved operas ever written. He didn't get defensive. He got surgical. The lesson traveled better than the humiliation did.",
-    "cta": "Even the greats got booed off stage once. Follow for more comeback stories in art history.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Giacomo Puccini, Madama Butterfly (premiered La Scala, Milan, 17 February 1904)",
-      "Mosco Carner, Puccini: A Critical Biography (1958)"
-    ]
-  },
-  {
-    "id": "pop-star-ballet-visuals",
-    "pillar": "Carmen's Hip-Hop Lineage",
-    "title": "Pop Stars Keep Stealing Ballet's Visual Language",
-    "hook": "When a pop star's music video suddenly looks like a ballet or an opera stage, that's not random — it's borrowed prestige, on purpose.",
-    "script": "When a pop music video suddenly features pointe shoes, dramatic stage lighting, or opera-style staging and vocal runs, that's a deliberate borrow, not a coincidence. Ballet and opera carry centuries of association with 'high art,' discipline, and untouchable elegance, and pop artists use those visuals to signal ambition and seriousness the same way earlier generations used orchestral strings on a pop ballad. It's the same move as Carmen Jones and hip-hop opera, just running in the opposite direction: instead of classical art absorbing a popular genre's tools, a popular genre borrows classical art's visual credibility. Both directions prove the wall between 'high' and 'low' art was always more about marketing than substance.",
-    "cta": "Follow for more of the two-way theft between pop culture and classical art.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "ballet",
-    "sources": [
-      "General music-video and pop-culture journalism on classical/ballet visual references in mainstream pop videos"
-    ]
-  },
-  {
-    "id": "history-piano-invention",
-    "pillar": "Pure History",
-    "category": "classical-music",
-    "title": "The Piano's Name Describes the Problem It Solved",
-    "hook": "The piano was invented specifically to fix one annoying limitation of the instrument before it.",
-    "script": "Before the piano, the dominant keyboard instrument was the harpsichord, which plucks its strings — meaning every note comes out at the same volume no matter how hard or soft you press the key. Around 1700, Italian instrument maker Bartolomeo Cristofori solved that by inventing a mechanism that strikes the strings with hammers instead, letting a player control loudness through touch for the first time. He named his invention 'gravicembalo col piano e forte' — 'harpsichord with soft and loud' — which eventually got shortened to just 'piano.' It took decades to catch on, but that single mechanical fix is the reason expressive dynamics in music work the way they do today.",
-    "cta": "The piano's whole name is a description of the problem it solved. Follow for more instrument history.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "sources": [
-      "Stewart Pollens, The Early Pianoforte (1995)",
-      "Grove Music Online: 'Pianoforte'"
-    ]
-  },
-  {
-    "id": "game-tonyhawk-not-classical",
-    "pillar": "Classical Music Hiding in Video Games",
-    "category": "video-games",
-    "title": "The Truth About Tony Hawk's Soundtrack",
-    "hook": "People assume Tony Hawk's Pro Skater has some hidden classical needle-drop. It doesn't — and the real story is actually more interesting.",
-    "script": "Tony Hawk's Pro Skater, starting in 1999, has zero classical or orchestral music in its soundtrack — it's built entirely on punk, ska, hardcore, and underground hip-hop, from bands like Goldfinger and the Dead Kennedys. That's not a gap, it's the whole point: THPS is widely credited with pioneering the modern licensed-soundtrack model in games, proving a curated needle-drop playlist could define a franchise's identity as much as its gameplay does. Compare that to the same era's Grand Theft Auto and Hitman, which leaned the opposite direction and licensed real classical and opera. Two completely different bets on what makes a game's soundtrack iconic — both of them worked.",
-    "cta": "Follow for the real story behind the games people misremember.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "sources": [
-      "Tony Hawk's Pro Skater (Neversoft/Activision, 1999) — official soundtrack listing",
-      "Games-journalism retrospectives on THPS's role in popularizing licensed soundtracks (e.g. NME, Rock Sound franchise soundtrack features)"
-    ]
-  },
-  {
-    "id": "riot-rigoletto-censorship",
-    "pillar": "Opening Night Chaos",
-    "title": "This Opera Was Banned Before It Even Opened",
-    "hook": "Verdi wrote an opera about a corrupt, predatory ruler — and the censors tried to shut it down before opening night.",
-    "script": "Giuseppe Verdi's Rigoletto, based on a Victor Hugo play, centers on a womanizing, morally rotten duke who abuses his power with zero consequences. Venetian censors, protective of the actual ruling class, demanded major rewrites before its 1851 premiere — they didn't want audiences watching a portrait of unchecked authority that felt too real. Verdi fought them, changed names and settings to get it past the censors, but kept the rot at the center of the story intact. It premiered anyway and became one of his biggest hits. Art commenting on power getting censored by power is not a new problem. It's basically opera's oldest one.",
-    "cta": "Follow for more art that made the powerful uncomfortable on purpose.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Giuseppe Verdi, Rigoletto (1851), based on Victor Hugo's play Le roi s'amuse (1832)",
-      "Mary Jane Phillips-Matz, Verdi: A Biography (1993)"
+      {
+        "label": "Katamari Damacy — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Katamari_Damacy"
+      }
     ]
   },
   {
@@ -497,33 +512,79 @@
     "pillar": "Pure History",
     "category": "ballet",
     "title": "Ballet's Actual Birthday",
-    "hook": "Ballet has an official birthday, and it's because a king wanted an excuse to keep dancing.",
-    "script": "In 1661, King Louis XIV of France founded the Académie Royale de Danse in Paris — the first professional dance institution in the Western world, and the direct ancestor of today's Paris Opera Ballet. Louis wasn't a distant patron; he performed in ballets himself for years, famously dancing the role of the sun in 'Le Ballet de la Nuit' in 1653, which is actually where his nickname 'the Sun King' comes from. He created the academy partly to formalize the technique he and his court were already dancing, turning a royal hobby into codified training. The five basic foot positions still taught in every ballet class today were standardized around this exact period.",
-    "cta": "The 'Sun King' nickname literally comes from a ballet role. Follow for more ballet origin history.",
+    "hook": "Ballet has an official birthday, and it exists because a king wanted an excuse to keep dancing.",
+    "script": "Ballet has an official birthday, and honestly, it exists because a king wanted an excuse to keep dancing. In March 1661, King Louis XIV of France founded the Académie Royale de Danse in Paris — the first professional dance institution in the Western world, and the direct ancestor of today's Paris Opera Ballet. Louis wasn't a distant patron funding this from a distance; he performed in court ballets himself for years, most famously dancing the role of the sun in Le Ballet de la Nuit back in 1653, which is actually where his nickname, the Sun King, comes from. The academy brought together thirteen of the most experienced dancing masters in France specifically to codify the technique the court was already dancing and certify teachers through formal examination. The five basic foot positions still taught in literally every beginner ballet class today were standardized around this exact period. I think about this a lot: an entire global art form's technical foundation traces back to one king who really, really liked to dance. And the timing wasn't random either — this happened right after the death of Louis XIV's chief adviser, Cardinal Mazarin, at a moment when the young king was actively consolidating his own personal power. Founding a royal academy of dance was, in its own way, a political move dressed up as an artistic one.",
+    "cta": "The 'Sun King' nickname is literally a ballet credit.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Académie Royale de Danse founding charter (1661, under Louis XIV)",
-      "Jennifer Homans, Apollo's Angels: A History of Ballet (2010)"
+      {
+        "label": "Académie Royale de Danse — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Acad%C3%A9mie_Royale_de_Danse"
+      }
     ]
   },
   {
-    "id": "ai-phantom-voice-cloning",
-    "pillar": "AI Meets the Classics",
-    "title": "The Phantom's Whole Trick Is Now Real Technology",
-    "hook": "The Phantom's power was throwing his voice so people thought it came from nowhere. AI voice cloning does that for real now.",
-    "script": "Part of what makes the Phantom terrifying in the original story is his ability to throw his voice — Christine hears him seemingly coming from the walls, from thin air, from inside her own head, and it destabilizes her sense of what's real. That was a magic trick, a metaphor for manipulation. AI voice cloning tools can now recreate someone's exact voice from a short clip, well enough to fool family members on a phone call. Scammers are already using it. The Phantom's supernatural manipulation tactic is now a real fraud category with a name. Fiction usually explores a fear. This time it built the blueprint.",
-    "cta": "Follow for more classic stories that quietly predicted current tech.",
+    "id": "carmen-jones-legacy",
+    "pillar": "Carmen's Hip-Hop Lineage",
+    "category": "opera",
+    "title": "The Film That Rewrote Who Gets to Be Carmen",
+    "hook": "In 1954, an almost entirely Black cast reimagined Carmen and changed who classical stories were allowed to center.",
+    "script": "In 1954, an almost entirely Black cast reimagined Carmen and changed who classical stories were allowed to center. Carmen Jones, directed by Otto Preminger and starring Dorothy Dandridge and Harry Belafonte, transplants Bizet's opera into a World War Two-era American setting, swapping the bullfighter for a boxer and adapting the score with the 1943 Oscar Hammerstein II stage musical it was based on, while keeping Carmen's emotional core fully intact — a woman who refuses to be controlled and pays a steep social price for it. Interestingly, most of the singing in the film was actually dubbed, including Belafonte and Dandridge themselves, by opera-trained voices. What made the film genuinely groundbreaking was putting a nearly all-Black cast in leading roles in a major Hollywood musical, at a time when that was still rare in American cinema. That reimagining is a direct ancestor of today's hip-hop opera stagings of Carmen — companies that keep reworking her story through contemporary Black musical forms, decades after Carmen Jones first proved the story could hold an entirely different cultural setting without losing what made it powerful in the first place. The film's opening titles were also the very first ones designed by Saul Bass, who went on to become one of the most influential title-sequence designers in film history — so even the studio's presentation of Carmen Jones ended up quietly shaping how movies introduce themselves decades later.",
+    "cta": "This is the lineage behind every hip-hop opera Carmen crossover happening right now.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "opera",
     "sources": [
-      "Gaston Leroux, Le Fantôme de l'Opéra (1910)",
-      "FTC consumer alerts and general technology journalism on AI voice-cloning fraud"
+      {
+        "label": "Carmen Jones (film) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Carmen_Jones_(film)"
+      }
+    ]
+  },
+  {
+    "id": "history-piano-invention",
+    "pillar": "Pure History",
+    "category": "classical-music",
+    "title": "The Piano's Own Name Describes the Problem It Solved",
+    "hook": "The piano was invented to fix one specific, annoying limitation of the instrument that came before it.",
+    "script": "The piano was invented to fix one specific, annoying limitation of the instrument that came before it. Before the piano, the dominant keyboard instrument was the harpsichord, which plucks its strings — meaning every note comes out at essentially the same volume no matter how hard or soft you press the key. Around 1700, Italian instrument maker Bartolomeo Cristofori, who worked for the Medici family in Florence as their keeper of instruments, solved that by inventing a mechanism that strikes the strings with hammers instead of plucking them, letting a player control volume through touch for the very first time. He named his invention, in Italian, a 'keyboard of cypress with soft and loud' — which over time got shortened first to fortepiano, then simply to piano. It took decades to fully catch on, but that single mechanical fix is the entire reason expressive dynamics in music work the way they do today. Every time a pianist plays something quietly and tenderly right after something loud and dramatic, that's Cristofori's fix from over 300 years ago, still doing exactly what it was built to do. It's also worth knowing Cristofori wasn't some outsider tinkering in a garage — he was already a respected, expert harpsichord builder working for the Medici family, which meant he had the exact technical knowledge of keyboard mechanisms needed to solve the problem properly the first time.",
+    "cta": "The piano's whole name is literally a description of the problem it solved.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Bartolomeo Cristofori — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bartolomeo_Cristofori"
+      },
+      {
+        "label": "Piano — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Piano"
+      }
+    ]
+  },
+  {
+    "id": "game-tonyhawk-not-classical",
+    "pillar": "Classical Music Hiding in Video Games",
+    "category": "video-games",
+    "title": "The Truth About Tony Hawk's Soundtrack",
+    "hook": "People assume there's a hidden classical needle-drop in Tony Hawk's Pro Skater somewhere. There isn't, and the real story is actually more interesting.",
+    "script": "People sometimes assume there's a hidden classical needle-drop tucked into Tony Hawk's Pro Skater somewhere. There isn't — I checked. Starting in 1999, the franchise's soundtrack is built entirely on punk, ska, and hardcore, and it's now considered one of the most influential curated music soundtracks in video game history for exactly that reason. That's not a gap in the classical-crossover story — it's actually the more interesting angle: THPS is widely credited with pioneering the modern licensed-soundtrack model in games, proving that a tightly curated needle-drop playlist could define a franchise's identity just as much as its gameplay could. Compare that to the same era's GTA and, a few years later, Hitman, which leaned in the completely opposite direction and licensed real classical and opera music instead. Two totally different bets on what makes a game's soundtrack iconic, made around the same era — and both of them worked completely. The remakes have run into real licensing headaches trying to preserve the original tracklist too, which is its own proof of how tightly that specific soundtrack is tied to the franchise's identity — you can rebuild the levels perfectly and it still won't feel right with the wrong music underneath it.",
+    "cta": "If you thought THPS had a classical needle-drop somewhere, it's punk and ska start to finish, and that's the actual story.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Tony Hawk's Pro Skater — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tony_Hawk%27s_Pro_Skater"
+      }
     ]
   },
   {
@@ -531,188 +592,87 @@
     "pillar": "Pure History",
     "category": "ballet",
     "title": "The Tutu Was Built for One Dancer",
-    "hook": "The tutu was invented for one specific dancer, for one specific ballet, and it was considered scandalously short.",
-    "script": "The tutu as we know it — short, bell-shaped, layered tulle — was designed in 1832 for dancer Marie Taglioni's role in 'La Sylphide,' choreographed by her own father, Filippo Taglioni. The costume was scandalous for its time specifically because it needed to show off her legs and pointe work, still a fairly new technique being showcased as innovation. That single costume choice became the template for romantic-era ballet fashion for the rest of the century. Taglioni is also widely credited as one of the first ballerinas to perform extensively en pointe as a full expressive technique, rather than a brief novelty trick, permanently changing what ballet looked like on stage.",
-    "cta": "One costume for one dancer became a 200-year uniform. Follow for more ballet history.",
+    "hook": "The tutu as we know it was designed for one specific dancer, in one specific ballet, and it was considered scandalous at the time.",
+    "script": "The tutu as we know it was designed for one specific dancer, in one specific ballet, and it was considered scandalous at the time. On March 12th, 1832, La Sylphide premiered at the Paris Opéra, choreographed by Filippo Taglioni specifically as a showcase for his daughter, Marie Taglioni. The bell-shaped, calf-length skirt made of layered, stiffened tulle was designed to be light enough to show off her legs and her pointe work — which, at the time, was still new enough that it needed a reason to exist on stage, not just be tolerated as an acrobatic trick. La Sylphide is actually considered the first ballet where dancing en pointe had real aesthetic purpose, instead of just being a stunt. That one costume, made for one dancer, in one specific ballet, became the visual template for an entire era of ballet fashion, and versions of it are still what most people picture when they hear the word 'ballet' nearly two centuries later. One dad, trying to make his daughter the star of Paris, accidentally invented a costume that outlasted basically everything else from that era. Taglioni also gets credit for something just as important as the costume: she's widely considered one of the first ballerinas to use pointe work as genuine artistic expression instead of pure spectacle, which means one father-daughter collaboration basically shaped two separate pillars of ballet as we know it today.",
+    "cta": "One costume for one dancer became a 200-year uniform.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Filippo Taglioni (choreographer), La Sylphide (1832, Paris Opera Ballet)",
-      "Jennifer Homans, Apollo's Angels: A History of Ballet (2010)"
+      {
+        "label": "La Sylphide — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/La_Sylphide"
+      },
+      {
+        "label": "Marie Taglioni — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marie_Taglioni"
+      }
     ]
   },
   {
-    "id": "fashion-gothic-horror",
-    "pillar": "Costume, Design & Fashion",
-    "title": "Every Horror Movie Villain Is Wearing Opera's Old Clothes",
-    "hook": "Capes, masks, and candlelit lairs weren't invented by horror movies. Opera and gothic literature did it first, on purpose.",
-    "script": "The visual language of horror — a masked figure in a cape, moving through candlelit underground spaces, half-glimpsed in shadow — comes directly from 19th-century gothic opera staging and the gothic novels that inspired it. The Phantom's mask and cape, the underground lair, the dramatic lighting design used to hide and reveal a figure at exactly the right moment, all of it was theatrical technology built to control what an audience sees and fears. Modern horror cinematography — reveal shots, backlit silhouettes, a villain's face kept hidden until the worst possible moment — is opera's staging tricks with a camera instead of a stage.",
-    "cta": "Follow for the visual tricks horror movies borrowed straight from 19th-century theater.",
+    "id": "carmen-hiphop-opera-staging",
+    "pillar": "Carmen's Hip-Hop Lineage",
+    "category": "opera",
+    "title": "The Time MTV Turned Carmen Into a Full Hip-Hop Opera",
+    "hook": "In 2001, MTV actually made a full hip-hop retelling of Carmen, and it was Beyoncé's acting debut.",
+    "script": "In 2001, MTV actually made a full hip-hop retelling of Carmen, and it was Beyoncé's acting debut. Carmen: A Hip Hopera, directed by Robert Townsend, recast Bizet's story with a cast of actual recording artists — Mos Def, Wyclef Jean, Lil' Bow Wow, Da Brat, Rah Digga — and Beyoncé Knowles playing Carmen herself, all set to hip-hop and R&B instead of a traditional orchestra. It's part of a much longer lineage: contemporary opera companies keep returning to Carmen specifically for hip-hop and rap-infused reimaginings, because the character was always testing the limits of what her original genre would allow her to say and do. Even the Metropolitan Opera's own recent staging moved Carmen's story to a modern American border town instead of keeping it in its original 1875 setting. I love that this isn't a one-off gimmick — it's a genuinely consistent pattern across seven decades now, from Carmen Jones in 1954 to an MTV hip-hopera in 2001 to opera houses still reworking her today. Carmen keeps getting reborn because she was always too much for whatever box people tried to put her in first. Beyoncé playing Carmen at the very start of her acting career, in a hip-hop retelling of a story about a woman refusing to be controlled, is honestly one of those casting choices that reads as more intentional in hindsight than it probably felt like at the time.",
+    "cta": "Carmen has been getting remixed across genres for basically 70 years straight — go look up the MTV version, it's wild.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
-    "category": "opera",
     "sources": [
-      "Gaston Leroux, Le Fantôme de l'Opéra (1910)",
-      "General film-history writing on gothic visual conventions in horror cinema"
+      {
+        "label": "Variety — review of Carmen: A Hip Hopera (2001)",
+        "url": "https://variety.com/2001/tv/reviews/carmen-a-hip-hopera-1200468590/"
+      },
+      {
+        "label": "Rap opera — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rap_opera"
+      }
     ]
   },
   {
     "id": "history-ballets-russes",
     "pillar": "Pure History",
     "category": "ballet",
-    "title": "The Company That Invented Modern Ballet",
-    "hook": "One dance company, run by one obsessive impresario, is responsible for basically all of modern ballet.",
-    "script": "Sergei Diaghilev's Ballets Russes, active from 1909 to 1929, wasn't just a dance company — it was a deliberate collision machine. Diaghilev commissioned young, radical composers like Stravinsky and paired them with equally radical choreographers and set designers from the modern art world, on purpose, to make ballet dangerous and modern again instead of decorative. That's the company that premiered 'The Rite of Spring' in 1913 and caused an actual riot. It also launched Stravinsky's international career, gave choreographer Nijinsky his platform, and effectively invented the model of ballet as avant-garde art rather than royal entertainment — a model every serious ballet company today still follows.",
-    "cta": "Follow for the company that basically invented modern ballet as we know it.",
+    "title": "The Company That Basically Invented Modern Ballet",
+    "hook": "One dance company, run by one relentless impresario, is responsible for most of what we consider modern ballet.",
+    "script": "One dance company, run by one relentless impresario, is responsible for most of what we consider modern ballet. Sergei Diaghilev's Ballets Russes ran from 1909 to 1929, touring out of Paris across Europe and eventually to the Americas. Diaghilev's whole approach was deliberately collisional: he commissioned young, radical composers like Stravinsky, and paired them with equally radical choreographers, set designers, and visual artists — Picasso and Matisse both worked with the company — specifically to make ballet feel dangerous and modern instead of decorative and safe. This is the company that premiered The Rite of Spring in 1913 and caused an actual riot in the audience. It's also the company that launched Stravinsky's international career and gave choreographer Nijinsky his platform. What Diaghilev really did was invent the entire model of ballet as avant-garde, boundary-pushing art rather than polite royal entertainment — and that's basically still the model every serious contemporary ballet company runs on today. One person's stubborn insistence on shaking things up reshaped an entire art form. Coco Chanel even worked on costume design for the company at one point, which tells you how far outside 'just ballet' Diaghilev was willing to reach to keep the whole thing feeling dangerous and current.",
+    "cta": "This is the company every boundary-pushing ballet production today is quietly descended from.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Sjeng Scheijen, Diaghilev: A Life (2009)",
-      "Lynn Garafola, Diaghilev's Ballets Russes (1989)"
-    ]
-  },
-  {
-    "id": "composer-rigoletto-verdi-rebel",
-    "pillar": "Composer Drama",
-    "title": "Verdi Basically Trolled the Censors and Won",
-    "hook": "Verdi fought government censors for years, opera by opera, and mostly won.",
-    "script": "Giuseppe Verdi spent much of his career in open conflict with Italian and Austrian censors, who controlled what could be shown on stage in 19th-century Italy — no regicide, no criticizing rulers, no material considered politically dangerous. Verdi kept writing operas that pushed exactly against those lines: corrupt dukes, assassination plots, characters defying authority, then negotiating just enough — a changed title, a relocated setting, a renamed character — to get them approved. He wasn't just a composer. He was running a decades-long negotiation with state censorship, using music as the vehicle. Most of what got him in trouble is now considered classic, uncontroversial repertoire.",
-    "cta": "Follow for more artists who fought the censors and got the last word.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Mary Jane Phillips-Matz, Verdi: A Biography (1993)",
-      "Giuseppe Verdi, Rigoletto (1851)"
-    ]
-  },
-  {
-    "id": "myth-orpheus-hadestown",
-    "pillar": "Myth to Modern",
-    "title": "This Greek Myth Has Been an Opera for 400 Years and a Broadway Hit Right Now",
-    "hook": "One myth about a guy who tries to bring his wife back from the dead has been adapted into opera for 400 years straight — and it's still selling out Broadway.",
-    "script": "The myth of Orpheus and Eurydice — a musician so gifted he travels to the underworld to bring his dead wife back, and loses her again by looking back too soon — is considered one of the first stories ever turned into opera, with Jacopo Peri's Euridice in 1600 and Monteverdi's L'Orfeo in 1607. Composers have returned to it for four centuries: Gluck's 1762 version, countless others, and now Hadestown, a Tony-winning Broadway musical that retells the exact same myth with a Depression-era, industrial setting and folk-pop score. Same warning about grief, impatience, and looking back too soon. New genre every few centuries.",
-    "cta": "Follow for the myths that keep getting reborn, opera to Broadway to now.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Jacopo Peri, Euridice (1600)",
-      "Claudio Monteverdi, L'Orfeo (1607)",
-      "Christoph Willibald Gluck, Orfeo ed Euridice (1762)",
-      "Anaïs Mitchell, Hadestown (concept album 2010; Broadway production 2019)"
-    ]
-  },
-  {
-    "id": "myth-faust-deal-with-devil",
-    "pillar": "Myth to Modern",
-    "title": "Every 'Deal With the Devil' Movie Owes This Opera Money",
-    "hook": "The 'sold my soul for what I wanted' trope in movies traces straight back to one German legend and its most famous opera.",
-    "script": "The Faust legend — a scholar who trades his soul to the devil for knowledge, power, or pleasure — is one of the most adapted stories in Western art, and Charles Gounod's 1859 opera Faust was, for decades, one of the most performed operas in the world. The core trade — get what you want now, pay an unbearable price later — is the direct ancestor of every modern 'be careful what you wish for' story, from horror movies about cursed wishes to any film where a character makes a shortcut deal that destroys them. We keep needing to be told this lesson. Turns out we've needed it for centuries.",
-    "cta": "Name a modern movie that's secretly a Faust story. Follow for more myth lineage.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Charles Gounod, Faust (1859 opera)",
-      "Johann Wolfgang von Goethe, Faust (1808/1832)",
-      "Christopher Marlowe, Doctor Faustus (c. 1592)"
-    ]
-  },
-  {
-    "id": "carmen-jones-legacy",
-    "pillar": "Carmen's Hip-Hop Lineage",
-    "title": "There's a Version of Carmen That Rewrote Who Gets to Be the Star",
-    "hook": "In 1954, an all-Black cast reimagined Carmen and completely changed who classical stories were allowed to center.",
-    "script": "Carmen Jones, the 1954 film starring Dorothy Dandridge and Harry Belafonte, transplants Bizet's Carmen into a Black American setting during World War Two, swapping the bullfighter for a boxer and reworking the score with jazz and blues influences while keeping the emotional core intact — a fiercely independent woman who refuses to be controlled, loved and destroyed for it. It was groundbreaking for putting a nearly all-Black cast in leading roles in a major Hollywood musical at a time that was still rare. That reimagining is a direct ancestor of today's hip-hop opera stagings, where classical companies rework Carmen and other operas with contemporary Black musical forms and casts at the center, not the margins.",
-    "cta": "This is the lineage behind the hip-hop opera crossover I've been talking about. Follow for more.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Otto Preminger (dir.), Carmen Jones (1954 film), based on Oscar Hammerstein II's 1943 stage musical",
-      "Georges Bizet, Carmen (1875)"
-    ]
-  },
-  {
-    "id": "carmen-hiphop-opera-staging",
-    "pillar": "Carmen's Hip-Hop Lineage",
-    "title": "Why Opera Companies Keep Remixing Carmen With Hip-Hop",
-    "hook": "Carmen keeps getting reborn as hip-hop opera because the character was already too much for the genre that invented her.",
-    "script": "Carmen was written as a woman who refuses every rule 1870s French society tried to put on her — about desire, loyalty, and who owns her choices — and audiences of the time found that scandalous enough to boo the opera off stage. It makes sense that contemporary companies keep reworking her story through hip-hop opera stagings: rap and spoken word give her more room to be blunt, defiant, and unapologetic than 19th-century operatic convention ever fully allowed. It's not a gimmick pairing. Hip-hop's directness and Carmen's defiance were always aimed at the same target — control, and who gets to refuse it.",
-    "cta": "This is why the hip-hop opera crossover works so well. Follow for more.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Georges Bizet, Carmen (1875)",
-      "General arts journalism coverage of contemporary hip-hop opera stagings of Carmen by regional opera companies"
-    ]
-  },
-  {
-    "id": "mad-scene-lucia",
-    "pillar": "Villains You Root For",
-    "title": "Opera Invented the 'Villain Origin' Scene Too",
-    "hook": "There's a famous opera scene where a woman completely unravels on stage, covered in blood, singing for nearly fifteen minutes straight — and audiences still stand and cheer.",
-    "script": "In Donizetti's Lucia di Lammermoor, there's a legendary 'mad scene': after being forced into a marriage and driven to murder her husband on their wedding night, Lucia appears covered in blood and sings an extended, technically brutal aria as she completely mentally unravels in front of the wedding guests. It's one of opera's most demanded showcase moments for a soprano — not despite the horror of it, but because of it. That's the exact same appetite modern audiences have for a great 'villain origin' episode or a character's unraveling arc in prestige TV: we don't look away from someone breaking. We lean in.",
-    "cta": "Follow for more of opera's original 'this is your villain origin story' moments.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "category": "opera",
-    "sources": [
-      "Gaetano Donizetti, Lucia di Lammermoor (1835), based on Sir Walter Scott's The Bride of Lammermoor (1819)"
-    ]
-  },
-  {
-    "id": "history-castrati",
-    "pillar": "Pure History",
-    "category": "opera",
-    "title": "Opera's Biggest Stars Don't Exist Anymore",
-    "hook": "Opera's biggest stars for almost 200 years were a category of singer that doesn't exist anymore, by design.",
-    "script": "From the late 1500s through the early 1800s, some of opera's most celebrated and highest-paid performers were castrati — male singers castrated before puberty specifically to preserve a high vocal range combined with adult lung power. Singers like Farinelli, active in the 1720s and 30s, became genuine international celebrities commanding huge fees. The practice was banned as it became understood as the exploitation of children that it was, and it had effectively ended by the mid-1800s. Opera composers had to permanently rewrite what roles were written for, which is part of why many 'heroic male' opera roles from that era are now sung by women or countertenors — there's no direct vocal equivalent left.",
-    "cta": "Follow for the parts of opera history that don't get talked about enough.",
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ],
-    "sources": [
-      "Patrick Barbier, The World of the Castrati: The History of an Extraordinary Operatic Phenomenon (1996)",
-      "Grove Music Online: 'Castrato'"
+      {
+        "label": "Ballets Russes — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ballets_Russes"
+      }
     ]
   },
   {
     "id": "history-maria-callas",
     "pillar": "Pure History",
     "category": "opera",
-    "title": "The Soprano Who Saved a Whole Style of Opera",
-    "hook": "Opera almost lost an entire style of singing — until one soprano single-handedly brought it back.",
-    "script": "By the mid-20th century, 'bel canto' opera — the ornate, technically demanding Italian style from composers like Bellini and Donizetti — had mostly fallen out of fashion, considered too old-fashioned and vocally punishing to stage regularly. Soprano Maria Callas, performing through the 1950s, is widely credited with singlehandedly reviving serious interest in the style, because she combined its extreme technical demands with real dramatic acting rather than just showing off vocal range. Her performances in operas like Bellini's 'Norma' directly caused opera houses to start reprogramming bel canto repertoire that had been quietly shelved for decades. One performer's individual skill changed what an entire art form considered worth staging.",
-    "cta": "Follow for more performers who single-handedly changed what got staged.",
+    "title": "The Soprano Who Single-Handedly Revived a Style of Opera",
+    "hook": "By the mid-1900s, an entire style of opera had gone out of fashion — until one soprano brought it back almost by herself.",
+    "script": "By the mid-1900s, an entire style of opera had gone out of fashion — until one soprano brought it back almost by herself. Bel canto opera, the ornate, technically brutal Italian style from composers like Bellini, Donizetti, and Rossini, had mostly fallen out of regular staging by the early 20th century, considered too demanding and too old-fashioned to program often. Maria Callas, performing through the 1950s, is widely credited with sparking what's literally called the 'bel canto revival,' because she could combine the style's extreme vocal demands with genuinely committed dramatic acting, instead of just showing off range for its own sake. She gave 89 stage performances of Bellini's Norma alone, and her 1955 production of La sonnambula at La Scala, directed by Luchino Visconti, is still cited as rescuing that opera from decades of over-decorated, empty staging. A whole generation of sopranos who came after her — Joan Sutherland, Montserrat Caballé, Beverly Sills — rode the same wave she started. One performer's specific combination of skill and instinct changed what an entire art form considered worth staging again. What made her interpretations land wasn't just vocal power either — contemporaries specifically praised how she treated bel canto's technical fireworks as tools for storytelling, not as the point of the performance in themselves, which is exactly the distinction that had gotten lost in the decades before her.",
+    "cta": "If you've never heard Callas sing Norma, that's genuinely a great place to start with opera at all.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Vincenzo Bellini, Norma (1831 opera)",
-      "Anne Edwards, Maria Callas: An Intimate Biography (2001)"
+      {
+        "label": "Maria Callas — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Maria_Callas"
+      },
+      {
+        "label": "Bel canto — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bel_canto"
+      }
     ]
   },
   {
@@ -720,16 +680,41 @@
     "pillar": "Pure History",
     "category": "opera",
     "title": "Why You Can't See the Orchestra at the Opera",
-    "hook": "The orchestra used to perform in full view of the audience, until one composer decided that was a problem.",
-    "script": "For most of opera's early history, orchestras played at floor level, visible to the audience, sometimes even positioned between the audience and the stage. Composer Richard Wagner changed that permanently: for his purpose-built Bayreuth Festspielhaus theater, opened in 1876, he designed a sunken, covered orchestra pit specifically so the audience couldn't see the musicians at all. His reasoning was that watching bows move and conductors gesture broke the illusion of the drama on stage — he wanted the sound to seem to come from nowhere, immersing the audience completely. That covered-pit design became the standard blueprint most opera houses, and even Broadway theaters, still use today.",
-    "cta": "One composer's pet peeve became the standard theater design. Follow for more.",
+    "hook": "Orchestras used to perform in full view of the audience, until one composer decided that was ruining the illusion.",
+    "script": "Orchestras used to perform in full view of the audience, sometimes even positioned between the crowd and the stage, until one composer decided that was ruining the entire illusion. Richard Wagner designed his own purpose-built theater, the Bayreuth Festspielhaus, which opened in 1876, with a sunken, mostly covered orchestra pit specifically so the audience couldn't see the musicians at all — what Wagner called creating a 'mystic gulf' between the audience and the drama on stage. His reasoning was straightforward: watching a conductor's arms move or bows sawing back and forth broke the illusion of whatever story was happening on stage, and he wanted the sound to feel like it was coming from nowhere, immersing the audience completely instead of reminding them they were watching a performance. It's actually one of the hardest pits in the world to conduct in, because most players can't see or hear the singers directly and have to rely entirely on communication with the conductor. That one design choice, built around a single composer's very specific pet peeve, became the standard blueprint most opera houses, and even Broadway theaters, still use. Wagner cared so much about this effect that he was reportedly willing to sacrifice practical conducting convenience entirely for it — which tells you how seriously 19th-century composers took the audience's total immersion, long before anyone used that word for it.",
+    "cta": "One composer's obsession with immersion became the default theater design for the next 150 years.",
     "platforms": [
       "tiktok",
       "instagram"
     ],
     "sources": [
-      "Bayreuth Festspielhaus (opened 1876, designed to Richard Wagner's specifications)",
-      "Grove Music Online: 'Wagner, Richard' — Bayreuth theater design"
+      {
+        "label": "Bayreuth Festspielhaus — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Bayreuth_Festspielhaus"
+      }
+    ]
+  },
+  {
+    "id": "composer-rigoletto-verdi-rebel",
+    "pillar": "Composer Drama",
+    "category": "opera",
+    "title": "Verdi Basically Argued With the Government for Decades and Won",
+    "hook": "Verdi spent much of his career in open conflict with government censors, opera after opera, and mostly came out on top.",
+    "script": "Verdi spent much of his career in open conflict with government censors, opera after opera, and mostly came out on top. Austrian authorities controlled what could be staged in northern Italian theaters through much of the 1800s, and Verdi kept writing operas that pushed directly against those limits — corrupt rulers, assassination plots, characters openly defying authority — then negotiating just enough to get each one approved: a relocated setting here, a renamed character there. With Rigoletto specifically, he pushed the censors so hard his own librettist described it as needing to 'turn Venice upside down' to get approval before its 1851 premiere. He wasn't just writing music. He was running a decades-long negotiation with state censorship, using opera as the actual vehicle for that fight, and mostly winning it opera by opera. Almost everything that originally got him into trouble with censors is now considered completely standard, uncontroversial repertoire performed constantly without anyone thinking twice about it. Verdi did this repeatedly across his career too, not just with Rigoletto — La traviata and other operas ran into the exact same censorship fights, which means this wasn't a one-time standoff, it was basically his standard operating procedure for decades.",
+    "cta": "The version of the story that survived is the one Verdi refused to fully water down.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ],
+    "sources": [
+      {
+        "label": "Rigoletto — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Rigoletto"
+      },
+      {
+        "label": "Giuseppe Verdi — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Giuseppe_Verdi"
+      }
     ]
   }
 ]

@@ -1,5 +1,13 @@
 # Content Strategy: Opera/Ballet History x Pop Culture x Tech
 
+**Content rule:** nothing in the automated bank centers on death, murder,
+or other controversial/violent subject matter. This ruled out an entire
+early pillar idea ("Villains You Root For" — Sweeney Todd, Bluebeard, the
+Lucia mad scene) along with a few individual scripts (the Phantom's 1896
+chandelier fatality, the Orpheus myth, castrati history, Bizet's death).
+Those are gone from `data/topics.json`; the pillar list below reflects
+what's actually left in rotation, not the original brainstorm.
+
 Context: two weeks in, four topics posted — Sweeney Todd, Phantom of the
 Opera, Coppelia (+ modern AI parallel), Carmen (+ hip-hop opera crossover).
 The throughline already working across all four: **"the classical/historical

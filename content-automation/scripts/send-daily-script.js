@@ -18,16 +18,39 @@ function currentLocalHour(timeZone) {
   return Number(formatter.format(new Date()));
 }
 
+// Guarantees every day's batch mixes categories: picks one topic from each
+// category (deterministically rotating through that category's own list),
+// then fills any remaining slots by rotating which category contributes an
+// extra pick. With 4 categories and a 5-per-day count, one category gets 2
+// picks each day, and that "extra" category itself rotates day to day.
 function todaysTopics(topics, count) {
-  const cycleLength = Math.ceil(topics.length / count);
   const daysSinceEpoch = Math.floor(Date.now() / 86400000);
-  const cycleDay = daysSinceEpoch % cycleLength;
-  const start = cycleDay * count;
+
+  const byCategory = {};
+  topics.forEach((t) => {
+    byCategory[t.category] = byCategory[t.category] || [];
+    byCategory[t.category].push(t);
+  });
+  const categories = Object.keys(byCategory).sort();
+
   const picks = [];
-  for (let i = 0; i < count; i++) {
-    picks.push(topics[(start + i) % topics.length]);
+  const pickFromCategory = (cat, offset) => {
+    const list = byCategory[cat];
+    return list[(daysSinceEpoch + offset) % list.length];
+  };
+
+  categories.forEach((cat) => picks.push(pickFromCategory(cat, 0)));
+
+  let extraIndex = 0;
+  while (picks.length < count) {
+    const cat = categories[daysSinceEpoch % categories.length];
+    const candidate = pickFromCategory(cat, extraIndex + 1);
+    if (!picks.includes(candidate)) picks.push(candidate);
+    extraIndex++;
+    if (extraIndex > topics.length) break; // safety valve if count > topics.length
   }
-  return picks;
+
+  return picks.slice(0, count);
 }
 
 function buildScriptBlock(topic, index, total) {
@@ -37,7 +60,11 @@ function buildScriptBlock(topic, index, total) {
     .join("");
 
   const sourcesList = (topic.sources || [])
-    .map((s) => `<li style="margin:0 0 4px;">${s}</li>`)
+    .map((s) =>
+      s.url
+        ? `<li style="margin:0 0 4px;">(<a href="${s.url}" style="color:#1a5fb4;">${s.label}</a>)</li>`
+        : `<li style="margin:0 0 4px;">(${s.label})</li>`
+    )
     .join("");
 
   return `
@@ -50,7 +77,7 @@ function buildScriptBlock(topic, index, total) {
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Hook (on-screen text / first line)</p>
       <p style="font-size:17px;font-weight:600;margin:0 0 20px;">${topic.hook}</p>
 
-      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Script (read aloud, ~50-60 sec)</p>
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Script (read aloud, ~1.5-2 min at a natural pace)</p>
       ${scriptParagraph}
 
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Call to action</p>

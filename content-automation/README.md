@@ -1,34 +1,56 @@
 # Daily Content Script Automation
 
 Every morning at 8am Pacific, a GitHub Action emails **5 ready-to-film**
-TikTok/Instagram scripts (hook + ~50-60 second script + CTA + sources to
-verify) to `bankebalogun@gmail.com`, mixed across four categories: **ballet**,
-**opera**, **classical music**, and **classical/orchestral music hiding in
-video games** (90s-2000s era). See `STRATEGY.md` for the content strategy
-behind this — pillars, gaps to fill, and growth ideas.
+TikTok/Instagram scripts (hook + ~1.5-2 minute script + sign-off + linked
+sources) to `bankebalogun@gmail.com`. Every single day's batch is
+guaranteed to include all four categories — **ballet**, **opera**,
+**classical music**, and **classical/orchestral music hiding in video games**
+(90s-2000s era) — never five from the same bucket. See `STRATEGY.md` for the
+content strategy behind this — pillars, gaps to fill, and growth ideas.
+
+**Content rules baked into every script:** no death, no violent or
+controversial subject matter, real sources with direct links wherever one
+exists, and a personal, first-person, anecdote-driven voice rather than a
+"did you know" clickbait format — modeled directly on scripts you've
+actually written and posted.
 
 ## How it works
 
 - `data/topics.json` — the bank of scripts. Each entry has `category` (one of
   `ballet`, `opera`, `classical-music`, `video-games`), `pillar` (sub-theme),
-  `title`, `hook`, `script`, `cta`, and `sources` (named references so every
-  factual claim can be checked before filming). The file is pre-interleaved
-  across categories so a sequential batch of 5 gives a mix, not five of the
-  same category in a row.
-- `scripts/send-daily-script.js` — picks today's 5 topics (deterministic
-  rotation: a day count mod the cycle length, so it works through the whole
-  bank before repeating, no database needed) and emails them as one message
-  via Gmail SMTP.
+  `title`, `hook`, `script`, `cta`, and `sources` (an array of
+  `{ label, url }`, `url` is `null` only for a couple of general-knowledge
+  claims with no single canonical source).
+- `scripts/send-daily-script.js` — picks today's 5 topics. The selection
+  always takes one topic from *each* category first (rotating deterministically
+  by day count through that category's own list, so it works through the
+  whole category before repeating), then fills any remaining slot from a
+  category that itself rotates day to day — guaranteeing every email mixes
+  categories, never five from one bucket. Emails them as one message via
+  Gmail SMTP.
 - `.github/workflows/daily-script-email.yml` — runs the script on a schedule.
 
 ## A note on sourcing
 
-Every script's `sources` field names a real book, primary source, or article
-so you (or I, on your ask) can double-check a claim before it goes in a
-video. These are **named references, not guaranteed live links** — check the
-book/database named rather than assuming a URL. If you ever want a specific
-script's facts re-verified against current web sources before filming, ask
-and I'll check it.
+Every script's `sources` field links directly to a real, checkable
+reference — mostly Wikipedia articles backed by primary sources, official
+game/soundtrack pages, or news coverage (e.g. GRAMMY.com, NPR, FTC consumer
+alerts) — rendered as clickable links in the email itself. The two entries
+without a direct link are general-knowledge observations (e.g. "pop stars
+borrow ballet visuals") with no single citable source; those are labeled
+as such rather than given a fake link. If you ever want a specific script's
+facts re-verified against current web sources before filming, ask and I'll
+check it.
+
+## A note on voice
+
+These scripts are modeled on transcripts of videos you've actually written
+and posted — first-person, anecdote-driven, ending on a genuine
+recommendation rather than a generic "follow for more." Where a real
+personal anecdote would naturally go (e.g. "I saw this live at..."), the
+script is written in general enthusiastic first-person instead, since I
+can't invent specific things you did or saw — swap in your own specific
+memory or reaction there before filming if you have one.
 
 ### Why two cron times?
 
