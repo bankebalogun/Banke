@@ -1,0 +1,13 @@
+{
+  "name": "content-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daily TikTok/Instagram script generator + emailer",
+  "type": "commonjs",
+  "scripts": {
+    "send": "node scripts/send-daily-script.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}

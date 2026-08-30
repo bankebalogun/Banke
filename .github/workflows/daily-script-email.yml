@@ -1,0 +1,37 @@
+name: Daily Content Script Email
+
+on:
+  schedule:
+    # Runs at both possible UTC offsets for 8am Pacific; the script itself
+    # checks the real local hour and only sends once, on the correct run.
+    - cron: "0 15 * * *" # 8am PDT (Mar-Nov)
+    - cron: "0 16 * * *" # 8am PST (Nov-Mar)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Send immediately regardless of local time (for testing)"
+        type: boolean
+        default: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        working-directory: content-automation
+        run: npm install
+
+      - name: Send today's script
+        working-directory: content-automation
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          FORCE_SEND: ${{ inputs.force && 'true' || 'false' }}
+        run: npm run send
