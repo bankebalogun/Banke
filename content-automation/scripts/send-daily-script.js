@@ -7,6 +7,7 @@ const nodemailer = require("nodemailer");
 
 const TIMEZONE = "America/Los_Angeles";
 const TARGET_LOCAL_HOUR = 8;
+const SCRIPTS_PER_EMAIL = 5;
 
 function currentLocalHour(timeZone) {
   const formatter = new Intl.DateTimeFormat("en-US", {
@@ -17,21 +18,32 @@ function currentLocalHour(timeZone) {
   return Number(formatter.format(new Date()));
 }
 
-function todaysTopicIndex(topicsLength) {
+function todaysTopics(topics, count) {
+  const cycleLength = Math.ceil(topics.length / count);
   const daysSinceEpoch = Math.floor(Date.now() / 86400000);
-  return daysSinceEpoch % topicsLength;
+  const cycleDay = daysSinceEpoch % cycleLength;
+  const start = cycleDay * count;
+  const picks = [];
+  for (let i = 0; i < count; i++) {
+    picks.push(topics[(start + i) % topics.length]);
+  }
+  return picks;
 }
 
-function buildEmailHtml(topic, index, total) {
+function buildScriptBlock(topic, index, total) {
   const scriptParagraph = topic.script
     .split("\n")
     .map((line) => `<p style="margin:0 0 12px;">${line}</p>`)
     .join("");
 
+  const sourcesList = (topic.sources || [])
+    .map((s) => `<li style="margin:0 0 4px;">${s}</li>`)
+    .join("");
+
   return `
-    <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
+    <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;padding:24px 0;${index > 0 ? "border-top:2px solid #e5e5e5;" : ""}">
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">
-        ${topic.pillar} &middot; Script ${index + 1} of ${total}
+        Script ${index + 1} of ${total} &middot; ${topic.category} &middot; ${topic.pillar}
       </p>
       <h2 style="margin:0 0 16px;font-size:22px;">${topic.title}</h2>
 
@@ -44,11 +56,25 @@ function buildEmailHtml(topic, index, total) {
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Call to action</p>
       <p style="margin:0 0 20px;">${topic.cta}</p>
 
-      <hr style="border:none;border-top:1px solid #e5e5e5;margin:20px 0;" />
-      <p style="font-size:12px;color:#8a8a8a;margin:0;">
-        Tweak names, dates, or phrasing before filming if you want to double-check a detail —
-        treat this as a first draft, not a final script. Edit content-automation/data/topics.json
-        in the repo to add, remove, or rewrite topics; the rotation updates automatically.
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Sources (verify before filming)</p>
+      <ul style="margin:0;padding-left:18px;font-size:13px;color:#4a4a4a;">${sourcesList}</ul>
+    </div>
+  `;
+}
+
+function buildEmailHtml(topics) {
+  const blocks = topics
+    .map((topic, index) => buildScriptBlock(topic, index, topics.length))
+    .join("");
+
+  return `
+    <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
+      ${blocks}
+      <p style="font-size:12px;color:#8a8a8a;margin:24px 0 0;">
+        Every fact here comes with a named source so you can double-check before filming —
+        treat this as a well-researched first draft, not a final script. Edit
+        content-automation/data/topics.json in the repo to add, remove, or rewrite topics;
+        the rotation updates automatically.
       </p>
     </div>
   `;
@@ -72,8 +98,7 @@ async function main() {
     throw new Error("topics.json is empty or malformed.");
   }
 
-  const index = todaysTopicIndex(topics.length);
-  const topic = topics[index];
+  const todays = todaysTopics(topics, SCRIPTS_PER_EMAIL);
 
   const gmailUser = process.env.GMAIL_USER;
   const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
@@ -91,13 +116,15 @@ async function main() {
   });
 
   await transporter.sendMail({
-    from: `"Daily Content Script" <${gmailUser}>`,
+    from: `"Daily Content Scripts" <${gmailUser}>`,
     to: recipient,
-    subject: `🎬 Today's script: ${topic.title}`,
-    html: buildEmailHtml(topic, index, topics.length),
+    subject: `🎬 Today's ${todays.length} scripts: ${todays.map((t) => t.title).join(", ")}`,
+    html: buildEmailHtml(todays),
   });
 
-  console.log(`Sent topic "${topic.id}" (index ${index}/${topics.length}) to ${recipient}.`);
+  console.log(
+    `Sent ${todays.length} topics (${todays.map((t) => t.id).join(", ")}) to ${recipient}.`
+  );
 }
 
 main().catch((error) => {

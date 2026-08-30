@@ -45,6 +45,28 @@ per pillar (29 total) so you have roughly a month of runway immediately.
 10. **Carmen's Hip-Hop Lineage** — your Carmen crossover, deepened: Carmen
     Jones (1954), why hip-hop opera keeps returning to Carmen specifically,
     and the reverse trade — pop stars borrowing ballet/opera visual language.
+11. **Classical Music Hiding in Video Games (90s-2000s)** — real, verified
+    classical/opera needle-drops and radio stations buried in games: GTA
+    III's "Double Clef FM" (classical/opera, favorite station of the game's
+    Mafia families), GTA IV's "The Journey" (contemporary classical
+    including Philip Glass), Hitman: Blood Money's use of Schubert's "Ave
+    Maria," and Katamari Damacy's orchestral tracks. One myth-busting entry
+    is included too: GTA San Andreas does *not* have a classical station
+    (people misremember CSR 103.9, which is actually new jack swing/R&B) —
+    a good "sounding classy vs. actually classical" hook on its own.
+12. **Pure History** — standalone historical deep-dives with no pop-culture
+    bridge required: the 1661 founding of ballet as an institution, the
+    invention of the tutu, the history of castrati singers, Clara Schumann's
+    career being overshadowed by her husband's, the invention of the piano,
+    Diaghilev's Ballets Russes, Maria Callas reviving bel canto, and why
+    opera orchestras are hidden in a pit. This pillar exists specifically so
+    not every script has to lean on a modern hook to justify itself.
+
+**A correction worth knowing:** Tony Hawk's Pro Skater's soundtrack is punk,
+ska, and underground hip-hop — there's no classical music in it. If that
+franchise comes up as a "classical crossover" idea, the accurate angle is
+that it pioneered the *licensed soundtrack* model in games (contrasted with
+GTA/Hitman's classical licensing), not a hidden classical needle-drop.
 
 ## Where the real gaps are right now
 
