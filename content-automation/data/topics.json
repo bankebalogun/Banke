@@ -22,72 +22,6 @@
     ]
   },
   {
-    "id": "hidden-bridgerton",
-    "pillar": "Hidden in Plain Sight",
-    "category": "classical-music",
-    "title": "BRIDGERTON — THE VERSION WE ALMOST GOT",
-    "hook": "Everyone already knows Bridgerton turns modern songs into beautiful orchestral arrangements. What I didn't know is the show almost sounded completely different.",
-    "script": "Everyone already knows Bridgerton turns modern pop songs into these beautiful orchestral arrangements. But what I didn't know is that the show's whole sound could have gone in a completely different direction. Composer Kris Bowers has talked about experimenting early on with an idea that basically went the opposite way: writing classical-style orchestral music, chopping it up into samples, and using those samples to build hip-hop or pop-style beats underneath it. Which means there's an alternate universe somewhere where Bridgerton sounds less like a ball and more like a producer sampled an orchestra for a beat tape. But Bowers has said that direction just wasn't working. Then he heard the string-quartet cover of Ariana Grande's 'thank u, next' that the show was using, and that pointed him somewhere else entirely. Instead of forcing classical music to sound modern by putting a beat under it, he started pulling the actual rhythms and harmonies out of pop songs and translating those ideas into a full orchestra. And I think that's genuinely more interesting than just saying 'Bridgerton plays Taylor Swift on violins.' The sound we now instantly associate with the show wasn't obvious from day one — they had to figure out exactly how far they could push it before it stopped feeling like Bridgerton. Turns out hip-hop beats made out of chopped-up orchestral samples were just a little too far.",
-    "sources": [
-      {
-        "label": "Classic FM — 'How Kris Bowers created the Bridgerton sound'",
-        "url": "https://www.classicfm.com/discover-music/periods-genres/film-tv/kris-bowers-bridgerton-score-hip-hop-ravel/"
-      },
-      {
-        "label": "GRAMMY.com — 'Bridgerton Composer Kris Bowers & Vitamin String Quartet'",
-        "url": "https://www.grammy.com/news/bridgerton-classical-pop-music-kris-bowers-vitamin-string-quartet"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
-    "id": "phantom-reservoir",
-    "pillar": "Behind the Curtain",
-    "category": "opera",
-    "title": "THE PHANTOM OF THE OPERA — THERE REALLY IS WATER UNDERNEATH THE OPERA HOUSE",
-    "hook": "The Paris Opera House actually has water underneath it. Not the giant underground lake from the movie, but the real story is still pretty good.",
-    "script": "The Paris Opera House actually has water underneath it. Not the giant candlelit underground lake you picture from The Phantom of the Opera — so unfortunately nobody is casually rowing a boat around down there — but the real story behind it is still genuinely good. When the Palais Garnier was being built in the 1860s, the site had unexpectedly high groundwater, and it became a serious engineering problem. Crews sank wells and ran steam pumps around the clock and the site still wouldn't dry out. So the architect, Charles Garnier, designed a massive concrete cistern beneath the building — partly to relieve the water pressure on the foundation, and partly to double as a reservoir in case of fire. A legend grew up around this cistern that the opera house was secretly built over an actual underground lake, and that legend is exactly what Gaston Leroux picked up and turned into his 1910 novel. The 'lake' is real. It's a cistern. And it's still used today to train firefighters to swim in complete darkness. Honestly, if you handed me a building this enormous and dramatic, with a mysterious reservoir sitting underneath it, I probably would've started making things up too.",
-    "sources": [
-      {
-        "label": "Palais Garnier — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Palais_Garnier"
-      },
-      {
-        "label": "The Phantom of the Opera (novel) — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/The_Phantom_of_the_Opera_(novel)"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
-    "id": "game-gta3-double-clef",
-    "pillar": "Classical Music Hiding in Video Games",
-    "category": "video-games",
-    "title": "GTA III — ROCKSTAR WAS SNEAKING OPERA INTO GTA",
-    "hook": "The fact that GTA III had an actual opera station will never not be funny to me, because imagine stealing a car and causing complete chaos around Liberty City while Verdi is casually playing in the background.",
-    "script": "The fact that GTA III had an actual opera station will never not be funny to me, because imagine stealing a car, getting chased by police, and causing complete chaos around Liberty City while Verdi is casually playing in the background. The station is called Double Clef FM, from 2001, and it's not vague, generic-sounding classical filler either — you can hear real Mozart, real Puccini, real Verdi. Mozart's Marriage of Figaro, Verdi's La Traviata, Puccini's Gianni Schicchi, all genuinely in rotation. So there are probably people who spent hours listening to some of the most famous opera excerpts ever written without ever intentionally choosing to listen to opera. And honestly, that's exactly what I find so funny whenever someone tells me 'I don't know anything about classical music.' You probably know way more than you think you do. This music has been hiding in games, cartoons, commercials, and movie trailers forever. Sometimes you've known a piece of music for twenty years before somebody finally tells you what it's actually called. So depending on what you had playing while grinding missions in GTA III, Rockstar may have accidentally introduced you to Puccini. Not exactly how I imagine Puccini pictured future generations discovering his music.",
-    "sources": [
-      {
-        "label": "Double Clef FM Tracklist (GTA III) — GTA Wiki",
-        "url": "https://gta.fandom.com/wiki/Double_Clef_FM/Tracklist_(GTA_III)"
-      },
-      {
-        "label": "Grand Theft Auto III — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
     "id": "riot-rite-of-spring",
     "pillar": "Opening Night Chaos",
     "category": "ballet",
@@ -120,50 +54,6 @@
       {
         "label": "Carmina Burana (Orff) — Wikipedia",
         "url": "https://en.wikipedia.org/wiki/Carmina_Burana_(Orff)"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
-    "id": "death-and-the-powers",
-    "pillar": "AI Meets the Classics",
-    "category": "opera",
-    "title": "DEATH AND THE POWERS — THE OPERA THAT NEEDED MORE THAN 40 COMPUTERS TO PERFORM",
-    "hook": "I work in tech, so whenever I find a real connection between technology and the arts, I go straight down the rabbit hole. This one genuinely surprised me.",
-    "script": "I work in tech, so whenever I find a real connection between technology and the arts, I go straight down the rabbit hole. This one genuinely surprised me. It's called Death and the Powers, developed by composer Tod Machover and a team at the MIT Media Lab, with a libretto by former U.S. Poet Laureate Robert Pinsky. The story follows a wealthy inventor named Simon Powers who tries to extend his existence by uploading himself into a computerized system as he's dying. But here's the part that gets me — they didn't just write an opera ABOUT technology. They built real technology directly into the production. The stage had robots. It had sensors. It had custom software running different parts of the performance live. There was an enormous robotic musical chandelier that also functioned as an actual instrument, and according to MIT, running the whole production required more than 40 computers. My favorite detail out of all of it: some of the robotic elements could be manually controlled using an actual video-game controller. It premiered back in 2010, which makes it even more interesting to me, because we're having all these conversations right now about AI, robots, and what it means to merge with technology. Someone was already putting that exact conversation on an opera stage over a decade ago.",
-    "sources": [
-      {
-        "label": "Death and the Powers — MIT Media Lab, Opera of the Future",
-        "url": "https://opera.media.mit.edu/projects/deathandthepowers/"
-      },
-      {
-        "label": "MIT News — 'US premiere of Death and the Powers'",
-        "url": "https://news.mit.edu/2011/note-us-premiere-death-and-powers"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
-    "id": "game-tonyhawk-not-classical",
-    "pillar": "Classical Music Hiding in Video Games",
-    "category": "video-games",
-    "title": "TONY HAWK'S PRO SKATER — BEFORE SPOTIFY, THERE WAS TONY HAWK",
-    "hook": "If you grew up playing Tony Hawk's Pro Skater, that game may have shaped your taste in music way more than you ever realized.",
-    "script": "If you grew up playing Tony Hawk's Pro Skater, that game may have shaped your taste in music way more than you ever realized. The first game came out in 1999 — no Spotify, no TikTok sound going viral, no Shazaming something and saving it to a playlist. And then here comes this game, where you're replaying the same levels over and over while Goldfinger, Dead Kennedys, and Primus play in the background, and people genuinely discovered entire bands that way. Goldfinger's 'Superman' became so tied to the game that John Feldmann, the band's frontman, has talked about playing it live shortly after and watching the whole crowd form the biggest circle pit of the night — and only realizing afterward that people knew the song from the game, not the radio. Tony Hawk himself has said he didn't fully grasp how big the soundtrack would become. He just wanted the music to represent actual skate culture, and it ended up introducing people who'd never been anywhere near that culture to the bands that came with it. Someone involved with the series basically described those soundtracks as the Spotify playlists of their era, and honestly, that's exactly right — except instead of an algorithm deciding what you'd like, you had Tony Hawk.",
-    "sources": [
-      {
-        "label": "Loudwire — 'Goldfinger's John Feldmann: Tony Hawk's Pro Skater Impact Was Greater Than Anyone Could Have Imagined'",
-        "url": "https://loudwire.com/goldfinger-john-feldmann-tony-hawk-pro-skater-interview/"
-      },
-      {
-        "label": "Tony Hawk's Pro Skater — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Tony_Hawk%27s_Pro_Skater"
       }
     ],
     "platforms": [
@@ -328,24 +218,6 @@
       {
         "label": "CSR 103.9 — GTA Wiki",
         "url": "https://gta.fandom.com/wiki/CSR_103.9"
-      }
-    ],
-    "platforms": [
-      "tiktok",
-      "instagram"
-    ]
-  },
-  {
-    "id": "composer-swan-lake-flop",
-    "pillar": "Composer Drama",
-    "category": "ballet",
-    "title": "SWAN LAKE — THE BALLET THAT NEEDED A SECOND CHANCE",
-    "hook": "You would never know this now, but Swan Lake wasn't an instant success, and considering it's probably one of the first ballets most people can name, I think that's kind of wild.",
-    "script": "You would never know this now, but Swan Lake wasn't an instant success. And considering it's probably one of the first ballets most people can actually name, I think that's kind of wild. Tchaikovsky wrote the music in the 1870s, and it premiered at Moscow's Bolshoi Theatre in 1877. But that original production wasn't anywhere close to the Swan Lake we picture today — the choreography didn't land, the staging had real problems, and it basically came and went without becoming the phenomenon it is now. What actually changed things happened later. Tchaikovsky died in 1893, and two years after that, choreographers Marius Petipa and Lev Ivanov staged a full revival in St. Petersburg in 1895. That's the version whose choreography shaped the Swan Lake everyone now considers the classic. And that's the part of this story that gets me most: Tchaikovsky wrote music people all over the world still instantly recognize more than a century later, and he never got to see it become what it eventually became. Today you hear three notes of that score and you're picturing the swans, the tutus, maybe even Black Swan. I don't think this one even needs some big inspirational takeaway. I just think it's fascinating that one of the most famous ballets on Earth needed a second attempt to become itself.",
-    "sources": [
-      {
-        "label": "Swan Lake — Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/Swan_Lake"
       }
     ],
     "platforms": [
