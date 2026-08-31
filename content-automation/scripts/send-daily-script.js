@@ -1,57 +1,12 @@
-// Sends one script from data/topics.json to RECIPIENT_EMAIL every morning.
+// Sends today's hooks from data/hooks.json to RECIPIENT_EMAIL every morning.
 // Rotation is deterministic (day count mod bank size), so no state file is
 // needed between runs and the full bank cycles before repeating.
-const fs = require("fs");
-const path = require("path");
 const nodemailer = require("nodemailer");
+const { currentLocalHour, loadHooks, todaysTopics } = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
-const TARGET_LOCAL_HOUR = 8;
+const TARGET_LOCAL_HOUR = 7;
 const SCRIPTS_PER_EMAIL = 5;
-
-function currentLocalHour(timeZone) {
-  const formatter = new Intl.DateTimeFormat("en-US", {
-    timeZone,
-    hour: "numeric",
-    hourCycle: "h23",
-  });
-  return Number(formatter.format(new Date()));
-}
-
-// Guarantees every day's batch mixes categories: picks one topic from each
-// category (deterministically rotating through that category's own list),
-// then fills any remaining slots by rotating which category contributes an
-// extra pick. With 4 categories and a 5-per-day count, one category gets 2
-// picks each day, and that "extra" category itself rotates day to day.
-function todaysTopics(topics, count) {
-  const daysSinceEpoch = Math.floor(Date.now() / 86400000);
-
-  const byCategory = {};
-  topics.forEach((t) => {
-    byCategory[t.category] = byCategory[t.category] || [];
-    byCategory[t.category].push(t);
-  });
-  const categories = Object.keys(byCategory).sort();
-
-  const picks = [];
-  const pickFromCategory = (cat, offset) => {
-    const list = byCategory[cat];
-    return list[(daysSinceEpoch + offset) % list.length];
-  };
-
-  categories.forEach((cat) => picks.push(pickFromCategory(cat, 0)));
-
-  let extraIndex = 0;
-  while (picks.length < count) {
-    const cat = categories[daysSinceEpoch % categories.length];
-    const candidate = pickFromCategory(cat, extraIndex + 1);
-    if (!picks.includes(candidate)) picks.push(candidate);
-    extraIndex++;
-    if (extraIndex > topics.length) break; // safety valve if count > topics.length
-  }
-
-  return picks.slice(0, count);
-}
 
 function buildFullScriptBlock(topic, index, total) {
   const scriptParagraph = topic.script
@@ -140,14 +95,8 @@ async function main() {
 
   // Sourcing exclusively from the Hook Bank per the creator's request — the
   // full-script topics.json bank is left in place but unused for now. Swap
-  // this path back to topics.json to resume sending full researched scripts.
-  const topicsPath = path.join(__dirname, "..", "data", "hooks.json");
-  const topics = JSON.parse(fs.readFileSync(topicsPath, "utf8"));
-
-  if (!Array.isArray(topics) || topics.length === 0) {
-    throw new Error(`${topicsPath} is empty or malformed.`);
-  }
-
+  // loadHooks() for a topics.json loader to resume sending full researched scripts.
+  const topics = loadHooks();
   const todays = todaysTopics(topics, SCRIPTS_PER_EMAIL);
 
   const gmailUser = process.env.GMAIL_USER;

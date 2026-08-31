@@ -1,11 +1,11 @@
-name: Daily Content Script Email
+name: Review Reminder Email
 
 on:
   schedule:
-    # Runs at both possible UTC offsets for 7am Pacific; the script itself
+    # Runs at both possible UTC offsets for 5pm Pacific; the script itself
     # checks the real local hour and only sends once, on the correct run.
-    - cron: "0 14 * * *" # 7am PDT (Mar-Nov)
-    - cron: "0 15 * * *" # 7am PST (Nov-Mar)
+    - cron: "0 0 * * *" # 5pm PDT (Mar-Nov)
+    - cron: "0 1 * * *" # 5pm PST (Nov-Mar)
   workflow_dispatch:
     inputs:
       force:
@@ -27,11 +27,11 @@ jobs:
         working-directory: content-automation
         run: npm install
 
-      - name: Send today's script
+      - name: Send review reminder
         working-directory: content-automation
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
           FORCE_SEND: ${{ inputs.force && 'true' || 'false' }}
-        run: npm run send
+        run: node scripts/send-review-reminder.js
