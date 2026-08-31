@@ -257,5 +257,308 @@
     "hook": "Naming five composers you were never taught in school, back to back, no explanation, just the names on screen.",
     "script": "Naming five composers you were never taught in school, back to back, no explanation, just the names on screen. [Text-on-screen format — pick 5 real composers from underrepresented backgrounds you specifically want to spotlight; a few well-documented options if you want a starting point: Florence Price, Joseph Bologne Chevalier de Saint-Georges, William Grant Still, Margaret Bonds, Florence B. Price]. No context, no bio — let people Google them. The curiosity gap is the whole point.",
     "note": "Swap in whichever five composers matter most to you — the suggestions are just a starting point."
+  },
+  {
+    "id": "zelda-leitmotif-wagner",
+    "category": "Meme & Format Bait",
+    "format": "Explainer / did-you-know format",
+    "hook": "The Legend of Zelda's whole musical structure is a direct descendant of a 19th-century opera technique.",
+    "script": "The Legend of Zelda's whole musical structure is a direct descendant of a 19th-century opera technique. Composer Koji Kondo builds specific musical themes for characters, places, and items across the series, so you learn to recognize what's happening before you even see it — a fairy fountain sting, a puzzle-solved jingle, Zelda's own theme. That's a leitmotif, and the technique traces straight back to Wagner's Ring Cycle, where he used the exact same idea across four operas in the 1800s. Kondo didn't invent this. He inherited it, and then built one of gaming's most recognizable musical languages on top of it. Nintendo and 19th-century German opera are running on the same trick.",
+    "sources": [
+      {
+        "label": "Koji Kondo — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Koji_Kondo"
+      },
+      {
+        "label": "Leitmotif — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Leitmotif"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "ffvi-opera-house-scene",
+    "category": "Meme & Format Bait",
+    "format": "Explainer / did-you-know format",
+    "hook": "One of gaming's most beloved scenes is a full faux-opera, and composers still cite it today.",
+    "script": "One of gaming's most beloved scenes is a full faux-opera, and composers still cite it today. Final Fantasy VI, from 1994, has a level built entirely around an opera house — the character Celes has to impersonate a famous diva mid-performance to pull off a plan, singing a real composed aria called 'Aria di Mezzo Carattere.' Critics have called it composer Nobuo Uematsu's masterpiece moment, and IGN has named it one of the most unforgettable scenes in gaming history. The remastered version even added fully sung vocals in seven languages. This is a 16-bit game taking the structure of an actual opera scene — the aria, the staged performance within the story — completely seriously, decades before 'prestige game score' was a category anyone talked about.",
+    "sources": [
+      {
+        "label": "Opera House (Final Fantasy VI) — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Opera_House_(Final_Fantasy_VI)"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "journey-austin-wintory-grammy",
+    "category": "Meme & Format Bait",
+    "format": "Explainer / did-you-know format",
+    "hook": "Only one video game score in history has ever been nominated for a Grammy.",
+    "script": "Only one video game score in history has ever been nominated for a Grammy. Austin Wintory's score for Journey, the 2012 game, got nominated for Best Score Soundtrack for Visual Media in 2013 — the first full video game score to earn that nomination, competing directly against film scores. It didn't win, it lost to The Girl with the Dragon Tattoo, but the nomination itself was the milestone. Wintory built the score to respond dynamically to what the player was actually doing, growing one central theme across the entire emotional arc of the game, structurally closer to how an opera develops a single motif than how most games score action. Over a decade later, it's still the only one.",
+    "sources": [
+      {
+        "label": "Austin Wintory — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Austin_Wintory"
+      },
+      {
+        "label": "Grammy Award for Best Score Soundtrack for Visual Media — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Grammy_Award_for_Best_Score_Soundtrack_for_Visual_Media"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "elden-ring-choral-boss-opera",
+    "category": "Meme & Format Bait",
+    "format": "Explainer / did-you-know format",
+    "hook": "The internet-famous 'choir screaming Latin' boss music in Elden Ring is doing exactly what opera has done for 400 years.",
+    "script": "The internet-famous 'choir screaming' boss music in Elden Ring and the Dark Souls games is doing exactly what opera has done for 400 years: using a full chorus to make a single moment feel massive and inevitable. FromSoftware's boss themes for fights like the Godskin Duo or Radagon layer a chanting choir, sometimes in nonsense syllables or Latin, over strings and brass specifically to make one enemy feel like an operatic-scale event, not just a fight. Players call these 'choral boss themes' online completely unaware they're describing the exact same tool grand opera has always used for its biggest moments. The genre changed. The trick to make a moment feel enormous didn't.",
+    "sources": [
+      {
+        "label": "PC Gamer — 'One of Elden Ring's best choral songs wasn't sung by a proper choir'",
+        "url": "https://www.pcgamer.com/one-of-elden-rings-best-choral-songs-wasnt-sung-by-a-proper-choir/"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "ramin-djawadi-path-to-got",
+    "category": "Comment-Bait Hot Takes",
+    "format": "Insider-knowledge reveal",
+    "hook": "The composer behind the Game of Thrones theme got his start being personally recruited by Hans Zimmer.",
+    "script": "The composer behind the Game of Thrones theme got his start being personally recruited by Hans Zimmer. Ramin Djawadi studied at Berklee College of Music, graduated in 1998, and caught Zimmer's attention enough to get pulled into Remote Control Productions — Zimmer's own composer studio, essentially a farm system for major film composers. From there Djawadi scored Iron Man, then got approached directly by the Game of Thrones creators in 2011 for a theme, and ended up composing all eight seasons, winning two Emmys and three Grammy nominations along the way. One of the most recognizable TV themes of the last two decades exists because one composer got noticed by exactly the right person at exactly the right moment.",
+    "sources": [
+      {
+        "label": "Ramin Djawadi — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Ramin_Djawadi"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "john-williams-boston-pops",
+    "category": "Comment-Bait Hot Takes",
+    "format": "Insider-knowledge reveal",
+    "hook": "John Williams isn't just a film composer with an orchestra behind him — he actually ran a real orchestra for over a decade.",
+    "script": "John Williams isn't just a film composer who happens to use an orchestra — he actually ran a real one for over a decade. He served as principal conductor of the Boston Pops from 1980 to 1993, and he's still their laureate conductor today, regularly conducting at Symphony Hall and Tanglewood. This isn't a film composer borrowing classical music's prestige from a distance. This is someone who's spent decades as an active, working figure inside the actual classical concert world, not just adjacent to it. The wall between 'film music' and 'real orchestral music' gets treated as obvious. John Williams has personally been standing on both sides of it since 1980.",
+    "sources": [
+      {
+        "label": "John Williams — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/John_Williams"
+      },
+      {
+        "label": "Boston Pops — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Boston_Pops"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "black-swan-myth-vs-reality",
+    "category": "Comment-Bait Hot Takes",
+    "format": "Myth-bust, insider credibility",
+    "hook": "Black Swan is not an accurate depiction of ballet company life, and actual dancers have been saying so since 2010.",
+    "script": "Black Swan is not an accurate depiction of ballet company life, and actual dancers have been saying so since it came out in 2010. Real dancers and ballet critics pushed back hard on the idea that someone could go from corps dancer to lead in under a year, and there was a genuine public dispute over how much of Natalie Portman's dancing in the film was actually her versus dance double Sarah Lane. But here's the part that gets skipped: several dancers who were initially skeptical still said Portman's movement quality was better than they expected, and critics have pointed out the film stays weirdly faithful to the actual Swan Lake story's blur between reality and delusion, even while the day-to-day company politics are wildly exaggerated. It's not a documentary. It's also not pure fiction. It's Hollywood doing to ballet what ballet already does to its own source material.",
+    "sources": [
+      {
+        "label": "Black Swan dance double controversy — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Black_Swan_dance_double_controversy"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "misty-copeland-abt-principal",
+    "category": "Comment-Bait Hot Takes",
+    "format": "Hard-fact hook",
+    "hook": "American Ballet Theatre didn't have a Black female principal dancer until 2015.",
+    "script": "American Ballet Theatre didn't have a Black female principal dancer until 2015. Misty Copeland was promoted to principal that June — the first in the company's 75-year history at that point. She didn't even start ballet until age 13, which is considered very late by classical training standards, and still became one of the most recognized dancers in the world, landing on the cover of Time as one of its 100 most influential people that same year. I bring this up not to make it a simple inspirational story, but because the actual number — 75 years before it happened even once — is the part that tends to get skipped in favor of the highlight reel.",
+    "sources": [
+      {
+        "label": "Misty Copeland — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Misty_Copeland"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "met-live-in-hd-invented-event-cinema",
+    "category": "Ride This Right Now — Real, Current Pop Culture",
+    "format": "Tech ⟷ Art explainer",
+    "hook": "Every 'watch it live in theaters' event you've seen for a concert or a big match? The Met Opera basically started that.",
+    "script": "Every 'watch it live in theaters' event you've seen for a concert or a big match? The Met Opera basically started that. In December 2006, they broadcast a live performance in HD straight into movie theaters worldwide, starting small with Mozart's The Magic Flute. By the very next season they'd already gone from six broadcasts to eight, playing in over 300 theaters, and within a few years the program was pulling in millions in extra revenue and reaching around 3 million people a year across 1,600 theaters. That's the exact model concerts, WWE, and movie premieres all now use to sell 'watch this live at your local theater' tickets. An opera company, not a tech company, figured out the event-cinema business model first.",
+    "sources": [
+      {
+        "label": "Metropolitan Opera Live in HD — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Metropolitan_Opera_Live_in_HD"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "ai-composition-tools-reality-check",
+    "category": "Ride This Right Now — Real, Current Pop Culture",
+    "format": "Tech ⟷ Art explainer",
+    "hook": "I work in tech, so I get asked constantly whether AI can just write classical music now. The honest answer is more interesting than yes or no.",
+    "script": "I work in tech, so I get asked constantly whether AI can just write classical music now. The honest answer is more interesting than a yes or no. Tools like AIVA, Google's Magenta project, and Suno can generate technically coherent music fast, and for background or functional music, that's genuinely useful. What they're still bad at is the thing that actually makes a piece of classical music work — long-range structure, a musical idea that develops and pays off forty minutes later, the kind of large-scale architecture a symphony needs. AI is good at generating something that sounds plausible for thirty seconds. It's not yet good at building something that earns an ending. That gap is exactly where composers are still doing work no tool can replace.",
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "marian-anderson-1955-met-debut",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Hard-fact hook, historical detail",
+    "hook": "Marian Anderson didn't debut at the Met until 1955 — and only after being banned from a concert hall sixteen years earlier for being Black.",
+    "script": "Marian Anderson didn't debut at the Metropolitan Opera until January 7th, 1955 — the first Black singer to perform there, singing Ulrica in Verdi's Un ballo in maschera. The audience gave her a standing ovation before she'd even sung a note. That moment only happened because of a specific person: Rudolf Bing, who took over as the Met's general manager in 1950 and deliberately worked to integrate its casting. But get the fuller timeline: in 1939, sixteen years earlier, the Daughters of the American Revolution refused to let Anderson sing to an integrated audience at Constitution Hall in Washington, D.C. She performed for 75,000 people on the steps of the Lincoln Memorial instead. Her Met debut opened the door for Leontyne Price, Grace Bumbry, and Jessye Norman after her. Sixteen years between the ban and the ovation is the part of this story that deserves to be said out loud, not just implied.",
+    "sources": [
+      {
+        "label": "Marian Anderson — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Marian_Anderson"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "leontyne-price-signature-aida",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Career profile, hard-fact hook",
+    "hook": "Leontyne Price became so identified with one specific opera role that critics of her era just called her 'the Aida.'",
+    "script": "Leontyne Price became so identified with one specific opera role that critics of her era just called her 'the Aida.' She made her Met debut in 1961 alongside Franco Corelli, but Verdi's Aida became her signature — Herbert von Karajan personally conducted her in the role for her European debut at the Vienna State Opera in 1958, and she recorded two separate Grammy-winning versions of the opera for RCA. Her farewell performance as Aida at the Met in 1985 was filmed for PBS broadcast, closing out a career that helped open the door for Black singers at major American opera houses for decades after her. One role, one voice, decades of being considered simply definitive at it.",
+    "sources": [
+      {
+        "label": "Leontyne Price — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Leontyne_Price"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "anthony-davis-opera-x-met-revival",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Hard-fact hook, historical detail",
+    "hook": "An opera about Malcolm X existed for almost 40 years before the Met finally staged it.",
+    "script": "An opera about Malcolm X existed for almost 40 years before the Met finally staged it. Composer Anthony Davis and librettist Thulani Davis premiered X: The Life and Times of Malcolm X in Philadelphia in 1985, then again at New York City Opera in 1986. It took until a new production, directed by Robert O'Hara and starring Davóne Tines, premiering at Detroit Opera in 2022, for the piece to finally reach the Metropolitan Opera stage in the fall of 2023 — where it was covered seriously by The New York Times and Smithsonian Magazine. The opera didn't get better in the nearly four decades between its premiere and its Met run. The institutions just took that long to catch up to it.",
+    "sources": [
+      {
+        "label": "X: The Life and Times of Malcolm X — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/X:_The_Life_and_Times_of_Malcolm_X"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "nkeiru-okoye-caged-bird-sings",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Composer spotlight",
+    "hook": "There's a composer building entire operatic works around Black women's history who most people in this space have never heard of.",
+    "script": "There's a composer building entire operatic works around Black women's history who most people in this space have never heard of. Nkeiru Okoye, a Guggenheim Fellow, has written a full opera on Harriet Tubman and, more recently, 'When the Caged Bird Sings,' which premiered at the University of Michigan in February 2024 — a piece that blends oratorio, theater, and opera into what Okoye herself calls 'a gathering,' partly in tribute to Maya Angelou. Her work sits deliberately at the intersection of classical tradition and African American musical history, and it's exactly the kind of composer this space should be naming constantly and mostly isn't.",
+    "sources": [
+      {
+        "label": "Nkeiru Okoye — official site",
+        "url": "https://www.nkeiruokoye.com/"
+      },
+      {
+        "label": "I CARE IF YOU LISTEN — 'Nkeiru Okoye Celebrates... When the Caged Bird Sings'",
+        "url": "https://icareifyoulisten.com/2024/02/nkeiru-okoye-celebrates-transformative-black-women-when-the-caged-bird-sings/"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "jessie-montgomery-met-commission",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Composer spotlight",
+    "hook": "One of classical music's most in-demand living composers started on the violin in a Lower East Side settlement school.",
+    "script": "One of classical music's most in-demand living composers started on the violin in a Lower East Side settlement school. Jessie Montgomery trained at Juilliard, became the Chicago Symphony Orchestra's composer-in-residence in 2021, and was named one of three composers of color in the Metropolitan Opera's commissioning program — meaning the Met is actively paying her to write new work for its stage, not just occasionally programming something she already wrote. Her music pulls in samba, Zimbabwean dance rhythms, swing, and techno alongside classical structure, and she's cited Florence Price as a direct influence, the same way earlier composers cited Brahms or Beethoven. This is what it actually looks like when an institution puts real money behind expanding who gets to write its future repertoire, not just its past.",
+    "sources": [
+      {
+        "label": "Jessie Montgomery — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jessie_Montgomery"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "gabriela-lena-frank-pulitzer",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Composer spotlight",
+    "hook": "A composer who builds classical works around Peruvian folk instruments just won the Pulitzer Prize for Music.",
+    "script": "A composer who builds classical works around Peruvian folk instruments just won the Pulitzer Prize for Music. Gabriela Lena Frank, whose mother is Peruvian and father is of Lithuanian Jewish heritage, writes for Western classical ensembles while pulling in the sounds of Andean instruments like the pan flute and the charango — one 2012 piece was written to be performed entirely on indigenous instruments. She'd already received a Heinz Award in 2020 specifically recognizing how she 'breaks gender, disability, and cultural barriers in classical music composition,' and the Pulitzer this year is the field's biggest possible confirmation that this approach isn't a niche side lane. It's just composition.",
+    "sources": [
+      {
+        "label": "Gabriela Lena Frank — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Gabriela_Lena_Frank"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
+  },
+  {
+    "id": "tania-leon-pulitzer",
+    "category": "Purpose Content That Still Hits Hard, Not Soft",
+    "format": "Composer spotlight, correction of a common claim",
+    "hook": "In 2021, Tania León became the first Black woman ever to win the Pulitzer Prize for Music — over 100 years after the prize existed for other categories.",
+    "script": "In 2021, Cuban-American composer Tania León became the first Black woman ever to win the Pulitzer Prize for Music, for her piece 'Stride.' León, who's of Afro-Cuban and Chinese-Cuban descent, has spent decades as both a composer and a conductor, co-founding the Dance Theatre of Harlem's music program earlier in her career. I want to be precise about the specific milestone here, because it's easy to round it up or blur it: this is the first Black woman to win the prize, a genuinely huge milestone on its own, in an award that had already been running for decades before that happened. Precision matters more than a bigger-sounding headline in a story like this.",
+    "sources": [
+      {
+        "label": "Tania León — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tania_Le%C3%B3n"
+      },
+      {
+        "label": "Pulitzer Prize for Music — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Pulitzer_Prize_for_Music"
+      }
+    ],
+    "platforms": [
+      "tiktok",
+      "instagram"
+    ]
   }
 ]
