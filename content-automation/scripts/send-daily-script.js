@@ -53,7 +53,7 @@ function todaysTopics(topics, count) {
   return picks.slice(0, count);
 }
 
-function buildScriptBlock(topic, index, total) {
+function buildFullScriptBlock(topic, index, total) {
   const scriptParagraph = topic.script
     .split("\n")
     .map((line) => `<p style="margin:0 0 12px;">${line}</p>`)
@@ -86,19 +86,42 @@ function buildScriptBlock(topic, index, total) {
   `;
 }
 
-function buildEmailHtml(topics) {
-  const blocks = topics
-    .map((topic, index) => buildScriptBlock(topic, index, topics.length))
+function buildHookIdeaBlock(entry, index, total) {
+  return `
+    <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;padding:24px 0;${index > 0 ? "border-top:2px solid #e5e5e5;" : ""}">
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">
+        Idea ${index + 1} of ${total} &middot; ${entry.category} &middot; ${entry.format}
+      </p>
+      <p style="font-size:19px;font-weight:600;margin:0 0 12px;">"${entry.hook}"</p>
+      <p style="font-size:13px;color:#8a8a8a;margin:0;">
+        This is a hook/format idea, not a finished script — bring your own take, opinion, or
+        experience to it, and check whether the referenced trend/audio is still current before
+        filming.
+      </p>
+    </div>
+  `;
+}
+
+function buildEmailHtml(items) {
+  const blocks = items
+    .map((item, index) =>
+      item.script
+        ? buildFullScriptBlock(item, index, items.length)
+        : buildHookIdeaBlock(item, index, items.length)
+    )
     .join("");
+
+  const isHookBank = items.length > 0 && !items[0].script;
 
   return `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
       ${blocks}
       <p style="font-size:12px;color:#8a8a8a;margin:24px 0 0;">
-        Every fact here comes with a named source so you can double-check before filming —
-        treat this as a well-researched first draft, not a final script. Edit
-        content-automation/data/topics.json in the repo to add, remove, or rewrite topics;
-        the rotation updates automatically.
+        ${
+          isHookBank
+            ? "Pulled from content-automation/data/hooks.json (Banke's Hook Bank). Edit that file to add, remove, or rewrite hooks; the rotation updates automatically."
+            : "Every fact here comes with a named source so you can double-check before filming — treat this as a well-researched first draft, not a final script. Edit content-automation/data/topics.json in the repo to add, remove, or rewrite topics; the rotation updates automatically."
+        }
       </p>
     </div>
   `;
@@ -115,11 +138,14 @@ async function main() {
     return;
   }
 
-  const topicsPath = path.join(__dirname, "..", "data", "topics.json");
+  // Sourcing exclusively from the Hook Bank per the creator's request — the
+  // full-script topics.json bank is left in place but unused for now. Swap
+  // this path back to topics.json to resume sending full researched scripts.
+  const topicsPath = path.join(__dirname, "..", "data", "hooks.json");
   const topics = JSON.parse(fs.readFileSync(topicsPath, "utf8"));
 
   if (!Array.isArray(topics) || topics.length === 0) {
-    throw new Error("topics.json is empty or malformed.");
+    throw new Error(`${topicsPath} is empty or malformed.`);
   }
 
   const todays = todaysTopics(topics, SCRIPTS_PER_EMAIL);
@@ -139,10 +165,16 @@ async function main() {
     auth: { user: gmailUser, pass: gmailAppPassword },
   });
 
+  const isHookBank = !todays[0].script;
+  const subjectLabel = isHookBank ? "hook ideas" : "scripts";
+  const subjectPreview = isHookBank
+    ? todays[0].hook.slice(0, 50)
+    : todays[0].title.split(" — ")[0];
+
   await transporter.sendMail({
     from: `"Daily Content Scripts" <${gmailUser}>`,
     to: recipient,
-    subject: `🎬 Today's ${todays.length} scripts — ${todays[0].title.split(" — ")[0]} + ${todays.length - 1} more`,
+    subject: `🎬 Today's ${todays.length} ${subjectLabel} — ${subjectPreview}${subjectPreview.length >= 50 ? "…" : ""} + ${todays.length - 1} more`,
     html: buildEmailHtml(todays),
   });
 
