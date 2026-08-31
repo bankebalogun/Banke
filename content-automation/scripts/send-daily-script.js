@@ -42,31 +42,61 @@ function buildFullScriptBlock(topic, index, total) {
 }
 
 function buildHookIdeaBlock(entry, index, total) {
+  const scriptParagraph = (entry.script || "")
+    .split("\n")
+    .map((line) => `<p style="margin:0 0 12px;">${line}</p>`)
+    .join("");
+
+  const sourcesList = (entry.sources || [])
+    .map((s) =>
+      s.url
+        ? `<li style="margin:0 0 4px;">(<a href="${s.url}" style="color:#1a5fb4;">${s.label}</a>)</li>`
+        : `<li style="margin:0 0 4px;">(${s.label})</li>`
+    )
+    .join("");
+
   return `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;padding:24px 0;${index > 0 ? "border-top:2px solid #e5e5e5;" : ""}">
       <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">
         Idea ${index + 1} of ${total} &middot; ${entry.category} &middot; ${entry.format}
       </p>
-      <p style="font-size:19px;font-weight:600;margin:0 0 12px;">"${entry.hook}"</p>
-      <p style="font-size:13px;color:#8a8a8a;margin:0;">
-        This is a hook/format idea, not a finished script — bring your own take, opinion, or
-        experience to it, and check whether the referenced trend/audio is still current before
-        filming.
+      <p style="font-size:19px;font-weight:600;margin:0 0 16px;">"${entry.hook}"</p>
+
+      ${entry.script ? `
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Draft script</p>
+      ${scriptParagraph}
+      ` : `
+      <p style="font-size:13px;color:#8a8a8a;margin:0 0 16px;">No draft script yet for this one — bring your own take.</p>
+      `}
+
+      ${entry.note ? `
+      <p style="font-size:13px;background:#fff3cd;color:#664d03;padding:10px 12px;border-radius:6px;margin:0 0 16px;">
+        ⚠️ ${entry.note}
+      </p>
+      ` : ""}
+
+      ${sourcesList ? `
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 4px;">Sources (verify before filming)</p>
+      <ul style="margin:0 0 8px;padding-left:18px;font-size:13px;color:#4a4a4a;">${sourcesList}</ul>
+      ` : ""}
+
+      <p style="font-size:12px;color:#8a8a8a;margin:0;">
+        Bracketed parts in the script are yours to fill in, and check whether any referenced
+        trend/audio is still current before filming.
       </p>
     </div>
   `;
 }
 
 function buildEmailHtml(items) {
+  const isHookBank = items.length > 0 && !!items[0].format;
   const blocks = items
     .map((item, index) =>
-      item.script
-        ? buildFullScriptBlock(item, index, items.length)
-        : buildHookIdeaBlock(item, index, items.length)
+      isHookBank
+        ? buildHookIdeaBlock(item, index, items.length)
+        : buildFullScriptBlock(item, index, items.length)
     )
     .join("");
-
-  const isHookBank = items.length > 0 && !items[0].script;
 
   return `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
@@ -114,7 +144,7 @@ async function main() {
     auth: { user: gmailUser, pass: gmailAppPassword },
   });
 
-  const isHookBank = !todays[0].script;
+  const isHookBank = !!todays[0].format;
   const subjectLabel = isHookBank ? "hook ideas" : "scripts";
   const subjectPreview = isHookBank
     ? todays[0].hook.slice(0, 50)
