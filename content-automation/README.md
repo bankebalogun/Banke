@@ -1,28 +1,32 @@
 # Daily Content Script Automation
 
 Every morning at 8am Pacific, a GitHub Action emails **5 ready-to-film**
-TikTok/Instagram scripts (hook + ~1.5-2 minute script + sign-off + linked
-sources) to `bankebalogun@gmail.com`. Every single day's batch is
-guaranteed to include all four categories — **ballet**, **opera**,
-**classical music**, and **classical/orchestral music hiding in video games**
-(90s-2000s era) — never five from the same bucket. See `STRATEGY.md` for the
+TikTok/Instagram scripts (hook + ~1-1.5 minute script ending on an
+interactive question + linked sources) to `bankebalogun@gmail.com`. Every
+single day's batch is guaranteed to include all five categories —
+**ballet**, **opera**, **classical music**, **classical/orchestral music
+hiding in video games** (90s-2000s era), and **theater history tying into
+modern media** — never five from the same bucket. See `STRATEGY.md` for the
 content strategy behind this — pillars, gaps to fill, and growth ideas.
 
 **Content rules baked into every script:** no death, no violent or
-controversial subject matter, real sources with direct links wherever one
-exists, and a personal, first-person, anecdote-driven voice rather than a
-"did you know" clickbait format — modeled directly on scripts you've
-actually written and posted.
+controversial subject matter (including class/wealth-conflict framing —
+that's been explicitly ruled out), no topic the creator has already posted
+about, real sources with direct links wherever one exists, and a personal,
+first-person, anecdote-driven voice ending on a genuine question to the
+viewer rather than a generic CTA — modeled directly on scripts the creator
+has actually written and posted.
 
 ## How it works
 
 - `data/topics.json` — the bank of scripts. Each entry has `category` (one of
-  `ballet`, `opera`, `classical-music`, `video-games`), `pillar` (sub-theme),
-  `title` (format: `TOPIC — punchy subtitle`, all caps, matching your video
-  title-card style), `hook` (opening line, doubles as on-screen text),
-  `script` (the full ~1-1.5 min script — the last line is the punchline/button,
-  there's no separate CTA field anymore), and `sources` (an array of
-  `{ label, url }`, `url` is `null` only for a couple of general-knowledge
+  `ballet`, `opera`, `classical-music`, `video-games`, `theater`), `pillar`
+  (sub-theme), `title` (format: `TOPIC — punchy subtitle`, all caps, matching
+  the creator's video title-card style), `hook` (opening line, doubles as
+  on-screen text), `script` (the full ~1-1.5 min script — the last line is
+  always a direct, specific question inviting a comment, not a generic
+  follow CTA), and `sources` (an array of `{ label, url }`, `url` is `null`
+  only for a couple of general-knowledge
   claims with no single canonical source).
 - `scripts/send-daily-script.js` — picks today's 5 topics. The selection
   always takes one topic from *each* category first (rotating deterministically
