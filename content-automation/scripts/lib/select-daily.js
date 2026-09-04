@@ -13,6 +13,35 @@ function currentLocalHour(timeZone) {
   return Number(formatter.format(new Date()));
 }
 
+// GitHub Actions scheduled triggers are best-effort and have been observed
+// firing 3.5-4.5 hours late on this repo (documented GitHub behavior under
+// load, not something a workflow can control). A single exact-hour check
+// combined with that kind of delay means the run silently no-ops every
+// time. currentLocalDateString + the state-file helpers below let a script
+// accept a wide catch-up window and still send at most once per day.
+function currentLocalDateString(timeZone) {
+  const formatter = new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  });
+  return formatter.format(new Date()); // YYYY-MM-DD
+}
+
+function readLastSentDate(stateFilePath) {
+  try {
+    return fs.readFileSync(stateFilePath, "utf8").trim();
+  } catch {
+    return null;
+  }
+}
+
+function writeLastSentDate(stateFilePath, dateStr) {
+  fs.mkdirSync(path.dirname(stateFilePath), { recursive: true });
+  fs.writeFileSync(stateFilePath, dateStr + "\n");
+}
+
 function loadHooks() {
   const hooksPath = path.join(__dirname, "..", "..", "data", "hooks.json");
   const hooks = JSON.parse(fs.readFileSync(hooksPath, "utf8"));
@@ -56,4 +85,11 @@ function todaysTopics(topics, count) {
   return picks.slice(0, count);
 }
 
-module.exports = { currentLocalHour, loadHooks, todaysTopics };
+module.exports = {
+  currentLocalHour,
+  currentLocalDateString,
+  readLastSentDate,
+  writeLastSentDate,
+  loadHooks,
+  todaysTopics,
+};

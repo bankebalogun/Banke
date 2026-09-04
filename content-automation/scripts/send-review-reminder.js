@@ -1,12 +1,27 @@
 // Sends a 5pm Pacific reminder recapping the hooks emailed that same morning,
 // so the creator has a nudge to actually review/film before the day ends.
 // Uses the same deterministic selection as send-daily-script.js (same day
-// count -> same picks), so this never needs to share state with that run.
+// count -> same picks), so this never needs to share state with that run
+// for CONTENT purposes. It does need its own state file for TIMING,
+// though: GitHub's scheduled triggers on this repo have been observed
+// firing 3.5-4.5 hours late, so an exact-hour check silently no-ops every
+// run. This accepts a wide catch-up window and guarantees at most one
+// send per Pacific calendar day via a committed state file.
+const path = require("path");
 const nodemailer = require("nodemailer");
-const { currentLocalHour, loadHooks, todaysTopics } = require("./lib/select-daily");
+const {
+  currentLocalHour,
+  currentLocalDateString,
+  readLastSentDate,
+  writeLastSentDate,
+  loadHooks,
+  todaysTopics,
+} = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
-const TARGET_LOCAL_HOUR = 17;
+const WINDOW_START_HOUR = 17; // 5pm
+const WINDOW_END_HOUR = 23; // through 11pm, inclusive — generous catch-up margin
+const STATE_FILE = path.join(__dirname, "..", "state", "last-reminder-send.txt");
 const SCRIPTS_PER_EMAIL = 5;
 
 function buildReminderHtml(todays) {
@@ -36,12 +51,20 @@ function buildReminderHtml(todays) {
 async function main() {
   const forceSend = process.env.FORCE_SEND === "true";
   const localHour = currentLocalHour(TIMEZONE);
+  const todayStr = currentLocalDateString(TIMEZONE);
 
-  if (!forceSend && localHour !== TARGET_LOCAL_HOUR) {
-    console.log(
-      `Local hour in ${TIMEZONE} is ${localHour}, not ${TARGET_LOCAL_HOUR}. Skipping (this run covers the other DST offset).`
-    );
-    return;
+  if (!forceSend) {
+    if (localHour < WINDOW_START_HOUR || localHour > WINDOW_END_HOUR) {
+      console.log(
+        `Local hour in ${TIMEZONE} is ${localHour}, outside the ${WINDOW_START_HOUR}:00-${WINDOW_END_HOUR}:00 catch-up window. Skipping.`
+      );
+      return;
+    }
+    const lastSent = readLastSentDate(STATE_FILE);
+    if (lastSent === todayStr) {
+      console.log(`Already sent today (${todayStr}). Skipping.`);
+      return;
+    }
   }
 
   const topics = loadHooks();
@@ -70,6 +93,11 @@ async function main() {
   });
 
   console.log(`Sent 5pm review reminder (${todays.map((t) => t.id).join(", ")}) to ${recipient}.`);
+
+  if (!forceSend) {
+    writeLastSentDate(STATE_FILE, todayStr);
+    console.log(`Recorded ${todayStr} to ${STATE_FILE}.`);
+  }
 }
 
 main().catch((error) => {

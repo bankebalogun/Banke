@@ -17,6 +17,25 @@ first-person, anecdote-driven voice ending on a genuine question to the
 viewer rather than a generic CTA — modeled directly on scripts the creator
 has actually written and posted.
 
+## Why the schedule isn't a single fixed cron time
+
+GitHub's scheduled workflow triggers are best-effort, and on this repo
+they've been observed firing 3.5-4.5 hours late under load — a documented
+GitHub limitation, not something a workflow config can fix directly. A
+single "run at exactly 7am" cron combined with that kind of delay meant the
+job kept firing around 10-11am, the script correctly saw the wrong local
+hour, and silently skipped sending for several days in a row with no error.
+
+The fix: both `daily-script-email.yml` and `review-reminder-email.yml` now
+run on an hourly cron (`0 * * * *`) instead of a fixed time. Each script
+accepts a wide local-time catch-up window (7am-1pm for the morning send,
+5pm-11pm for the reminder) and checks a committed state file
+(`content-automation/state/last-morning-send.txt` /
+`last-reminder-send.txt`) to guarantee at most one send per Pacific
+calendar day no matter how late in the window the run actually lands. After
+a real (non-`force`) send, the workflow commits the updated state file back
+to `main` itself.
+
 ## How it works
 
 - `data/topics.json` — the bank of scripts. Each entry has `category` (one of

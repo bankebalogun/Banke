@@ -1,11 +1,25 @@
 // Sends today's hooks from data/hooks.json to RECIPIENT_EMAIL every morning.
-// Rotation is deterministic (day count mod bank size), so no state file is
-// needed between runs and the full bank cycles before repeating.
+// Topic rotation is deterministic (day count mod bank size). Send timing
+// is NOT purely time-based, though: GitHub's scheduled triggers on this
+// repo have been observed firing 3.5-4.5 hours late, so an exact-hour
+// check silently no-ops every run. Instead this accepts a wide catch-up
+// window and uses a committed state file to guarantee at most one send
+// per Pacific calendar day, however late in the window the run lands.
+const path = require("path");
 const nodemailer = require("nodemailer");
-const { currentLocalHour, loadHooks, todaysTopics } = require("./lib/select-daily");
+const {
+  currentLocalHour,
+  currentLocalDateString,
+  readLastSentDate,
+  writeLastSentDate,
+  loadHooks,
+  todaysTopics,
+} = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
-const TARGET_LOCAL_HOUR = 7;
+const WINDOW_START_HOUR = 7; // 7am
+const WINDOW_END_HOUR = 13; // through 1pm, inclusive — generous catch-up margin
+const STATE_FILE = path.join(__dirname, "..", "state", "last-morning-send.txt");
 const SCRIPTS_PER_EMAIL = 5;
 
 function buildFullScriptBlock(topic, index, total) {
@@ -115,12 +129,20 @@ function buildEmailHtml(items) {
 async function main() {
   const forceSend = process.env.FORCE_SEND === "true";
   const localHour = currentLocalHour(TIMEZONE);
+  const todayStr = currentLocalDateString(TIMEZONE);
 
-  if (!forceSend && localHour !== TARGET_LOCAL_HOUR) {
-    console.log(
-      `Local hour in ${TIMEZONE} is ${localHour}, not ${TARGET_LOCAL_HOUR}. Skipping (this run covers the other DST offset).`
-    );
-    return;
+  if (!forceSend) {
+    if (localHour < WINDOW_START_HOUR || localHour > WINDOW_END_HOUR) {
+      console.log(
+        `Local hour in ${TIMEZONE} is ${localHour}, outside the ${WINDOW_START_HOUR}:00-${WINDOW_END_HOUR}:00 catch-up window. Skipping.`
+      );
+      return;
+    }
+    const lastSent = readLastSentDate(STATE_FILE);
+    if (lastSent === todayStr) {
+      console.log(`Already sent today (${todayStr}). Skipping.`);
+      return;
+    }
   }
 
   // Sourcing exclusively from the Hook Bank per the creator's request — the
@@ -160,6 +182,11 @@ async function main() {
   console.log(
     `Sent ${todays.length} topics (${todays.map((t) => t.id).join(", ")}) to ${recipient}.`
   );
+
+  if (!forceSend) {
+    writeLastSentDate(STATE_FILE, todayStr);
+    console.log(`Recorded ${todayStr} to ${STATE_FILE}.`);
+  }
 }
 
 main().catch((error) => {

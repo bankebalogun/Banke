@@ -2,16 +2,21 @@ name: Review Reminder Email
 
 on:
   schedule:
-    # Runs at both possible UTC offsets for 5pm Pacific; the script itself
-    # checks the real local hour and only sends once, on the correct run.
-    - cron: "0 0 * * *" # 5pm PDT (Mar-Nov)
-    - cron: "0 1 * * *" # 5pm PST (Nov-Mar)
+    # GitHub's scheduled triggers on this repo have been observed firing
+    # 3.5-4.5 hours late (documented best-effort behavior under load), so a
+    # single fixed-time cron isn't reliable here. Running hourly and letting
+    # the script accept a wide local-time window + a committed "already
+    # sent today" state file is what actually gets an email out reliably.
+    - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
       force:
         description: "Send immediately regardless of local time (for testing)"
         type: boolean
         default: false
+
+permissions:
+  contents: write
 
 jobs:
   send:
@@ -35,3 +40,16 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
           FORCE_SEND: ${{ inputs.force && 'true' || 'false' }}
         run: node scripts/send-review-reminder.js
+
+      - name: Commit updated send-state
+        run: |
+          if [ -n "$(git status --porcelain content-automation/state)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add content-automation/state
+            git commit -m "Record reminder send state [skip ci]"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No state change to commit."
+          fi
