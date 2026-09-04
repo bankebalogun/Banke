@@ -2,11 +2,12 @@
 // Rotation is deterministic (day count mod bank size), so no state file is
 // needed between runs and the full bank cycles before repeating.
 const nodemailer = require("nodemailer");
-const { currentLocalHour, loadHooks, todaysTopics } = require("./lib/select-daily");
+const { currentLocalHour, loadHooks, loadTopics, todaysTopics } = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
 const TARGET_LOCAL_HOUR = 7;
 const SCRIPTS_PER_EMAIL = 5;
+const BONUS_HOOKS_PER_EMAIL = 2;
 
 function buildFullScriptBlock(topic, index, total) {
   const scriptParagraph = topic.script
@@ -88,25 +89,32 @@ function buildHookIdeaBlock(entry, index, total) {
   `;
 }
 
-function buildEmailHtml(items) {
-  const isHookBank = items.length > 0 && !!items[0].format;
-  const blocks = items
-    .map((item, index) =>
-      isHookBank
-        ? buildHookIdeaBlock(item, index, items.length)
-        : buildFullScriptBlock(item, index, items.length)
-    )
+function buildEmailHtml(scriptItems, hookItems) {
+  const scriptBlocks = scriptItems
+    .map((item, index) => buildFullScriptBlock(item, index, scriptItems.length))
     .join("");
+
+  const hookSection = hookItems.length
+    ? `
+      <div style="margin:8px 0 0;padding:20px 0 0;border-top:4px solid #1a1a1a;">
+        <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:0 0 16px;">
+          + ${hookItems.length} bonus hook idea${hookItems.length === 1 ? "" : "s"} from the Hook Bank
+        </p>
+        ${hookItems.map((item, index) => buildHookIdeaBlock(item, index, hookItems.length)).join("")}
+      </div>
+    `
+    : "";
 
   return `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
-      ${blocks}
+      ${scriptBlocks}
+      ${hookSection}
       <p style="font-size:12px;color:#8a8a8a;margin:24px 0 0;">
-        ${
-          isHookBank
-            ? "Pulled from content-automation/data/hooks.json (Banke's Hook Bank). Edit that file to add, remove, or rewrite hooks; the rotation updates automatically."
-            : "Every fact here comes with a named source so you can double-check before filming — treat this as a well-researched first draft, not a final script. Edit content-automation/data/topics.json in the repo to add, remove, or rewrite topics; the rotation updates automatically."
-        }
+        Every fact in the full scripts comes with a named source so you can double-check before
+        filming — treat these as well-researched first drafts, not final scripts. Edit
+        content-automation/data/topics.json to add, remove, or rewrite scripts, and
+        content-automation/data/hooks.json to add, remove, or rewrite bonus hook ideas; the
+        rotation for both updates automatically.
       </p>
     </div>
   `;
@@ -123,11 +131,17 @@ async function main() {
     return;
   }
 
-  // Sourcing exclusively from the Hook Bank per the creator's request — the
-  // full-script topics.json bank is left in place but unused for now. Swap
-  // loadHooks() for a topics.json loader to resume sending full researched scripts.
-  const topics = loadHooks();
-  const todays = todaysTopics(topics, SCRIPTS_PER_EMAIL);
+  // Combines both banks: the 5 category-guaranteed full scripts from
+  // topics.json (ballet/opera/classical-music/video-games/theater, never
+  // five from one bucket) plus a couple of bonus hook ideas from hooks.json
+  // (the Hook Bank), each rotating deterministically by day count.
+  const scripts = loadTopics();
+  const scriptItems = todaysTopics(scripts, SCRIPTS_PER_EMAIL);
+
+  const hooks = loadHooks();
+  const hookItems = todaysTopics(hooks, BONUS_HOOKS_PER_EMAIL, {
+    guaranteeAllCategories: false,
+  });
 
   const gmailUser = process.env.GMAIL_USER;
   const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
@@ -144,21 +158,18 @@ async function main() {
     auth: { user: gmailUser, pass: gmailAppPassword },
   });
 
-  const isHookBank = !!todays[0].format;
-  const subjectLabel = isHookBank ? "hook ideas" : "scripts";
-  const subjectPreview = isHookBank
-    ? todays[0].hook.slice(0, 50)
-    : todays[0].title.split(" — ")[0];
+  const subjectPreview = scriptItems[0].title.split(" — ")[0];
+  const totalCount = scriptItems.length + hookItems.length;
 
   await transporter.sendMail({
     from: `"Daily Content Scripts" <${gmailUser}>`,
     to: recipient,
-    subject: `🎬 Today's ${todays.length} ${subjectLabel} — ${subjectPreview}${subjectPreview.length >= 50 ? "…" : ""} + ${todays.length - 1} more`,
-    html: buildEmailHtml(todays),
+    subject: `🎬 Today's ${scriptItems.length} scripts — ${subjectPreview}${subjectPreview.length >= 50 ? "…" : ""} + ${totalCount - 1} more`,
+    html: buildEmailHtml(scriptItems, hookItems),
   });
 
   console.log(
-    `Sent ${todays.length} topics (${todays.map((t) => t.id).join(", ")}) to ${recipient}.`
+    `Sent ${scriptItems.length} scripts (${scriptItems.map((t) => t.id).join(", ")}) + ${hookItems.length} bonus hooks (${hookItems.map((t) => t.id).join(", ")}) to ${recipient}.`
   );
 }
 

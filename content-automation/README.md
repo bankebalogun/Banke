@@ -1,13 +1,16 @@
 # Daily Content Script Automation
 
-Every morning at 8am Pacific, a GitHub Action emails **5 ready-to-film**
+Every morning at 7am Pacific, a GitHub Action emails **5 ready-to-film**
 TikTok/Instagram scripts (hook + ~1-1.5 minute script ending on an
-interactive question + linked sources) to `bankebalogun@gmail.com`. Every
-single day's batch is guaranteed to include all five categories —
+interactive question + linked sources) to `bankebalogun@gmail.com`, plus
+**2 bonus hook ideas** pulled from the Hook Bank. Every single day's batch
+of 5 full scripts is guaranteed to include all five categories —
 **ballet**, **opera**, **classical music**, **classical/orchestral music
 hiding in video games** (90s-2000s era), and **theater history tying into
-modern media** — never five from the same bucket. See `STRATEGY.md` for the
-content strategy behind this — pillars, gaps to fill, and growth ideas.
+modern media** — never five from the same bucket. The 2 bonus hook ideas
+rotate day-to-day through the Hook Bank's own categories on top of that.
+See `STRATEGY.md` for the content strategy behind this — pillars, gaps to
+fill, and growth ideas.
 
 **Content rules baked into every script:** no death, no violent or
 controversial subject matter (including class/wealth-conflict framing —
@@ -28,13 +31,20 @@ has actually written and posted.
   follow CTA), and `sources` (an array of `{ label, url }`, `url` is `null`
   only for a couple of general-knowledge
   claims with no single canonical source).
-- `scripts/send-daily-script.js` — picks today's 5 topics. The selection
-  always takes one topic from *each* category first (rotating deterministically
-  by day count through that category's own list, so it works through the
-  whole category before repeating), then fills any remaining slot from a
-  category that itself rotates day to day — guaranteeing every email mixes
-  categories, never five from one bucket. Emails them as one message via
-  Gmail SMTP.
+- `data/hooks.json` — the Hook Bank. Each entry has `category` (a content
+  pillar, e.g. `Comment-Bait Hot Takes`), `format` (the hook style), `hook`,
+  `script`, and `sources`.
+- `scripts/send-daily-script.js` — picks today's 5 topics from
+  `topics.json`. The selection always takes one topic from *each* category
+  first (rotating deterministically by day count through that category's
+  own list, so it works through the whole category before repeating), then
+  fills any remaining slot from a category that itself rotates day to
+  day — guaranteeing every email mixes categories, never five from one
+  bucket. It then picks 2 bonus hook ideas from `hooks.json` the same way,
+  except the *categories themselves* rotate day to day too (there are more
+  Hook Bank categories than bonus slots, so which ones appear varies daily
+  rather than always being the same two). Emails everything as one message
+  via Gmail SMTP.
 - `.github/workflows/daily-script-email.yml` — runs the script on a schedule.
 
 ## A note on sourcing

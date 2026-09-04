@@ -3,11 +3,12 @@
 // Uses the same deterministic selection as send-daily-script.js (same day
 // count -> same picks), so this never needs to share state with that run.
 const nodemailer = require("nodemailer");
-const { currentLocalHour, loadHooks, todaysTopics } = require("./lib/select-daily");
+const { currentLocalHour, loadHooks, loadTopics, todaysTopics } = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
 const TARGET_LOCAL_HOUR = 17;
 const SCRIPTS_PER_EMAIL = 5;
+const BONUS_HOOKS_PER_EMAIL = 2;
 
 function buildReminderHtml(todays) {
   const items = todays
@@ -44,8 +45,18 @@ async function main() {
     return;
   }
 
-  const topics = loadHooks();
-  const todays = todaysTopics(topics, SCRIPTS_PER_EMAIL);
+  // Mirrors send-daily-script.js's selection exactly (same day count -> same
+  // picks) so this recaps exactly what went out that morning: the 5
+  // category-guaranteed scripts plus the bonus hook ideas.
+  const scripts = loadTopics();
+  const scriptItems = todaysTopics(scripts, SCRIPTS_PER_EMAIL);
+
+  const hooks = loadHooks();
+  const hookItems = todaysTopics(hooks, BONUS_HOOKS_PER_EMAIL, {
+    guaranteeAllCategories: false,
+  });
+
+  const todays = [...scriptItems, ...hookItems];
 
   const gmailUser = process.env.GMAIL_USER;
   const gmailAppPassword = process.env.GMAIL_APP_PASSWORD;
