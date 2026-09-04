@@ -17,7 +17,7 @@ const {
 } = require("./lib/select-daily");
 
 const TIMEZONE = "America/Los_Angeles";
-const WINDOW_START_HOUR = 7; // 7am
+const WINDOW_START_HOUR = 6; // 6am
 const WINDOW_END_HOUR = 13; // through 1pm, inclusive — generous catch-up margin
 const STATE_FILE = path.join(__dirname, "..", "state", "last-morning-send.txt");
 const SCRIPTS_PER_EMAIL = 5;

@@ -1,6 +1,6 @@
 # Daily Content Script Automation
 
-Every morning at 8am Pacific, a GitHub Action emails **5 ready-to-film**
+Every morning shortly after 6am Pacific, a GitHub Action emails **5 ready-to-film**
 TikTok/Instagram scripts (hook + ~1-1.5 minute script ending on an
 interactive question + linked sources) to `bankebalogun@gmail.com`. Every
 single day's batch is guaranteed to include all five categories —
@@ -11,30 +11,37 @@ content strategy behind this — pillars, gaps to fill, and growth ideas.
 
 **Content rules baked into every script:** no death, no violent or
 controversial subject matter (including class/wealth-conflict framing —
-that's been explicitly ruled out), no topic the creator has already posted
-about, real sources with direct links wherever one exists, and a personal,
-first-person, anecdote-driven voice ending on a genuine question to the
-viewer rather than a generic CTA — modeled directly on scripts the creator
-has actually written and posted.
+that's been explicitly ruled out), no leading a hook with "first Black
+person/woman to..." framing — a milestone like that can be mentioned as one
+fact within the story, never the headline itself, no topic the creator has
+already posted about, real sources with direct links wherever one exists,
+and a personal, first-person, anecdote-driven voice ending on a genuine
+question to the viewer rather than a generic CTA — modeled directly on
+scripts the creator has actually written and posted.
 
 ## Why the schedule isn't a single fixed cron time
 
 GitHub's scheduled workflow triggers are best-effort, and on this repo
 they've been observed firing 3.5-4.5 hours late under load — a documented
 GitHub limitation, not something a workflow config can fix directly. A
-single "run at exactly 7am" cron combined with that kind of delay meant the
-job kept firing around 10-11am, the script correctly saw the wrong local
-hour, and silently skipped sending for several days in a row with no error.
+single "run at exactly 6am" cron combined with that kind of delay meant the
+job kept firing hours late, the script correctly saw the wrong local hour,
+and silently skipped sending for several days in a row with no error.
 
 The fix: both `daily-script-email.yml` and `review-reminder-email.yml` now
-run on an hourly cron (`0 * * * *`) instead of a fixed time. Each script
-accepts a wide local-time catch-up window (7am-1pm for the morning send,
-5pm-11pm for the reminder) and checks a committed state file
-(`content-automation/state/last-morning-send.txt` /
-`last-reminder-send.txt`) to guarantee at most one send per Pacific
-calendar day no matter how late in the window the run actually lands. After
-a real (non-`force`) send, the workflow commits the updated state file back
-to `main` itself.
+run on an hourly cron (`0 * * * *`) instead of a fixed time, checked every
+hour of the day. Each script accepts a wide local-time catch-up window
+(6am-1pm for the morning send, 5pm-11pm for the reminder) and checks a
+committed state file (`content-automation/state/last-morning-send.txt` /
+`last-reminder-send.txt`) to guarantee **exactly one send per Pacific
+calendar day**, sent as early as possible once the hourly check lands
+inside that window — whether that's 6:03am or, in a worst-case delay,
+several hours later, it still goes out and never duplicates or gets
+skipped. After a real (non-`force`) send, the workflow commits the updated
+state file back to `main` itself, so the "already sent today" guard
+survives across runs and runners. This has been verified live: both
+workflows have completed successful, non-`force` runs that correctly
+detected the window, sent, and committed state.
 
 ## How it works
 
@@ -78,14 +85,6 @@ script is written in general enthusiastic first-person instead, since I
 can't invent specific things you did or saw — swap in your own specific
 memory or reaction there before filming if you have one.
 
-### Why two cron times?
-
-GitHub Actions cron only runs in UTC and doesn't know about daylight saving.
-8am Pacific is 15:00 UTC in summer (PDT) and 16:00 UTC in winter (PST), so the
-workflow is scheduled at both times every day. The script checks the *actual*
-current Pacific hour and only sends when it's really 8am there — the other
-run silently exits. You'll get exactly one email a day, no duplicates.
-
 ## One-time setup (do this in the GitHub repo settings, not here)
 
 1. **Create a Gmail App Password** (requires 2-Step Verification enabled on
@@ -107,7 +106,7 @@ run silently exits. You'll get exactly one email a day, no duplicates.
 - **Manual trigger with force-send**: repo → Actions → "Daily Content Script
   Email" → Run workflow → set `force` to `true`. This sends immediately
   regardless of the time of day, so you can confirm the secrets work without
-  waiting for 8am.
+  waiting for 6am.
 - **Local test** (from `content-automation/`):
   ```
   npm install

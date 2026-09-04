@@ -39,7 +39,7 @@ function buildReminderHtml(todays) {
   return `
     <div style="font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:600px;margin:0 auto;color:#1a1a1a;">
       <h2 style="margin:0 0 12px;font-size:20px;">⏰ Reminder: review this morning's hooks</h2>
-      <p style="margin:0 0 16px;">Here's what went out at 7am today — have you looked at these yet?</p>
+      <p style="margin:0 0 16px;">Here's what went out this morning — have you looked at these yet?</p>
       <ul style="margin:0 0 20px;padding-left:20px;">${items}</ul>
       <p style="font-size:13px;color:#8a8a8a;margin:0;">
         Full details are in this morning's "Today's scripts/hook ideas" email in this inbox.
