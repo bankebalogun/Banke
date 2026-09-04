@@ -94,6 +94,12 @@ function buildHookIdeaBlock(entry, index, total) {
       <ul style="margin:0 0 8px;padding-left:18px;font-size:13px;color:#4a4a4a;">${sourcesList}</ul>
       ` : ""}
 
+      ${entry.caption ? `
+      <p style="font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#8a8a8a;margin:20px 0 4px;">Caption (TikTok / Instagram)</p>
+      <p style="margin:0 0 4px;">${entry.caption}</p>
+      <p style="margin:0 0 16px;color:#1a5fb4;">${(entry.hashtags || []).join(" ")}</p>
+      ` : ""}
+
       <p style="font-size:12px;color:#8a8a8a;margin:0;">
         Bracketed parts in the script are yours to fill in, and check whether any referenced
         trend/audio is still current before filming.
