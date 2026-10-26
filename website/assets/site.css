@@ -943,3 +943,18 @@ main:focus { outline: none; }
 .ig-f { padding: 12px 14px; font: italic 400 15px/1 var(--display); color: var(--gold-2); }
 @media (max-width: 760px) { .posts-ig { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .ig-f { font-size: 13px; } }
 .j-empty { font: italic 400 22px/1.4 var(--display); color: var(--mute-d); }
+
+/* films: 35mm frames */
+.films { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: clamp(22px, 3vw, 40px); }
+.film .frame { position: relative; aspect-ratio: 3 / 4; padding: 34px 22px; display: flex; flex-direction: column; justify-content: flex-end; gap: 10px; background: radial-gradient(120% 90% at 30% 20%, color-mix(in srgb, var(--tint) 80%, #fff 20%), var(--tint) 45%, var(--night) 100%); color: var(--ivory); overflow: hidden; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .6); transition: transform .8s var(--ease); }
+.film .frame::before, .film .frame::after { content: ""; position: absolute; left: 0; right: 0; height: 18px; background: var(--night) repeating-linear-gradient(90deg, transparent 0 8px, rgba(248, 242, 234, .5) 8px 18px, transparent 18px 26px) center / 100% 8px no-repeat; }
+.film .frame::before { top: 0; }
+.film .frame::after { bottom: 0; }
+.film .frame b { font: 400 clamp(22px, 2vw, 28px)/1.08 var(--display); }
+.film .fn { position: absolute; top: 32px; left: 22px; font: italic 400 15px/1 var(--display); color: var(--gold-2); }
+.film .fy { font-size: 13px; letter-spacing: .14em; color: var(--gold-2); }
+.film:hover .frame { transform: translateY(-6px) rotate(-.6deg); }
+.film .by { margin-top: 16px; font-size: 14px; color: var(--gold-2); }
+.film p { margin-top: 6px; color: var(--mute-d); font-size: 16px; }
+.film .ln { display: inline-block; margin-top: 12px; font-size: 14px; }
+@media (prefers-reduced-motion: reduce) { .film:hover .frame { transform: none; } }
