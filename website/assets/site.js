@@ -264,6 +264,39 @@
     };
     bs.forEach(function (b) { b.addEventListener('click', function () { show(cur === b.getAttribute('data-w') ? null : b.getAttribute('data-w')); }); });
   });
+  // Reading progress, photo drift, press ribbon speed and back to top, on one scroll loop
+  var bar = document.createElement('div'); bar.className = 'progress'; bar.setAttribute('aria-hidden', 'true'); document.body.appendChild(bar);
+  var top = document.createElement('button'); top.type = 'button'; top.className = 'to-top'; top.setAttribute('aria-label', 'Back to top');
+  top.innerHTML = '<svg class="ring" viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="24"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>';
+  top.addEventListener('click', function () { scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' }); var sk = $('#main'); if (sk) setTimeout(function () { sk.focus({ preventScroll: true }); }, 600); });
+  document.body.appendChild(top);
+  var drifts = $$('.full-bleed .rv-img, .spread .rv-img, .host-img .rv-img, .interlude .rv-img, .cr-img .rv-img');
+  drifts.forEach(function (d) { d.classList.add('drift'); });
+  var track = $('.marquee .track'), lastS = scrollY, boost = 0, ticking = false;
+  var frame = function () {
+    ticking = false;
+    var h = document.documentElement.scrollHeight - innerHeight, p = h > 0 ? Math.min(1, scrollY / h) : 0;
+    bar.style.transform = 'scaleX(' + p + ')';
+    top.classList.toggle('on', scrollY > innerHeight * 1.2); top.style.setProperty('--p', p.toFixed(3));
+    if (!reduce) drifts.forEach(function (d) {
+      var r = d.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+      var k = (r.top + r.height / 2 - innerHeight / 2) / (innerHeight / 2 + r.height / 2);
+      d.style.setProperty('--py', (-k * 30).toFixed(1) + 'px');
+    });
+    if (track && !reduce) { boost = Math.min(4, boost + Math.abs(scrollY - lastS) / 60); }
+    lastS = scrollY;
+  };
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }, { passive: true });
+  addEventListener('resize', frame); frame();
+  if (track && !reduce && track.getAnimations) {
+    (function spin() { var an = track.getAnimations()[0]; if (an) { boost *= .94; an.playbackRate = 1 + boost; } requestAnimationFrame(spin); })();
+  }
+  // A soft light follows the cursor across dark sections
+  if (fine && !reduce) $$('.night, .plum, .chapter, .series, .ftr').forEach(function (sec) {
+    sec.classList.add('glow');
+    sec.addEventListener('pointermove', function (e) { var r = sec.getBoundingClientRect(); sec.style.setProperty('--mx', (e.clientX - r.left) + 'px'); sec.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+    sec.addEventListener('pointerleave', function () { sec.style.setProperty('--mx', '-999px'); });
+  });
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');
   if (vids.length) {

@@ -811,3 +811,29 @@ main:focus { outline: none; }
 .creator .spread-2 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 100px); align-items: center; }
 .creator .cr-img .vid { aspect-ratio: 4 / 5; }
 @media (max-width: 900px) { .creator .spread-2 { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---- refinements ---- */
+/* reading progress */
+.progress { position: fixed; left: 0; top: 0; height: 2px; width: 100%; z-index: 120; background: linear-gradient(90deg, var(--gold), var(--gold-2)); transform-origin: left; transform: scaleX(0); pointer-events: none; }
+/* photos drift inside their frames */
+.drift img { height: calc(100% + 70px) !important; margin-top: -35px; translate: 0 var(--py, 0px); will-change: translate; }
+/* gold sheen across buttons */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::after { content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 40%; background: linear-gradient(100deg, transparent, rgba(255, 246, 225, .55), transparent); transform: skewX(-18deg); transition: left .9s var(--ease); pointer-events: none; z-index: 1; }
+.btn:hover::after { left: 130%; }
+/* a slow shimmer on gold italic words in the large headings */
+.h-xl em .w > span, .phero h1 em .w > span, .chapter h2 em .w > span, .closing h2 em .w > span { background: linear-gradient(100deg, var(--gold-2) 0%, #FFF3D6 18%, var(--gold-2) 36%, var(--gold) 60%, var(--gold-2) 100%); background-size: 300% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: foil 9s ease-in-out infinite; }
+@keyframes foil { 0%, 100% { background-position: 100% 0; } 50% { background-position: 0 0; } }
+/* soft light that follows the cursor on dark sections */
+.night, .plum, .ftr, .chapter, .series { --mx: -999px; --my: -999px; }
+.glow::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(420px circle at var(--mx) var(--my), rgba(231, 205, 150, .07), transparent 60%); z-index: 0; }
+.glow > .wrap { position: relative; z-index: 1; }
+/* back to top */
+.to-top { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: max(16px, env(safe-area-inset-bottom, 0px)); z-index: 80; width: 52px; height: 52px; border-radius: 50%; border: 1px solid rgba(231, 205, 150, .45); background: rgba(20, 8, 34, .82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); color: var(--gold-2); display: grid; place-items: center; cursor: pointer; opacity: 0; transform: translateY(12px); pointer-events: none; transition: opacity .5s, transform .6s var(--ease), border-color .3s; }
+.to-top.on { opacity: 1; transform: none; pointer-events: auto; }
+.to-top:hover { border-color: var(--gold-2); }
+.to-top svg { width: 18px; height: 18px; }
+.to-top circle { fill: none; stroke: var(--gold-2); stroke-width: 1.5; stroke-dasharray: 151; stroke-dashoffset: calc(151 - 151 * var(--p, 0)); transform: rotate(-90deg); transform-origin: center; }
+.to-top .ring { position: absolute; inset: -1px; width: calc(100% + 2px); height: calc(100% + 2px); }
+@media (prefers-reduced-motion: reduce) { .h-xl em .w > span, .phero h1 em .w > span, .chapter h2 em .w > span, .closing h2 em .w > span { animation: none; } .drift img { translate: none; } }
+.glow { position: relative; }
