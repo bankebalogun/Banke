@@ -808,3 +808,6 @@ main:focus { outline: none; }
 /* more menu items: switch to the drawer a little earlier */
 @media (max-width: 1240px) { .hdr nav { display: none; } .menu-btn { display: inline-block; } }
 .plum .rows dt, .night .rows dt { color: var(--gold-2); }
+.creator .spread-2 { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 100px); align-items: center; }
+.creator .cr-img .vid { aspect-ratio: 4 / 5; }
+@media (max-width: 900px) { .creator .spread-2 { grid-template-columns: minmax(0, 1fr); } }
