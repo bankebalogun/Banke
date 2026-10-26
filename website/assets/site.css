@@ -684,3 +684,8 @@ main:focus { outline: none; }
 .host { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 100px); align-items: center; }
 .host-img .rv-img { aspect-ratio: 4 / 5; }
 @media (max-width: 900px) { .host { grid-template-columns: minmax(0, 1fr); } .steps.dark { grid-template-columns: minmax(0, 1fr); } }
+/* home hero film: keep skin tones natural, darken only where the words sit */
+.hero .media video.hv { object-position: 50% 30%; }
+.hero .tint::before { opacity: .22; }
+.hero .tint { background: linear-gradient(180deg, rgba(20, 8, 34, .5) 0%, rgba(20, 8, 34, .08) 35%, rgba(20, 8, 34, .2) 60%, rgba(20, 8, 34, .9) 100%), linear-gradient(90deg, rgba(20, 8, 34, .55) 0%, rgba(20, 8, 34, 0) 60%); }
+.hero .flare { display: none; }

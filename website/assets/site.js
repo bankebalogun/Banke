@@ -216,6 +216,12 @@
       if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); else done();
     });
   });
+  // Home: a full-screen film of Banke, wide or tall to suit the screen
+  var hv = $('.hero video.hv');
+  if (hv && !reduce && !(navigator.connection && navigator.connection.saveData)) {
+    hv.src = hv.getAttribute(innerWidth / innerHeight < .9 ? 'data-tall' : 'data-wide');
+    hv.muted = true; var hp = hv.play(); if (hp && hp.catch) hp.catch(function () {});
+  }
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');
   if (vids.length) {
