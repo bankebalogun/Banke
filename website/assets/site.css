@@ -551,3 +551,9 @@ figure.cap-fig figcaption::before, .interlude figcaption::before { content: ""; 
 .form .btn[disabled] { opacity: .5; cursor: not-allowed; }
 .thanks { display: grid; gap: 14px; padding: 40px 0; outline: none; }
 .thanks p { font: 400 clamp(22px, 2.2vw, 30px)/1.4 var(--display); }
+.gaps { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); border-top: 1px solid var(--line-d); }
+.gaps li { padding-top: 30px; display: grid; gap: 12px; align-content: start; }
+.gaps .n { font: italic 400 20px/1 var(--display); color: var(--gold); }
+.gaps h3 { font-size: clamp(26px, 2.4vw, 36px); }
+.gaps p { color: var(--mute-d); }
+@media (max-width: 860px) { .gaps { grid-template-columns: minmax(0, 1fr); } }
