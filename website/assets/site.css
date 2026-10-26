@@ -743,3 +743,25 @@ main:focus { outline: none; }
 #post .back { display: inline-block; margin: 0 0 30px; }
 #post .prose + .back { margin: 30px 0 0; }
 @media (max-width: 800px) { .posts { grid-template-columns: minmax(0, 1fr); } .entry.lead { grid-template-columns: minmax(0, 1fr); } }
+
+/* Portfolio chapters: one clear band per chapter */
+.chap-nav { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 34px; max-width: 560px; }
+.chap-nav a { display: grid; gap: 6px; padding: 16px 18px; min-height: 44px; border: 1px solid var(--line-d); text-decoration: none; font: 400 clamp(17px, 1.5vw, 20px)/1.2 var(--display); transition: border-color .3s, background-color .3s, color .3s; }
+.chap-nav a span { font: italic 400 14px/1 var(--display); color: var(--gold-2); }
+.chap-nav a:hover { background: var(--gold-2); border-color: var(--gold-2); color: var(--night); }
+.chap-nav a:hover span { color: var(--night); }
+.chapter { position: relative; padding: clamp(110px, 14vw, 200px) 0 clamp(70px, 8vw, 110px); background: linear-gradient(180deg, var(--night), var(--royal)); text-align: center; overflow: hidden; scroll-margin-top: 0; }
+.chapter::before { content: ""; position: absolute; left: 50%; top: 0; width: 1px; height: clamp(60px, 8vw, 110px); background: linear-gradient(180deg, transparent, var(--gold-2)); }
+.chapter .c-n { display: block; font: italic 400 clamp(22px, 2vw, 30px)/1 var(--display); color: var(--gold-2); letter-spacing: .1em; margin-bottom: 18px; }
+.chapter .h-xl { font-size: clamp(58px, 10vw, 150px); line-height: .92; }
+.chapter .lede { margin: 26px auto 0; }
+.chapter .series-nav { justify-content: center; }
+.outings { padding-top: 20px; }
+.outings .filters { margin-bottom: 30px; }
+.out-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.out-strip a { display: block; aspect-ratio: 3 / 4; overflow: hidden; }
+.out-strip img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
+.out-strip a:hover img { transform: scale(1.05); }
+@media (max-width: 560px) { .chap-nav { grid-template-columns: minmax(0, 1fr); } .chap-nav a { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 12px; } }
+.chapter { background: radial-gradient(70% 90% at 50% 100%, rgba(91, 44, 143, .45), rgba(20, 8, 34, 0) 70%), var(--night); }
+.chapter .c-n { font: 400 13px/1 var(--body); letter-spacing: .32em; text-transform: uppercase; }

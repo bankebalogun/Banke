@@ -318,7 +318,8 @@
 
   // Filters and lightbox
   var fb = $$('.filters button'), tiles = $$('.pf button');
-  fb.forEach(function (b) { b.addEventListener('click', function () { var k = b.getAttribute('data-f'); fb.forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); tiles.forEach(function (t) { t.hidden = !(k === 'all' || t.getAttribute('data-c') === k); }); }); });
+  var scope = function (el) { return el.closest('[data-gallery]') || el.closest('section') || document; };
+  fb.forEach(function (b) { b.addEventListener('click', function () { var k = b.getAttribute('data-f'), g = scope(b); fb.forEach(function (o) { if (scope(o) === g) o.setAttribute('aria-pressed', o === b); }); $$('.pf button', g).forEach(function (t) { t.hidden = !(k === 'all' || t.getAttribute('data-c') === k); }); }); });
   if (tiles.length) {
     var box, im, ct, at = 0, vis = [];
     var show = function (i) {
@@ -333,7 +334,7 @@
     };
     tiles.forEach(function (t) {
       t.addEventListener('click', function () {
-        vis = tiles.filter(function (x) { return !x.hidden; });
+        var g = t.closest('[data-gallery]'); vis = tiles.filter(function (x) { return !x.hidden && x.closest('[data-gallery]') === g; });
         box = document.createElement('div'); box.className = 'lightbox'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Photo viewer');
         box.innerHTML = '<img alt=""><span class="lb ct"></span><button class="lb x" type="button">Close</button><button class="lb pv" type="button" aria-label="Previous photo">&#8592;</button><button class="lb nx" type="button" aria-label="Next photo">&#8594;</button>';
         im = $('img', box); ct = $('.ct', box);
