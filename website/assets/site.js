@@ -297,6 +297,30 @@
     sec.addEventListener('pointermove', function (e) { var r = sec.getBoundingClientRect(); sec.style.setProperty('--mx', (e.clientX - r.left) + 'px'); sec.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
     sec.addEventListener('pointerleave', function () { sec.style.setProperty('--mx', '-999px'); });
   });
+  // Photos lean toward the cursor
+  if (fine && !reduce) $$('.pf button, .lb-card .lb-img, .shot, .entry .ei, .out-strip a').forEach(function (el) {
+    el.classList.add('tilt');
+    el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; el.classList.add('live'); el.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg'); el.style.setProperty('--rx', (-y * 7).toFixed(2) + 'deg'); });
+    el.addEventListener('pointerleave', function () { el.classList.remove('live'); el.style.setProperty('--ry', '0deg'); el.style.setProperty('--rx', '0deg'); });
+  });
+  // Venue names show a photo that follows the cursor
+  if (fine && !reduce) $$('.venues.peek').forEach(function (ul) {
+    var box = document.createElement('div'); box.className = 'peek-img'; box.setAttribute('aria-hidden', 'true'); box.innerHTML = '<img alt="">'; document.body.appendChild(box);
+    var im = $('img', box);
+    $$('a[data-peek]', ul).forEach(function (a) {
+      a.addEventListener('pointerenter', function () { im.src = a.getAttribute('data-peek'); box.classList.add('on'); });
+      a.addEventListener('pointerleave', function () { box.classList.remove('on'); });
+      a.addEventListener('pointermove', function (e) { box.style.setProperty('--x', (e.clientX + 60) + 'px'); box.style.setProperty('--y', (e.clientY - 230) + 'px'); });
+    });
+  });
+  // Gold lines under the labels and the footer name, drawn as they come into view
+  if ('IntersectionObserver' in window) {
+    var kio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add(e.target.classList.contains('big') ? 'in' : 'drawn'); kio.unobserve(e.target); } }); }, { threshold: .6 });
+    $$('.kick, .ftr .big').forEach(function (k) { if (reduce) k.classList.add(k.classList.contains('big') ? 'in' : 'drawn'); else kio.observe(k); });
+  }
+  // The opening name recedes as you scroll
+  var hh = $('.hero h1');
+  if (hh && !reduce) addEventListener('scroll', function () { var v = Math.min(1, scrollY / (innerHeight * .8)); hh.style.setProperty('--hs', v.toFixed(3)); }, { passive: true });
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');
   if (vids.length) {
