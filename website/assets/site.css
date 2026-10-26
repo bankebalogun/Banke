@@ -902,3 +902,6 @@ main:focus { outline: none; }
 @media (max-width: 640px) { .hw-body .pillars { grid-template-columns: minmax(0, 1fr); } }
 .hw-body .posts { grid-template-columns: minmax(0, 1fr); }
 .hw-body .entry.lead { grid-template-columns: minmax(0, 1fr); }
+/* four tabs fit again: the full menu returns above 1080px */
+@media (min-width: 1081px) { .hdr nav { display: flex; } .hdr .menu-btn { display: none; } }
+.drawer .foot a { color: var(--gold-2); text-decoration: none; }
