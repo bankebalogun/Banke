@@ -27,8 +27,8 @@
     $$('a', drawer).forEach(function (a) { a.addEventListener('click', function () { drawer.classList.remove('open'); }); });
   }
 
-  // Custom cursor with labels
-  if (fine && !reduce) {
+  // Custom cursor and magnetic buttons are off in the quiet edition
+  if (false) {
     var cur = document.createElement('div'); cur.className = 'cursor'; cur.innerHTML = '<span></span>'; document.body.appendChild(cur);
     var lab = $('span', cur), x = innerWidth / 2, y = innerHeight / 2, cx = x, cy = y;
     addEventListener('mousemove', function (e) { x = e.clientX; y = e.clientY; cur.classList.add('on'); }, { passive: true });
