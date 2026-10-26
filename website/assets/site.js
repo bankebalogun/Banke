@@ -216,11 +216,40 @@
       if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); else done();
     });
   });
-  // Home: a full-screen film of Banke, wide or tall to suit the screen
-  var hv = $('.hero video.hv');
-  if (hv && !reduce && !(navigator.connection && navigator.connection.saveData)) {
-    hv.src = hv.getAttribute(innerWidth / innerHeight < .9 ? 'data-tall' : 'data-wide');
-    hv.muted = true; var hp = hv.play(); if (hp && hp.catch) hp.catch(function () {});
+  // Home: a slow film of opera houses, ballet and museums
+  var film = $('.hero .film');
+  if (film) {
+    var fr = $$('img', film), fn = $('.reel-n b'), fi = 0;
+    var load = function (im) { if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); } };
+    load(fr[1]);
+    if (!reduce) setInterval(function () {
+      var cur = fr[fi]; fi = (fi + 1) % fr.length; var nx = fr[fi];
+      load(nx); load(fr[(fi + 1) % fr.length]);
+      nx.classList.remove('on'); void nx.offsetWidth; nx.classList.add('on');
+      setTimeout(function () { cur.classList.remove('on'); }, 2600);
+      if (fn) fn.textContent = String(fi + 1).padStart(2, '0');
+    }, 8000);
+  }
+  // Gold dust drifting up through the light
+  var dust = $('.hero canvas.dust');
+  if (dust && !reduce && dust.getContext) {
+    var dc = dust.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2), motes = [], dw, dh, live = true;
+    var size = function () { dw = dust.clientWidth; dh = dust.clientHeight; dust.width = dw * dpr; dust.height = dh * dpr; dc.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    size(); addEventListener('resize', size);
+    var count = innerWidth < 700 ? 34 : 70;
+    for (var m = 0; m < count; m++) motes.push({ x: Math.random() * dw, y: Math.random() * dh, r: .4 + Math.random() * 1.6, v: .12 + Math.random() * .35, d: Math.random() * 6.28, a: .25 + Math.random() * .6 });
+    new IntersectionObserver(function (es) { live = es[0].isIntersecting; }).observe(dust);
+    (function draw(t) {
+      requestAnimationFrame(draw); if (!live) return;
+      dc.clearRect(0, 0, dw, dh);
+      for (var q = 0; q < motes.length; q++) {
+        var o = motes[q]; o.y -= o.v; o.x += Math.sin(t / 2600 + o.d) * .25;
+        if (o.y < -6) { o.y = dh + 6; o.x = Math.random() * dw; }
+        var tw = .55 + .45 * Math.sin(t / 700 + o.d * 3);
+        dc.beginPath(); dc.arc(o.x, o.y, o.r, 0, 6.283); dc.fillStyle = 'rgba(240,214,160,' + (o.a * tw).toFixed(3) + ')';
+        dc.shadowColor = 'rgba(231,205,150,.9)'; dc.shadowBlur = 6 * o.r; dc.fill();
+      }
+    })(0);
   }
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');

@@ -37,6 +37,8 @@
     });
   };
 
+  window.bbWix = wixRequest; // shared with the Journal
+
   // ---- the schema, flattened (forms-core.ts) ----
   var INPUT_BLOCK = { STRING: 'stringOptions', NUMBER: 'numberOptions', BOOLEAN: 'booleanOptions', ARRAY: 'arrayOptions' };
   var COMPONENT_BLOCK = { TEXT_INPUT: 'textInputOptions', PHONE_INPUT: 'phoneInputOptions', NUMBER_INPUT: 'numberInputOptions', CHECKBOX: 'checkboxOptions', CHECKBOX_GROUP: 'checkboxGroupOptions', RADIO_GROUP: 'radioGroupOptions', DROPDOWN: 'dropdownOptions', TAGS: 'tagsOptions', DATE_PICKER: 'datePickerOptions' };
