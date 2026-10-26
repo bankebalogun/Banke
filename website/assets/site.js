@@ -219,7 +219,8 @@
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');
   if (vids.length) {
-    if (reduce) vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    var saveData = navigator.connection && navigator.connection.saveData;
+    if (reduce || saveData) vids.forEach(function (v) { v.pause(); });
     else if ('IntersectionObserver' in window) {
       var vio = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); }); }, { threshold: .15 });
       vids.forEach(function (v) { v.muted = true; vio.observe(v); });
