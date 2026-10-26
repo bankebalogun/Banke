@@ -864,3 +864,36 @@ main:focus { outline: none; }
 .hero h1 { transform: translate3d(0, calc(var(--hs, 0) * -40px), 0) scale(calc(1 - var(--hs, 0) * .06)); letter-spacing: calc(-.035em + var(--hs, 0) * .04em); transform-origin: left bottom; }
 @media (prefers-reduced-motion: reduce) { .tilt { transform: none !important; } .ftr .big b span, .ftr .big i { transform: none; opacity: 1; } .hero h1 { transform: none; } }
 .closing .kick::after, .quote .kick::after, .posts .empty .kick::after { margin-inline: auto; transform-origin: center; background: linear-gradient(90deg, transparent, var(--gold-2), transparent); }
+
+/* The Encore Society */
+.encore-hero h1 { font-size: clamp(56px, 10.5vw, 180px); }
+.encore-hero .e-kick { font: 400 12px/1 var(--body); letter-spacing: .32em; text-transform: uppercase; color: var(--gold-2); margin-bottom: 6px; }
+.what .wrap { max-width: 1120px; }
+.what-p { font: 400 clamp(28px, 3.4vw, 50px)/1.25 var(--display); margin-top: 10px; }
+.what-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(20px, 3vw, 44px); margin: clamp(44px, 6vw, 70px) 0 0; }
+.what-facts div { border-top: 1px solid var(--line-l); padding-top: 22px; }
+.what-facts dt { font: 400 12px/1 var(--body); letter-spacing: .28em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.what-facts dd { margin: 0; color: var(--mute-l); font-size: 17px; }
+.what-q { margin-top: clamp(44px, 6vw, 70px); font: italic 400 clamp(20px, 1.8vw, 26px)/1.5 var(--display); color: var(--ink); max-width: 46ch; }
+.what-q span { display: block; margin-top: 12px; font: 400 13px/1 var(--body); font-style: normal; letter-spacing: .1em; color: var(--mute-l); }
+@media (max-width: 760px) { .what-facts { grid-template-columns: minmax(0, 1fr); gap: 20px; } }
+/* sample calendar, set like a printed invitation */
+.cal { margin: clamp(50px, 7vw, 90px) auto 0; max-width: 620px; }
+.cal figcaption { text-align: center; font: 400 12px/1 var(--body); letter-spacing: .28em; text-transform: uppercase; color: var(--mute-l); margin-bottom: 18px; }
+.cal-card { position: relative; background: #FBF7F0; color: var(--ink); padding: clamp(30px, 5vw, 50px) clamp(22px, 5vw, 54px); box-shadow: 0 40px 80px -40px rgba(37, 16, 64, .45); transform: rotate(-.6deg); transition: transform .8s var(--ease); }
+.cal-card:hover { transform: rotate(0) translateY(-4px); }
+.cal-card::before { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(132, 98, 47, .5); pointer-events: none; }
+.cal-card::after { content: ""; position: absolute; inset: 15px; border: 1px solid rgba(132, 98, 47, .22); pointer-events: none; }
+.cal-h { text-align: center; margin-bottom: 26px; }
+.cal-h b { display: block; font: 400 clamp(22px, 2.4vw, 30px)/1.1 var(--display); letter-spacing: .12em; text-transform: uppercase; }
+.cal-h span { display: block; font: 400 clamp(28px, 3vw, 38px)/1 var(--script); color: var(--gold); margin-top: 6px; }
+.cal-card ol { list-style: none; padding: 0; margin: 0; }
+.cal-card li { display: grid; grid-template-columns: 96px minmax(0, 1fr) auto; gap: 14px; align-items: baseline; padding: 14px 0; border-top: 1px solid rgba(132, 98, 47, .25); }
+.cal-card li:last-child { border-bottom: 1px solid rgba(132, 98, 47, .25); }
+.cal-card .ck { font: italic 400 16px/1.2 var(--display); color: var(--gold); }
+.cal-card .cv { font: 400 18px/1.25 var(--display); }
+.cal-card .cv small { display: block; font: 400 13px/1.4 var(--body); color: var(--mute-l); margin-top: 2px; }
+.cal-card .cd { font: 400 12px/1 var(--body); letter-spacing: .14em; text-transform: uppercase; color: var(--mute-l); }
+.cal-f { text-align: center; margin-top: 24px; font: italic 400 16px/1.4 var(--display); color: var(--mute-l); }
+@media (max-width: 560px) { .cal-card li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+@media (prefers-reduced-motion: reduce) { .cal-card { transform: none; } }
