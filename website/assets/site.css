@@ -897,3 +897,8 @@ main:focus { outline: none; }
 .cal-f { text-align: center; margin-top: 24px; font: italic 400 16px/1.4 var(--display); color: var(--mute-l); }
 @media (max-width: 560px) { .cal-card li { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
 @media (prefers-reduced-motion: reduce) { .cal-card { transform: none; } }
+/* Her World: content chapter */
+.hw-body .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; }
+@media (max-width: 640px) { .hw-body .pillars { grid-template-columns: minmax(0, 1fr); } }
+.hw-body .posts { grid-template-columns: minmax(0, 1fr); }
+.hw-body .entry.lead { grid-template-columns: minmax(0, 1fr); }

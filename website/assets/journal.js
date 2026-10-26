@@ -41,7 +41,7 @@
   };
 
   var slug = new URLSearchParams(location.search).get('p');
-  if (slug) {
+  if (slug && one) {
     list.hidden = true; one.hidden = false;
     window.bbWix('/blog/v3/posts/slugs/' + encodeURIComponent(slug) + '?fieldsets=RICH_CONTENT', 'GET').then(function (r) {
       var p = r.post; document.title = p.title + ' · Banke Balogun';
@@ -53,6 +53,7 @@
   window.bbWix('/blog/v3/posts?paging.limit=50', 'GET').then(function (r) {
     var ps = r.posts || [];
     if (!ps.length) return;
+    if (list.hasAttribute('data-in-world')) { var ch = list.closest('.ch'); if (ch) ch.hidden = false; var li = document.querySelector('[data-journal]'); if (li) li.hidden = false; }
     list.innerHTML = ps.map(function (p, i) {
       var c = cover(p);
       return '<a class="entry' + (i === 0 ? ' lead' : '') + '" href="' + link(p) + '" data-cursor="Read">' + (c ? '<div class="ei"><img src="' + esc(c) + '" alt="" loading="lazy"></div>' : '') + '<div class="et"><p class="meta">' + date(p.firstPublishedDate) + (p.minutesToRead ? ' · ' + p.minutesToRead + ' min read' : '') + '</p><h2>' + esc(p.title) + '</h2><p>' + esc(p.excerpt || '') + '</p><span class="ln">Read ' + '&rarr;</span></div></a>';
