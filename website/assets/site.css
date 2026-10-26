@@ -765,3 +765,46 @@ main:focus { outline: none; }
 @media (max-width: 560px) { .chap-nav { grid-template-columns: minmax(0, 1fr); } .chap-nav a { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 12px; } }
 .chapter { background: radial-gradient(70% 90% at 50% 100%, rgba(91, 44, 143, .45), rgba(20, 8, 34, 0) 70%), var(--night); }
 .chapter .c-n { font: 400 13px/1 var(--body); letter-spacing: .32em; text-transform: uppercase; }
+
+/* The intersection (from Banke's own design): three worlds, one overlap */
+.intersect .i-head { text-align: center; max-width: 980px; margin: 0 auto clamp(40px, 6vw, 70px); }
+.intersect .tap { font: 400 12px/1 var(--body); letter-spacing: .3em; text-transform: uppercase; color: var(--mute-l); margin-top: 22px; }
+.intersect .i-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(30px, 6vw, 90px); align-items: center; }
+.venn { position: relative; width: min(100%, 460px); aspect-ratio: 1 / 1; margin: 0 auto; }
+.venn .c { position: absolute; width: 58%; aspect-ratio: 1 / 1; border-radius: 50%; border: 1px solid rgba(132, 98, 47, .55); cursor: pointer; display: grid; padding: 0; color: var(--ink); font: 400 clamp(17px, 1.7vw, 22px)/1.15 var(--display); mix-blend-mode: multiply; transition: transform .8s var(--ease), background-color .5s, box-shadow .5s; animation: breathe 7s ease-in-out infinite alternate; }
+.venn .c span { position: absolute; max-width: 6em; text-align: center; }
+.venn .c-arts { left: 0; top: 0; background: rgba(206, 160, 170, .55); }
+.venn .c-arts span { left: 22%; top: 30%; }
+.venn .c-tech { right: 0; top: 0; background: rgba(231, 205, 150, .7); animation-delay: -2.3s; }
+.venn .c-tech span { right: 20%; top: 30%; }
+.venn .c-fashion { left: 21%; bottom: 0; background: rgba(176, 140, 190, .5); animation-delay: -4.6s; }
+.venn .c-fashion span { left: 50%; bottom: 24%; transform: translateX(-50%); }
+.venn .core { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -38%); font: 400 clamp(26px, 2.6vw, 36px)/1 var(--script); color: var(--plum); pointer-events: none; transition: opacity .5s; }
+@keyframes breathe { from { transform: scale(1); } to { transform: scale(1.035); } }
+.venn .c:hover { box-shadow: 0 0 0 6px rgba(231, 205, 150, .25); }
+.venn .c[aria-pressed="true"] { transform: scale(1.08); background-color: rgba(201, 160, 98, .75); z-index: 2; animation: none; }
+.intersect.picked .core { opacity: .25; }
+.intersect .i-copy h3, .intersect .i-copy .i-p { transition: opacity .25s; }
+.intersect .i-k { font: 400 12px/1 var(--body); letter-spacing: .3em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.intersect .i-copy .i-p { margin: 16px 0 26px; color: var(--mute-l); max-width: 46ch; font-size: 18px; }
+@media (max-width: 860px) { .intersect .i-grid { grid-template-columns: minmax(0, 1fr); } .intersect .i-copy { text-align: center; } .intersect .i-copy .i-p { margin-inline: auto; } }
+@media (prefers-reduced-motion: reduce) { .venn .c { animation: none; } }
+
+/* Content pillars */
+.pillars { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0 clamp(18px, 2vw, 30px); }
+.pillars > li { border-top: 1px solid var(--line-d); padding: 28px 0 10px; display: grid; gap: 12px; align-content: start; transition: border-color .4s; }
+.pillars > li:hover { border-top-color: var(--gold-2); }
+.pillars .n { font: italic 400 18px/1 var(--display); color: var(--gold-2); }
+.pillars h3 { font-size: clamp(22px, 1.8vw, 28px); }
+.pillars p { color: var(--mute-d); font-size: 15px; }
+.pillars ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 10px; }
+.pillars ul li { font-size: 14px; color: var(--ivory); padding-left: 16px; position: relative; line-height: 1.5; }
+.pillars ul li::before { content: "✦"; position: absolute; left: 0; top: 1px; font-size: 9px; color: var(--gold-2); }
+@media (max-width: 1100px) { .pillars { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; } }
+@media (max-width: 640px) { .pillars { grid-template-columns: minmax(0, 1fr); } }
+.steps:has(li:nth-child(4)) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) { .steps:has(li:nth-child(4)) { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .steps:has(li:nth-child(4)) { grid-template-columns: minmax(0, 1fr); } }
+/* more menu items: switch to the drawer a little earlier */
+@media (max-width: 1240px) { .hdr nav { display: none; } .menu-btn { display: inline-block; } }
+.plum .rows dt, .night .rows dt { color: var(--gold-2); }

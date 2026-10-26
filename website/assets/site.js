@@ -251,6 +251,19 @@
       }
     })(0);
   }
+  // The intersection: tap a world to read about it, tap again for the overlap
+  $$('.intersect').forEach(function (sec) {
+    var bs = $$('.venn .c', sec), h = $('.i-copy h3', sec), p = $('.i-copy .i-p', sec), cur = null;
+    var show = function (k) {
+      cur = k; bs.forEach(function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-w') === k); });
+      sec.classList.toggle('picked', !!k); sec.setAttribute('data-w', k || '');
+      var t = k && $('template[data-w="' + k + '"]', sec);
+      var ht = t ? t.content.querySelector('b').textContent : h.getAttribute('data-default'), pt = t ? t.content.querySelector('i').textContent : p.getAttribute('data-default');
+      p.style.opacity = 0; h.style.opacity = 0;
+      setTimeout(function () { h.textContent = ht; p.textContent = pt; h.style.opacity = 1; p.style.opacity = 1; }, reduce ? 0 : 220);
+    };
+    bs.forEach(function (b) { b.addEventListener('click', function () { show(cur === b.getAttribute('data-w') ? null : b.getAttribute('data-w')); }); });
+  });
   // Clips play only while on screen (saves battery); reduced motion shows the poster
   var vids = $$('.vid video');
   if (vids.length) {
