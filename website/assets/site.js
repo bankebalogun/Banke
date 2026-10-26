@@ -200,6 +200,15 @@
       if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); else done();
     });
   });
+  // Clips play only while on screen (saves battery); reduced motion shows the poster
+  var vids = $$('.vid video');
+  if (vids.length) {
+    if (reduce) vids.forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
+    else if ('IntersectionObserver' in window) {
+      var vio = new IntersectionObserver(function (es) { es.forEach(function (e) { var v = e.target; if (e.isIntersecting) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause(); }); }, { threshold: .15 });
+      vids.forEach(function (v) { v.muted = true; vio.observe(v); });
+    }
+  }
   // Speaker reel plays in place
   $$('.reel').forEach(function (r) {
     r.addEventListener('click', function (e) {
@@ -277,3 +286,9 @@
     });
   }
 })();
+
+// two-photo series: size each photo by its aspect ratio so the row lines up
+document.querySelectorAll('.pf.s-2 img').forEach(function (img) {
+  function fit() { if (img.naturalWidth) img.parentNode.style.flexGrow = (img.naturalWidth / img.naturalHeight).toFixed(3); }
+  if (img.complete) fit(); else img.addEventListener('load', fit);
+});
