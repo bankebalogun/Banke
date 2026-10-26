@@ -158,6 +158,38 @@
     addEventListener('pageshow', function (e) { if (e.persisted) pt.className = 'pt'; });
   }
 
+
+  // Opening: a slow sequence of opera houses
+  var seq = $('.seq');
+  if (seq && !reduce) {
+    var si = $$('img', seq), wh = $$('.hero .where span'), at = 0;
+    si.forEach(function (im) { im.loading = 'eager'; });
+    setInterval(function () {
+      si[at].classList.remove('on'); at = (at + 1) % si.length;
+      void si[at].offsetWidth; si[at].classList.add('on');
+      wh.forEach(function (w) { w.style.transform = 'translateY(' + (-100 * at) + '%)'; });
+    }, 7000);
+  }
+  // Lookbook: scrolls sideways while the section is pinned
+  var lb = $('.lookbook'), lt = lb && $('.lb-track'), lbar = lb && $('.lb-bar i');
+  var wideLb = matchMedia('(min-width: 901px)');
+  var sizeLb = function () {
+    if (!lb) return;
+    if (!wideLb.matches || reduce) { lb.style.height = ''; lt.style.transform = ''; return; }
+    var extra = lt.scrollWidth - innerWidth; lb.style.height = (innerHeight + Math.max(0, extra)) + 'px'; moveLb();
+  };
+  var moveLb = function () {
+    if (!lb || !wideLb.matches || reduce) return;
+    var r = lb.getBoundingClientRect(), extra = lt.scrollWidth - innerWidth;
+    var p = Math.min(1, Math.max(0, -r.top / Math.max(1, r.height - innerHeight)));
+    lt.style.transform = 'translate3d(' + (-extra * p) + 'px,0,0)'; if (lbar) lbar.style.transform = 'scaleX(' + p + ')';
+  };
+  if (lb) { addEventListener('resize', sizeLb); addEventListener('scroll', moveLb, { passive: true }); addEventListener('load', sizeLb); sizeLb(); }
+  // Signature draws itself
+  if ('IntersectionObserver' in window) {
+    var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); sio.unobserve(e.target); } }); }, { threshold: .4 });
+    $$('.sig').forEach(function (s) { if (reduce) s.classList.add('in'); else sio.observe(s); });
+  }
   // Speaker reel plays in place
   $$('.reel').forEach(function (r) {
     r.addEventListener('click', function (e) {
