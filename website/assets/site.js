@@ -260,7 +260,7 @@
   fb.forEach(function (b) { b.addEventListener('click', function () { var k = b.getAttribute('data-f'); fb.forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); tiles.forEach(function (t) { t.hidden = !(k === 'all' || t.getAttribute('data-c') === k); }); }); });
   if (tiles.length) {
     var box, im, ct, at = 0, vis = [];
-    var show = function (i) { at = (i + vis.length) % vis.length; var s = $('img', vis[at]); im.src = s.src; im.alt = s.alt; ct.textContent = (at + 1) + ' / ' + vis.length; };
+    var show = function (i) { at = (i + vis.length) % vis.length; var s = $('img', vis[at]); im.src = s.getAttribute('data-full') || s.src; im.alt = s.alt; ct.textContent = (at + 1) + ' / ' + vis.length; };
     var close = function () { if (box) { box.remove(); box = null; vis[at].focus(); } };
     tiles.forEach(function (t) {
       t.addEventListener('click', function () {
