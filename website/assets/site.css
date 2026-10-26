@@ -539,3 +539,15 @@ figure.cap-fig figcaption::before, .interlude figcaption::before { content: ""; 
 .ftr .credit a { color: inherit; }
 .lookbook .pin { grid-template-columns: minmax(0, 1fr); } .lb-track { min-width: 0; }
 @media (min-width: 901px) { .lb-card { width: min(clamp(240px, 24vw, 360px), calc((100svh - 420px) * .75)); } }
+/* Wix Forms */
+.field .req { color: var(--gold-2); }
+.field .err { font-size: 14px; color: #F2A7A7; min-height: 0; }
+.field .err:empty { display: none; }
+.field .help { font-size: 14px; color: var(--mute-d); }
+.field [aria-invalid="true"] { color: #FFD9D9; }
+.field.check label { display: flex; gap: 12px; align-items: center; font: 300 17px/1.4 var(--body); letter-spacing: 0; color: var(--ivory); }
+.field.sk { height: 74px; background: linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.08), rgba(255,255,255,.03)); background-size: 200% 100%; animation: sk 1.4s linear infinite; border-bottom: 1px solid var(--line-d); }
+@keyframes sk { to { background-position: -200% 0; } }
+.form .btn[disabled] { opacity: .5; cursor: not-allowed; }
+.thanks { display: grid; gap: 14px; padding: 40px 0; outline: none; }
+.thanks p { font: 400 clamp(22px, 2.2vw, 30px)/1.4 var(--display); }

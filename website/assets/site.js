@@ -218,7 +218,7 @@
     });
   });
   // Forms open an email to Banke
-  $$('form.form').forEach(function (f) {
+  $$('form.form:not([data-form-id])').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!f.reportValidity()) return;
