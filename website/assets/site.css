@@ -29,7 +29,7 @@ a { color: inherit; }
 h1, h2, h3, p, ul, ol, dl, figure, blockquote { margin: 0; }
 h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1.04; letter-spacing: -.01em; }
 em { font-style: italic; color: var(--gold-2); }
-.light em { color: var(--violet); }
+.light em, .pearl em { color: var(--violet); }
 ::selection { background: var(--gold-2); color: var(--night); }
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .wrap { max-width: 1380px; margin: 0 auto; padding-left: var(--gl); padding-right: var(--gr); }
@@ -632,4 +632,47 @@ main img { filter: contrast(1.04) saturate(.9) sepia(.07); }
 /* two-photo series: a justified row, both photos the same height */
 .pf.s-2 { columns: auto; display: flex; gap: 18px; align-items: flex-start; }
 .pf.s-2 button { flex: 1 1 0; min-width: 0; margin-bottom: 0; }
-@media (max-width: 560px) { .pf.s-2 { gap: 10px; } }
+@media (max-width: 560px) { .pf.s-2 { display: block; } .pf.s-2 button { margin-bottom: 10px; } }
+/* accessibility */
+.sr { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; }
+.skip { position: fixed; left: 16px; top: 12px; z-index: 200; padding: 12px 18px; background: var(--gold-2); color: var(--night); font: 400 15px/1 var(--body); text-decoration: none; transform: translateY(-160%); transition: transform .4s var(--ease); }
+.skip:focus { transform: none; }
+main:focus { outline: none; }
+/* gold text on ivory and pearl is darkened so it stays readable */
+.light, .pearl { --gold: #85612A; }
+.light :focus-visible, .pearl :focus-visible { outline-color: var(--violet); }
+.offer button:focus-visible, .pl button:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.lb:hover { border-color: var(--gold-2); color: var(--gold-2); }
+.tape-out { display: inline-block; font-size: 13px; color: var(--mute-d); padding: 10px 2px 2px; }
+
+/* interaction refinements */
+.angles li .n { transition: transform .6s var(--ease), color .4s; }
+.angles li h3 { transition: color .4s; }
+.angles li:hover .n { transform: translateX(8px); color: var(--gold-2); }
+.angles li:hover h3 { color: var(--gold-2); }
+.venues .arw { display: inline-block; transition: transform .6s var(--ease); }
+.venues a:hover .arw, .venues a:focus-visible .arw { transform: translateX(6px); }
+.venues a:hover .nm { font-style: italic; }
+.lightbox { animation: none; opacity: 0; transition: opacity .45s var(--ease); }
+.lightbox.on { opacity: 1; }
+.lightbox img { opacity: 0; transform: scale(.985); transition: opacity .5s var(--ease), transform .8s var(--ease); }
+.lightbox img.on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .lightbox, .lightbox img { transition: none; } }
+
+/* mobile: comfortable tap targets (44px) without changing how links look */
+.ln, .ftr nav a, .ftr .base a, .hdr .lockup, .contact .mail, .pl a, .copy.ln { position: relative; }
+.ln::after, .ftr nav a::after, .ftr .base a::after, .hdr .lockup::after, .contact .mail::after, .pl a::after { content: ""; position: absolute; left: -6px; right: -6px; top: 50%; height: 44px; transform: translateY(-50%); }
+.series-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+.pl a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; justify-content: flex-end; }
+@media (max-width: 900px) {
+  .hw-index a { min-height: 44px; align-items: center; }
+  .ftr nav { gap: 6px 26px; }
+  .ftr nav a { display: inline-flex; align-items: center; min-height: 44px; }
+  .ftr .base { gap: 4px 10px; }
+  .drawer li a { padding-block: 2px; }
+  .drawer .top { min-height: 70px; }
+  .drawer ul { gap: 2px; }
+}
+/* lookbook swipe: cards snap with the page gutter, not flush to the edge */
+.lb-track { scroll-padding-inline: var(--gl) var(--gr); overscroll-behavior-x: contain; }
+@media (max-width: 900px) { .lb-card:last-of-type { margin-right: 0; } .lb-end { padding: 0 var(--gr) 0 10px; align-self: center; } }

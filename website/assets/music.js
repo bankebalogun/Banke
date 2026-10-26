@@ -7,7 +7,7 @@
   var IDS = ['K1XMmNNfjSY', 'U-45C9fH2yE'], idx = 0, player = null, ready = false, KEY = 'bb-tape';
   var state = {}; try { state = JSON.parse(sessionStorage.getItem(KEY) || '{}'); } catch (e) {}
   var save = function () { try { sessionStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
-  var setOn = function (on) { tape.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); btn.setAttribute('aria-label', (on ? 'Pause' : 'Play') + ' Romance by Hiroshi Suzuki'); };
+  var setOn = function (on) { tape.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); };
   var loadApi = function (cb) {
     if (window.YT && window.YT.Player) return cb();
     var prev = window.onYouTubeIframeAPIReady; window.onYouTubeIframeAPIReady = function () { if (prev) prev(); cb(); };
@@ -20,7 +20,7 @@
       host: 'https://www.youtube-nocookie.com',
       playerVars: { autoplay: autoplay ? 1 : 0, start: Math.floor(state.t || 0), controls: 1, modestbranding: 1, rel: 0, playsinline: 1 },
       events: {
-        onReady: function (e) { ready = true; e.target.setVolume(60); if (autoplay) e.target.playVideo(); },
+        onReady: function (e) { ready = true; var f = e.target.getIframe && e.target.getIframe(); if (f) f.title = 'Romance by Hiroshi Suzuki, YouTube player'; e.target.setVolume(60); if (autoplay) e.target.playVideo(); },
         onStateChange: function (e) {
           if (e.data === 1) { setOn(true); state.playing = true; save(); }
           if (e.data === 2) { setOn(false); state.playing = false; save(); }

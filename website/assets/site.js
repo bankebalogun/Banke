@@ -25,6 +25,18 @@
   };
   addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
+  // Keep keyboard focus inside an open overlay
+  var trap = function (e, root) {
+    var f = $$('a[href], button:not([disabled])', root).filter(function (x) { return x.offsetParent !== null; });
+    if (!f.length) return;
+    var a = f[0], z = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+    else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+  };
+  // Skip link lands on the content
+  var sk = $('.skip'), mainEl = $('#main');
+  if (sk && mainEl) sk.addEventListener('click', function (e) { e.preventDefault(); mainEl.focus(); mainEl.scrollIntoView(); });
+
   // Drawer
   var drawer = $('#drawer'), mb = $('.menu-btn');
   if (drawer && mb) {
@@ -33,7 +45,11 @@
     mb.addEventListener('click', function () { set(true); });
     $('.close', drawer).addEventListener('click', function () { set(false); mb.focus(); });
     $$('a', drawer).forEach(function (a) { a.addEventListener('click', function () { set(false); }); });
-    addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('open')) { set(false); mb.focus(); } });
+    addEventListener('keydown', function (e) {
+      if (!drawer.classList.contains('open')) return;
+      if (e.key === 'Escape') { set(false); mb.focus(); }
+      if (e.key === 'Tab') trap(e, drawer);
+    });
   }
 
   // Split headings into words that rise into place
@@ -269,8 +285,16 @@
   fb.forEach(function (b) { b.addEventListener('click', function () { var k = b.getAttribute('data-f'); fb.forEach(function (o) { o.setAttribute('aria-pressed', o === b); }); tiles.forEach(function (t) { t.hidden = !(k === 'all' || t.getAttribute('data-c') === k); }); }); });
   if (tiles.length) {
     var box, im, ct, at = 0, vis = [];
-    var show = function (i) { at = (i + vis.length) % vis.length; var s = $('img', vis[at]); im.src = s.getAttribute('data-full') || s.src; im.alt = s.alt; ct.textContent = (at + 1) + ' / ' + vis.length; };
-    var close = function () { if (box) { box.remove(); box = null; vis[at].focus(); } };
+    var show = function (i) {
+      at = (i + vis.length) % vis.length; var s = $('img', vis[at]), url = s.getAttribute('data-full') || s.src;
+      ct.textContent = (at + 1) + ' / ' + vis.length; im.classList.remove('on');
+      var go = function () { im.onload = function () { im.classList.add('on'); }; im.src = url; im.alt = s.alt; if (im.complete) im.classList.add('on'); };
+      if (im.getAttribute('src')) setTimeout(go, reduce ? 0 : 180); else go();
+    };
+    var close = function () {
+      if (!box) return; var b = box; box = null; b.classList.remove('on'); document.documentElement.style.overflow = '';
+      setTimeout(function () { b.remove(); }, reduce ? 0 : 450); vis[at].focus();
+    };
     tiles.forEach(function (t) {
       t.addEventListener('click', function () {
         vis = tiles.filter(function (x) { return !x.hidden; });
@@ -279,9 +303,10 @@
         im = $('img', box); ct = $('.ct', box);
         $('.x', box).onclick = close; $('.pv', box).onclick = function () { show(at - 1); }; $('.nx', box).onclick = function () { show(at + 1); };
         box.addEventListener('click', function (e) { if (e.target === box) close(); });
-        box.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(at - 1); if (e.key === 'ArrowRight') show(at + 1); });
+        box.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); if (e.key === 'ArrowLeft') show(at - 1); if (e.key === 'ArrowRight') show(at + 1); if (e.key === 'Tab') trap(e, box); });
         var sx = 0; box.addEventListener('touchstart', function (e) { sx = e.touches[0].clientX; }, { passive: true }); box.addEventListener('touchend', function (e) { var dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 50) show(at + (dx < 0 ? 1 : -1)); });
-        document.body.appendChild(box); show(vis.indexOf(t)); $('.x', box).focus();
+        document.body.appendChild(box); document.documentElement.style.overflow = 'hidden'; show(vis.indexOf(t)); $('.x', box).focus();
+        requestAnimationFrame(function () { if (box) box.classList.add('on'); });
       });
     });
   }
