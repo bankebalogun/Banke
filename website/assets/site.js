@@ -190,6 +190,16 @@
     var sio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); sio.unobserve(e.target); } }); }, { threshold: .4 });
     $$('.sig').forEach(function (s) { if (reduce) s.classList.add('in'); else sio.observe(s); });
   }
+  // Press: copy a bio with one tap
+  $$('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = $(b.getAttribute('data-copy')), label = b.textContent;
+      if (!t) return;
+      var text = t.innerText.trim();
+      var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = label; }, 1800); };
+      if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {}); else done();
+    });
+  });
   // Speaker reel plays in place
   $$('.reel').forEach(function (r) {
     r.addEventListener('click', function (e) {
