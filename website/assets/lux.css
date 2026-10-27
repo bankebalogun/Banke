@@ -56,7 +56,7 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .chrail:hover .rl { max-width: 220px; opacity: 1; }
 .chrail:hover a:not(.on) .rl { opacity: .7; }
 .chrail a.on .rl { color: var(--gold-2); }
-@media (max-width: 1199px) { .chrail { display: none; } }
+@media (max-width: 1599px) { .chrail { display: none; } }
 
 /* LA clock */
 .la-time { display: inline-flex; align-items: center; gap: 8px; }
@@ -86,3 +86,15 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .light .orn, .pearl .orn { stroke: var(--violet); }
 
 @media (prefers-reduced-motion: reduce) { .rr { transition: none; } .js .phero .rv-img.ph, .js .phero .rv-img.ph img { animation: none; } .js .orn :is(path, line) { stroke-dashoffset: 0; transition: none; } }
+
+/* The BB monogram */
+.mark text { font-family: var(--display); }
+.lockup.with-mark { flex-direction: row; gap: 13px; }
+.lockup.with-mark .mark { width: 31px; height: auto; flex: none; overflow: visible; }
+.lockup.with-mark .wm { display: flex; flex-direction: column; align-items: center; }
+.lockup .mark path:nth-of-type(3) { transition: stroke .5s, opacity .5s; }
+.lockup:hover .mark path:nth-of-type(3) { stroke: #FFF1C9; }
+@media (max-width: 1080px) { .lockup.with-mark .mark { width: 25px; } .lockup.with-mark { gap: 10px; } }
+.curtain .big-mark { width: clamp(74px, 8vw, 112px); height: auto; margin-bottom: 18px; opacity: 0; animation: fadeUp 1s 0s var(--ease) forwards; }
+.ftr .ftr-mark { display: block; width: 58px; height: auto; margin: 0 auto 26px; }
+.pt-mark .mark { width: clamp(56px, 5vw, 76px); height: auto; margin-bottom: 14px; }
