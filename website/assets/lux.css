@@ -13,7 +13,7 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .pt { background: none !important; transform: none !important; transition: none !important; }
 .pt::before, .pt::after { content: ""; position: absolute; top: 0; bottom: 0; width: 50.5%; background:
   linear-gradient(90deg, rgba(0, 0, 0, .35), transparent 18%, rgba(255, 255, 255, .05) 30%, transparent 42%, rgba(0, 0, 0, .3) 56%, transparent 70%, rgba(255, 255, 255, .04) 82%, rgba(0, 0, 0, .35)) 0 0 / 120px 100%,
-  linear-gradient(180deg, #4A1F78, #2A0F47 60%, #170726);
+  linear-gradient(180deg, #5A1422, #3B0A14 60%, #1C0408);
   transition: transform .62s var(--ease-io); }
 .pt::before { left: 0; transform: translateX(-101%); box-shadow: inset -2px 0 0 var(--gold); }
 .pt::after { right: 0; transform: translateX(101%); box-shadow: inset 2px 0 0 var(--gold); }
@@ -29,11 +29,11 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .pt.cover.out .pt-mark { opacity: 0; transition: opacity .25s; }
 
 /* Opera-house arches on the main portraits */
-.meet .ph > .rv-img, .phero .rv-img.ph, .host-img .rv-img { border-radius: 999px 999px 0 0 / 34% 34% 0 0; outline: 1px solid rgba(231, 205, 150, .55); outline-offset: -12px; }
-.phero .rv-img.ph::after, .host-img .rv-img::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(231, 205, 150, .18); pointer-events: none; }
+.meet .ph > .rv-img, .phero .rv-img.ph, .host-img .rv-img { border-radius: 999px 999px 0 0 / 34% 34% 0 0; outline: 1px solid rgba(227, 196, 143, .55); outline-offset: -12px; }
+.phero .rv-img.ph::after, .host-img .rv-img::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 1px rgba(227, 196, 143, .18); pointer-events: none; }
 
 /* Gold foil: a slow sheen across the script and italic words */
-.foil .w > span, .foil:not(.split) { background: linear-gradient(100deg, #B8863B 0%, #E7CD96 22%, #FFF1C9 32%, #C9A062 46%, #E7CD96 64%, #B8863B 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: luxfoil 7s linear infinite; padding: 0 .04em .12em; }
+.foil .w > span, .foil:not(.split) { background: linear-gradient(100deg, #B8863B 0%, #E3C48F 22%, #FFF1C9 32%, #A67C45 46%, #E3C48F 64%, #B8863B 100%) 0 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: luxfoil 7s linear infinite; padding: 0 .04em .12em; }
 @keyframes luxfoil { to { background-position: -260% 0; } }
 
 /* A light sweep across photos on hover */
@@ -42,11 +42,11 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .lb-card:hover .lb-img::after, .ig:hover .ig-img::after, .gather article:hover .rv-img::after, .mgrid .rv-img:hover::after { background-position: 150% 0; }
 
 /* Chapter rail */
-.chrail { position: fixed; right: clamp(14px, 1.6vw, 26px); top: 50%; z-index: 40; transform: translate(14px, -50%); opacity: 0; pointer-events: none; transition: opacity .5s, transform .6s var(--ease); padding: 12px 12px 12px 14px; border-radius: 22px; background: rgba(37, 16, 64, .62); -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2); box-shadow: inset 0 0 0 1px rgba(231, 205, 150, .18); }
+.chrail { position: fixed; right: clamp(14px, 1.6vw, 26px); top: 50%; z-index: 40; transform: translate(14px, -50%); opacity: 0; pointer-events: none; transition: opacity .5s, transform .6s var(--ease); padding: 12px 12px 12px 14px; border-radius: 22px; background: rgba(43, 26, 18, .62); -webkit-backdrop-filter: blur(10px) saturate(1.2); backdrop-filter: blur(10px) saturate(1.2); box-shadow: inset 0 0 0 1px rgba(227, 196, 143, .18); }
 .chrail.show { opacity: 1; transform: translate(0, -50%); pointer-events: auto; }
 .chrail.hide { opacity: 0; pointer-events: none; }
 .chrail ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; justify-items: end; }
-.chrail a { display: flex; align-items: center; gap: 12px; padding: 5px 0; color: #F8F2EA; text-decoration: none; }
+.chrail a { display: flex; align-items: center; gap: 12px; padding: 5px 0; color: #F8F1EA; text-decoration: none; }
 .chrail .rn { font: italic 400 12px/1 var(--display); opacity: .55; transition: opacity .3s; }
 .chrail .rl { font: 400 12px/1 var(--body); letter-spacing: .16em; text-transform: uppercase; max-width: 0; overflow: hidden; white-space: nowrap; opacity: 0; transition: max-width .6s var(--ease), opacity .4s; }
 .chrail a::after { content: ""; width: 18px; height: 1px; background: currentColor; opacity: .5; transition: width .5s var(--ease), opacity .3s; }
@@ -60,8 +60,8 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 
 /* LA clock */
 .la-time { display: inline-flex; align-items: center; gap: 8px; }
-.la-time i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-2); box-shadow: 0 0 0 0 rgba(231, 205, 150, .6); animation: pulse 2.4s infinite; }
-@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(231, 205, 150, 0); } 100% { box-shadow: 0 0 0 0 rgba(231, 205, 150, 0); } }
+.la-time i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-2); box-shadow: 0 0 0 0 rgba(227, 196, 143, .6); animation: pulse 2.4s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(227, 196, 143, 0); } 100% { box-shadow: 0 0 0 0 rgba(227, 196, 143, 0); } }
 
 @media (prefers-reduced-motion: reduce) { .foil .w > span, .foil:not(.split) { animation: none; } .la-time i { animation: none; } }
 
@@ -98,3 +98,9 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .curtain .big-mark { width: clamp(74px, 8vw, 112px); height: auto; margin-bottom: 18px; opacity: 0; animation: fadeUp 1s 0s var(--ease) forwards; }
 .ftr .ftr-mark { display: block; width: 58px; height: auto; margin: 0 auto 26px; }
 .pt-mark .mark { width: clamp(56px, 5vw, 76px); height: auto; margin-bottom: 14px; }
+
+/* Oxblood: the opera-house red, kept for the big moments */
+.quote, .encore-stmt { background: radial-gradient(120% 140% at 50% 0%, #5A1422 0%, #3B0A14 55%, #22060C 100%); }
+.quote p, .encore-stmt p { color: var(--ivory); }
+.quote small, .encore-stmt small { color: var(--gold-2); }
+::selection { background: #7A1F2B; color: var(--ivory); }
