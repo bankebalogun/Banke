@@ -83,4 +83,88 @@
     var oio = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('drawn'); oio.unobserve(e.target); } }); }, { threshold: .6 });
     orns.forEach(function (o) { oio.observe(o); });
   } else orns.forEach(function (o) { o.classList.add('drawn'); });
+  // Ribbons: the press names drift on their own, follow the scroll direction, slow on hover and can be dragged
+  $$('.featured ul').forEach(function (ul) {
+    ul.closest('.featured').classList.add('rib');
+    var rb = document.createElement('div'); rb.className = 'rib-box'; ul.parentNode.insertBefore(rb, ul); rb.appendChild(ul);
+    Array.prototype.slice.call(ul.children).forEach(function (li) { var c = li.cloneNode(true); c.setAttribute('aria-hidden', 'true'); ul.appendChild(c); });
+  });
+  $$('.marquee .track, .featured.rib ul').forEach(function (track) {
+    if (reduce) return;
+    track.style.animation = 'none';
+    var box = track.parentElement, x = 0, dir = 1, boost = 0, hover = false, drag = null, vel = 0, last = performance.now(), lastY = scrollY;
+    box.classList.add('ribbon');
+    var half = function () { return track.scrollWidth / 2; };
+    box.addEventListener('pointerenter', function () { hover = true; });
+    box.addEventListener('pointerleave', function () { hover = false; });
+    box.addEventListener('pointerdown', function (e) { drag = { x: e.clientX, start: x }; vel = 0; box.classList.add('grab'); box.setPointerCapture(e.pointerId); });
+    box.addEventListener('pointermove', function (e) { if (!drag) return; var nx = drag.start + (e.clientX - drag.x); vel = nx - x; x = nx; });
+    var up = function () { if (!drag) return; drag = null; box.classList.remove('grab'); if (Math.abs(vel) > 1) dir = vel < 0 ? 1 : -1; };
+    box.addEventListener('pointerup', up); box.addEventListener('pointercancel', up);
+    addEventListener('scroll', function () { var d = scrollY - lastY; lastY = scrollY; if (d) { dir = d > 0 ? 1 : -1; boost = Math.min(9, boost + Math.abs(d) / 14); } }, { passive: true });
+    (function tick(t) {
+      var dt = Math.min(64, t - last); last = t;
+      if (!drag) { x -= dir * (hover ? .25 : .9 + boost) * dt / 16; x += vel; vel *= .92; }
+      boost *= .93;
+      var h = half(); if (h > 0) { while (x <= -h) x += h; while (x > 0) x -= h; }
+      track.style.transform = 'translate3d(' + x.toFixed(1) + 'px,0,0)';
+      requestAnimationFrame(tick);
+    })(last);
+  });
+
+  // Tabs: arrow keys move between them, one panel shows at a time
+  var tabs = function (list, onShow) {
+    var bs = $$('[role="tab"]', list);
+    var show = function (b, focus) {
+      bs.forEach(function (o) { var on = o === b, pnl = document.getElementById(o.getAttribute('aria-controls')); o.setAttribute('aria-selected', on); o.tabIndex = on ? 0 : -1; if (pnl) { pnl.hidden = !on; pnl.classList.toggle('on', on); } });
+      if (focus) b.focus(); if (onShow) onShow(b);
+    };
+    bs.forEach(function (b, i) {
+      b.addEventListener('click', function () { show(b); });
+      b.addEventListener('keydown', function (e) { var k = e.key, n = k === 'ArrowRight' || k === 'ArrowDown' ? 1 : k === 'ArrowLeft' || k === 'ArrowUp' ? -1 : 0; if (n) { e.preventDefault(); show(bs[(i + n + bs.length) % bs.length], true); } });
+    });
+  };
+  $$('.pick-tabs, .area-tabs').forEach(function (l) { tabs(l); });
+
+  // "I'm into this" picks the matching interest in the questionnaire
+  $$('[data-interest]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var v = a.getAttribute('data-interest');
+      setTimeout(function () { var c = document.querySelector('#join .chip[data-value="' + v.replace(/"/g, '') + '"]'); if (c && c.getAttribute('aria-pressed') !== 'true') c.click(); }, 900);
+    });
+  });
+
+  // Cards that turn over
+  $$('.pcard, .kcard').forEach(function (c) { c.addEventListener('click', function () { if (c.dataset.dragged) { delete c.dataset.dragged; return; } c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') !== 'true'); }); });
+
+  // The deck about me scrolls sideways by drag on desktop
+  $$('.deck').forEach(function (d) {
+    var down = null;
+    d.addEventListener('pointerdown', function (e) { if (e.pointerType !== 'mouse') return; down = { x: e.clientX, s: d.scrollLeft, moved: false }; });
+    d.addEventListener('pointermove', function (e) { if (!down) return; var dx = e.clientX - down.x; if (Math.abs(dx) > 5) { down.moved = true; d.classList.add('grab'); } d.scrollLeft = down.s - dx; });
+    var up = function (e) { if (down && down.moved) { var c = e.target.closest && e.target.closest('.kcard'); if (c) c.dataset.dragged = '1'; } down = null; d.classList.remove('grab'); };
+    d.addEventListener('pointerup', up); d.addEventListener('pointerleave', function () { down = null; d.classList.remove('grab'); });
+  });
+
+  // Sound familiar? The story changes frame as you scroll through it
+  $$('.story').forEach(function (st) {
+    var fs = $$('.story-f', st), dots = $$('.story-dots li', st), cur = 0;
+    var set = function (i) { if (i === cur) return; cur = i; fs.forEach(function (f, k) { f.classList.toggle('on', k === i); f.classList.toggle('past', k < i); }); dots.forEach(function (d, k) { d.classList.toggle('on', k === i); }); };
+    var frame = function () { var r = st.getBoundingClientRect(), total = r.height - innerHeight; if (total <= 0) return; var p = Math.min(.999, Math.max(0, -r.top / total)); set(Math.floor(p * fs.length)); };
+    addEventListener('scroll', frame, { passive: true }); frame();
+  });
+
+  // Her World: the record spins while a song is picked, with a tonearm and a little equalizer
+  var disc = $('.disc');
+  if (disc) {
+    var dw = document.createElement('div'); dw.className = 'disc-wrap'; disc.parentNode.insertBefore(dw, disc); dw.appendChild(disc);
+    dw.insertAdjacentHTML('beforeend', '<span class="arm" aria-hidden="true"></span>');
+    var eq = '<span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>';
+    var mark = function () { $$('.pl button').forEach(function (b) { var e = b.querySelector('.eq'); if (b.getAttribute('aria-pressed') === 'true') { if (!e) b.insertAdjacentHTML('beforeend', eq); } else if (e) e.remove(); }); };
+    mark();
+    $$('.pl button').forEach(function (b) { b.addEventListener('click', function () { disc.classList.remove('drop'); void disc.offsetWidth; disc.classList.add('drop'); setTimeout(mark, 10); }); });
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (e) { var on = e.isIntersecting && !reduce; disc.classList.toggle('spin', on); dw.classList.toggle('spinning', on); }); }, { threshold: .3 }).observe(dw);
+  }
+  var tapeBtn = $('#tape .tape-btn');
+  if (tapeBtn && !$('.eq', tapeBtn)) tapeBtn.insertAdjacentHTML('beforeend', '<span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>');
 })();
