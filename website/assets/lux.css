@@ -230,3 +230,39 @@ html { scrollbar-color: var(--gold) var(--night); scrollbar-width: thin; }
 .pick-panel[hidden], .area[hidden] { display: none !important; }
 .featured.rib .rib-box { flex: 1; min-width: 0; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 88%, transparent); }
 .featured.rib .wrap { -webkit-mask-image: none; mask-image: none; }
+
+/* Refinement: quieter labels, clearer text, warmer light sections */
+:root { --pearl: #F3ECE3; --line-l: #E4D9CC; --mute-d: #D2C5DF; }
+.kick { font: 500 12px/1 var(--body); letter-spacing: .34em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 16px; margin-bottom: 22px; }
+.kick::before { content: ""; width: 34px; height: 1px; flex: none; background: var(--gold); opacity: .8; }
+.kick::after { display: none; }
+.light .kick, .pearl .kick { color: #8A6A38; }
+.light .kick::before, .pearl .kick::before { background: #8A6A38; }
+.i-head .kick, .closing .kick, .quote .kick, .chapter .kick, .founder .kick, .what .kick, .problem .kick { justify-content: center; }
+.problem .kick, .what .kick { justify-content: flex-start; }
+.i-head .kick::after, .closing .kick::after, .chapter .kick::after, .founder .kick::after { content: ""; display: block; width: 34px; height: 1px; background: currentColor; opacity: .8; transform: none; margin: 0; }
+body { font-size: 17.5px; }
+.lede { color: var(--mute-d); line-height: 1.75; }
+.light .lede, .pearl .lede { color: #5F4F6E; }
+p { text-wrap: pretty; }
+h1, h2, h3, .h-l, .h-m { text-wrap: balance; }
+.h-l { letter-spacing: -.015em; }
+
+/* Buttons: tracked capitals, a little more air */
+.btn { font: 500 12px/1 var(--body); letter-spacing: .2em; text-transform: uppercase; min-height: 54px; padding: 0 32px; }
+.hdr nav .btn { font-size: 11.5px; padding: 0 22px; }
+
+/* What I do: hairline circles instead of tinted fills */
+.venn .c { mix-blend-mode: normal; border: 1px solid rgba(138, 106, 56, .65); }
+.venn .c-arts, .venn .c-tech, .venn .c-fashion { background: rgba(255, 255, 255, .18); }
+.venn .c:hover { box-shadow: 0 0 0 6px rgba(201, 160, 98, .14); background: rgba(201, 160, 98, .08); }
+.venn .c[aria-pressed="true"] { background: rgba(201, 160, 98, .22); }
+
+/* Film stamps and the music player in champagne, not orange */
+.stamp { font-size: 18px; color: var(--gold-2); text-shadow: 0 0 6px rgba(231, 205, 150, .45); opacity: .9; }
+.tape-txt small, .tape-out { font: 500 10.5px/1.2 var(--body); letter-spacing: .2em; text-transform: uppercase; color: var(--gold-2); }
+.tape-btn { border-color: rgba(231, 205, 150, .35); }
+.meet .ph .tag { font: 500 11px/1 var(--body); letter-spacing: .2em; text-transform: uppercase; background: var(--night); color: var(--gold-2); border: 1px solid rgba(231, 205, 150, .45); }
+
+/* More breathing room between sections on large screens */
+@media (min-width: 1100px) { .sec { padding-top: clamp(110px, 10vw, 170px); padding-bottom: clamp(110px, 10vw, 170px); } }
