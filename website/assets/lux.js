@@ -213,4 +213,15 @@
       });
     }
   })();
+  // My content: filter the videos by topic
+  $$('.reel-tabs').forEach(function (tabs) {
+    var list = tabs.nextElementSibling;
+    $$('button', tabs).forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = b.getAttribute('data-f');
+        $$('button', tabs).forEach(function (o) { o.setAttribute('aria-pressed', o === b); });
+        $$('li', list).forEach(function (li) { li.hidden = f !== 'all' && li.getAttribute('data-c') !== f; if (!li.hidden) li.classList.add('in'); });
+      });
+    });
+  });
 })();

@@ -298,3 +298,37 @@ h1, h2, h3, .h-l, .h-m { text-wrap: balance; }
 .pbtn.playing i { width: 11px; height: 13px; border: 0; margin: 0; border-left: 3.5px solid var(--night); border-right: 3.5px solid var(--night); }
 .pl button .eq { display: none; }
 .pl button.playing .eq { display: inline-flex; }
+
+/* My content: intro, filterable reels, a brand pitch */
+.c-intro { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: clamp(22px, 3vw, 44px); align-items: center; margin-bottom: clamp(40px, 5vw, 64px); }
+.c-face { aspect-ratio: 4 / 5; overflow: hidden; border-radius: 999px 999px 0 0 / 32% 32% 0 0; outline: 1px solid rgba(243, 226, 184, .5); outline-offset: -10px; }
+.c-face img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+.c-facts { margin: 0; display: grid; gap: 0; border-top: 1px solid var(--line-d); }
+.c-facts div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2.2fr); gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line-d); }
+.c-facts dt { font: 500 11px/1.6 var(--body); letter-spacing: .24em; text-transform: uppercase; color: var(--gold-2); }
+.c-facts dd { margin: 0; font: 400 clamp(17px, 1.4vw, 20px)/1.45 var(--display); color: var(--ivory); }
+.reel-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px; }
+.reel-tabs button { font: 400 14px/1 var(--body); padding: 11px 18px; min-height: 44px; border: 1px solid rgba(248, 242, 234, .35); border-radius: 999px; background: transparent; color: var(--ivory); cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
+.reel-tabs button:hover { border-color: var(--gold-2); }
+.reel-tabs button[aria-pressed="true"] { background: var(--gold-2); color: var(--night); border-color: var(--gold-2); }
+.vids { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 190px), 1fr)); gap: 18px; }
+.vids li[hidden] { display: none; }
+.vids a { display: grid; gap: 8px; text-decoration: none; color: var(--ivory); }
+.r-img { position: relative; aspect-ratio: 9 / 14; overflow: hidden; border-radius: 6px; box-shadow: 0 24px 40px -24px rgba(0, 0, 0, .6); }
+.r-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.vids a:hover .r-img img { transform: scale(1.05); }
+.r-play { position: absolute; right: 12px; top: 12px; width: 34px; height: 34px; border-radius: 50%; background: rgba(22, 8, 50, .55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); box-shadow: inset 0 0 0 1px rgba(243, 226, 184, .5); }
+.r-play::after { content: ""; position: absolute; left: 13px; top: 10px; border-left: 10px solid var(--gold-2); border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+.vids b { font: 400 18px/1.25 var(--display); }
+.vids a > span:last-child:not(.r-img) { font: 300 14px/1.5 var(--body); color: var(--mute-d); }
+.reels-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-bottom: clamp(36px, 4vw, 56px); }
+.pearl .vids a, .light .vids a { color: var(--ink); }
+@media (max-width: 860px) { .reels-strip { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); } .c-intro { grid-template-columns: minmax(0, 1fr); } .c-face { max-width: 320px; } .c-facts div { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
+.c-brands { margin-top: clamp(44px, 6vw, 80px); padding: clamp(26px, 3.4vw, 44px); border: 1px solid var(--gold); background: linear-gradient(160deg, rgba(106, 59, 209, .28), rgba(22, 8, 50, 0) 70%); display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 20px 40px; }
+.c-brands h3 { font-size: clamp(26px, 2.4vw, 36px); margin: 4px 0 12px; }
+.c-brands p { color: var(--mute-d); }
+.c-brands ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; align-content: center; }
+.c-brands li { padding-left: 22px; position: relative; font: 400 17px/1.4 var(--display); }
+.c-brands li::before { content: ""; position: absolute; left: 0; top: .6em; width: 10px; height: 1px; background: var(--gold); }
+.c-cta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 860px) { .c-brands { grid-template-columns: minmax(0, 1fr); } }
