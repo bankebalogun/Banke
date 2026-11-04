@@ -33,7 +33,7 @@
 
   // Velvet curtain for page changes
   var pt = $('.pt');
-  if (pt && !$('.pt-mark', pt)) pt.innerHTML = '<span class="pt-mark" aria-hidden="true"><svg class="mark" viewBox="0 0 48 60" aria-hidden="true" focusable="false"><path d="M5 58V24a19 19 0 0 1 38 0v34" fill="none" stroke="#B28A79" stroke-width="0.8"/><path d="M1.5 58h45" fill="none" stroke="#B28A79" stroke-width="0.8"/><path d="M31.24 22.06L37.52 20.38M30.50 20.25L34.39 18.00M29.30 18.70L33.90 14.10M27.75 17.50L30.00 13.61M25.94 16.76L27.62 10.48M24.00 16.50L24.00 12.00M22.06 16.76L20.38 10.48M20.25 17.50L18.00 13.61M18.70 18.70L14.10 14.10M17.50 20.25L13.61 18.00M16.76 22.06L10.48 20.38" fill="none" stroke="#E5D7C8" stroke-width="0.6400000000000001" stroke-linecap="round"/><circle cx="24" cy="24" r="1.6" fill="#E5D7C8"/><text x="24.2" y="51.5" text-anchor="middle" font-family="\'Bodoni Moda\', Didot, \'Bodoni 72\', Georgia, serif" font-size="22.5" letter-spacing="-1.2" fill="#F0EFED">BB</text></svg><b>BANKE</b><i>Balogun</i></span>';
+  if (pt && !$('.pt-mark', pt)) pt.innerHTML = '<span class="pt-mark" aria-hidden="true"><svg class="mark" viewBox="0 0 48 60" aria-hidden="true" focusable="false"><path d="M5 58V24a19 19 0 0 1 38 0v34" fill="none" stroke="#C9A062" stroke-width="0.8"/><path d="M1.5 58h45" fill="none" stroke="#C9A062" stroke-width="0.8"/><path d="M31.24 22.06L37.52 20.38M30.50 20.25L34.39 18.00M29.30 18.70L33.90 14.10M27.75 17.50L30.00 13.61M25.94 16.76L27.62 10.48M24.00 16.50L24.00 12.00M22.06 16.76L20.38 10.48M20.25 17.50L18.00 13.61M18.70 18.70L14.10 14.10M17.50 20.25L13.61 18.00M16.76 22.06L10.48 20.38" fill="none" stroke="#E7CD96" stroke-width="0.6400000000000001" stroke-linecap="round"/><circle cx="24" cy="24" r="1.6" fill="#E7CD96"/><text x="24.2" y="51.5" text-anchor="middle" font-family="\'Bodoni Moda\', Didot, \'Bodoni 72\', Georgia, serif" font-size="22.5" letter-spacing="-1.2" fill="#F8F2EA">BB</text></svg><b>BANKE</b><i>Balogun</i></span>';
 
   // Chapter rail: the labels of this page's sections, down the right edge
   var secs = $('.hw-index') ? [] : $$('section').filter(function (s) { var k = $('.kick', s); return k && k.closest('section') === s && k.textContent.trim(); });
@@ -163,8 +163,54 @@
     var mark = function () { $$('.pl button').forEach(function (b) { var e = b.querySelector('.eq'); if (b.getAttribute('aria-pressed') === 'true') { if (!e) b.insertAdjacentHTML('beforeend', eq); } else if (e) e.remove(); }); };
     mark();
     $$('.pl button').forEach(function (b) { b.addEventListener('click', function () { disc.classList.remove('drop'); void disc.offsetWidth; disc.classList.add('drop'); setTimeout(mark, 10); }); });
-    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { es.forEach(function (e) { var on = e.isIntersecting && !reduce; disc.classList.toggle('spin', on); dw.classList.toggle('spinning', on); }); }, { threshold: .3 }).observe(dw);
   }
   var tapeBtn = $('#tape .tape-btn');
   if (tapeBtn && !$('.eq', tapeBtn)) tapeBtn.insertAdjacentHTML('beforeend', '<span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>');
+  // Music that plays on the page: 30-second previews from the Apple Music catalog
+  (function () {
+    var audio = new Audio(); audio.preload = 'none'; var current = null, cache = {}, n = 0;
+    var find = function (q) {
+      if (q in cache) return Promise.resolve(cache[q]);
+      return new Promise(function (res) {
+        var cb = 'bbSong' + (++n), tag = document.createElement('script');
+        var done = function (v) { delete window[cb]; if (tag.parentNode) tag.parentNode.removeChild(tag); res(v); };
+        window[cb] = function (d) { var r = d && d.results && d.results.find(function (x) { return x.previewUrl; }); cache[q] = r || null; done(cache[q]); };
+        tag.onerror = function () { done(null); };
+        setTimeout(function () { if (window[cb]) done(null); }, 8000);
+        tag.src = 'https://itunes.apple.com/search?media=music&entity=song&limit=5&term=' + encodeURIComponent(q) + '&callback=' + cb;
+        document.head.appendChild(tag);
+      });
+    };
+    var disc = $('.disc'), dw = $('.disc-wrap') || (disc && disc.parentElement);
+    var state = function (el, on, wait) {
+      $$('.pl button, .pbtn').forEach(function (b) { b.classList.toggle('playing', b === el && on); b.classList.toggle('loading', b === el && !!wait); });
+      if (disc) disc.classList.toggle('spin', on && !reduce);
+      if (dw) dw.classList.toggle('spinning', on);
+      var lbl = $('.disc .label'); if (lbl && el && el.closest('.pl')) lbl.textContent = el.getAttribute('data-t');
+    };
+    var play = function (el, q, fallback) {
+      if (current === el && !audio.paused) { audio.pause(); state(el, false); return; }
+      current = el; state(el, false, true);
+      var tape = $('#tape'); if (tape && tape.classList.contains('on')) { var tb = $('.tape-btn', tape); if (tb) tb.click(); }
+      find(q).then(function (r) {
+        if (current !== el) return;
+        if (!r) { state(el, false); if (fallback) window.open(fallback, '_blank', 'noopener'); return; }
+        audio.src = r.previewUrl;
+        audio.play().then(function () { state(el, true); }).catch(function () { state(el, false); });
+      });
+    };
+    audio.addEventListener('ended', function () { state(current, false); });
+    $$('.pl button').forEach(function (b) {
+      var li = b.closest('li'), a = li && li.querySelector('a'), who = b.querySelector('small');
+      b.addEventListener('click', function () { play(b, b.getAttribute('data-t') + ' ' + (who ? who.textContent : ''), a && a.href); });
+    });
+    $$('.pbtn').forEach(function (b) { var a = b.parentElement.querySelector('a'); b.addEventListener('click', function () { play(b, b.getAttribute('data-q'), a && a.href); }); });
+    if (dw) {
+      dw.style.cursor = 'pointer';
+      dw.addEventListener('click', function () {
+        if (current && !audio.paused) { audio.pause(); state(current, false); }
+        else { var b = $('.pl button[aria-pressed="true"]') || $('.pl button'); if (b) b.click(); }
+      });
+    }
+  })();
 })();
