@@ -225,3 +225,17 @@
     });
   });
 })();
+
+/* My content: arrows for the video row */
+(function () {
+  document.querySelectorAll('.vrow').forEach(function (row) {
+    var list = row.querySelector('.vscroll'), prev = row.querySelector('.prev'), next = row.querySelector('.next');
+    if (!list || !prev || !next) return;
+    var sync = function () { prev.disabled = list.scrollLeft < 8; next.disabled = list.scrollLeft + list.clientWidth >= list.scrollWidth - 8; };
+    prev.addEventListener('click', function () { list.scrollBy({ left: -list.clientWidth * .8, behavior: 'smooth' }); });
+    next.addEventListener('click', function () { list.scrollBy({ left: list.clientWidth * .8, behavior: 'smooth' }); });
+    list.addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); sync();
+    var tabs = row.previousElementSibling;
+    if (tabs && tabs.classList.contains('reel-tabs')) tabs.addEventListener('click', function () { setTimeout(function () { list.scrollLeft = 0; sync(); }, 30); });
+  });
+})();
