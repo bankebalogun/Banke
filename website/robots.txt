@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.bankebalogun.com/sitemap.xml
