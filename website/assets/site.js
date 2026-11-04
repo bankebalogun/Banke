@@ -246,8 +246,8 @@
         var o = motes[q]; o.y -= o.v; o.x += Math.sin(t / 2600 + o.d) * .25;
         if (o.y < -6) { o.y = dh + 6; o.x = Math.random() * dw; }
         var tw = .55 + .45 * Math.sin(t / 700 + o.d * 3);
-        dc.beginPath(); dc.arc(o.x, o.y, o.r, 0, 6.283); dc.fillStyle = 'rgba(240,214,160,' + (o.a * tw).toFixed(3) + ')';
-        dc.shadowColor = 'rgba(231,205,150,.9)'; dc.shadowBlur = 6 * o.r; dc.fill();
+        dc.beginPath(); dc.arc(o.x, o.y, o.r, 0, 6.283); dc.fillStyle = 'rgba(216, 216, 216, ' + (o.a * tw).toFixed(3) + ')';
+        dc.shadowColor = 'rgba(207, 207, 207, .9)'; dc.shadowBlur = 6 * o.r; dc.fill();
       }
     })(0);
   }
