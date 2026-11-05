@@ -295,3 +295,16 @@
     });
   }
 })();
+
+/* Round three: gold wipe on large section photos */
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var els = Array.prototype.slice.call(document.querySelectorAll('.know-vid .rv-img, .cr-img .rv-img, .ch .interlude .rv-img, .duo .rv-img, .sec.pearl .rv-img, .sticky .rv-img'))
+    .filter(function (el) { return !el.closest('.hero, .pf, .lb-track, .vids, .deck, .story-f, .pick-panel, .area'); });
+  els.forEach(function (el) { el.classList.add('gw'); });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  els.forEach(function (el) { io.observe(el); });
+  setTimeout(function () { els.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('seen'); }); }, 200);
+})();
