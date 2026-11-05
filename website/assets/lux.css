@@ -384,3 +384,44 @@ h1, h2, h3, .h-l, .h-m { text-wrap: balance; }
 .light .btn.solid, .pearl .btn.solid { background: #0A0A0A; border-color: #0A0A0A; color: #FFFFFF; }
 .light .btn.solid:hover, .pearl .btn.solid:hover { background: transparent; color: #0A0A0A; }
 .hero .film img { filter: grayscale(1) contrast(1.08) brightness(.9) !important; }
+
+/* Calm: fewer effects */
+.curtain, .pt, .cursor, .hero .leak, .hero canvas.dust, .hero .flare, .grain::after, .glow::after, .marquee { display: none !important; }
+.lit .w { opacity: 1 !important; color: inherit !important; }
+.featured ul { transform: none !important; animation: none !important; flex-wrap: wrap; justify-content: center; }
+.featured li[aria-hidden="true"] { display: none !important; }
+
+/* About me: a wide photo and small flashcards, two to a row */
+.know-grid { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+.know-vid .rv-img { min-height: 0; height: auto; aspect-ratio: 4 / 3; border-radius: 4px; outline: 0; }
+.deck { grid-auto-flow: row; grid-auto-columns: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: visible; scroll-snap-type: none; padding: 0; gap: 12px; }
+.deck li { scroll-snap-align: none; }
+.kcard { min-height: 0; aspect-ratio: 5 / 3; }
+.kcard > span { padding: 16px 18px; gap: 6px; }
+.kcard b { font-size: clamp(17px, 1.45vw, 21px); }
+.kcard .kb { font-size: clamp(14px, 1.1vw, 16px); line-height: 1.45; padding: 14px 18px; }
+.kt { font-size: 11px; }
+@media (max-width: 860px) {
+  .know-grid { grid-template-columns: minmax(0, 1fr); }
+  .know-vid .rv-img { aspect-ratio: 16 / 10; }
+  .know-vid video, .know-vid img { object-position: 50% 22%; }
+  .deck { grid-auto-columns: auto; }
+  .kcard { aspect-ratio: 1 / 1; }
+  .kcard b { font-size: 16px; }
+  .kcard .kb { font-size: 13px; padding: 12px; }
+  .kcard > span { padding: 12px; }
+}
+
+/* About: education */
+.edu-card { border-top: 1px solid var(--line-l); border-bottom: 1px solid var(--line-l); padding: clamp(22px, 2.6vw, 34px) 0; display: grid; gap: 8px; }
+.edu-card .kick { font: 500 11px/1.6 var(--body); letter-spacing: .28em; text-transform: uppercase; color: var(--mute-l); }
+.edu-deg { margin: 0; font: 400 clamp(26px, 2.6vw, 38px)/1.15 var(--display); color: var(--ink); }
+.edu-note { margin: 0; color: var(--mute-l); max-width: 46ch; }
+
+/* The Muse: a simple swipeable row on every screen */
+.lookbook { height: auto !important; }
+.lookbook .pin { position: static; height: auto; padding-block: clamp(70px, 8vw, 110px) 40px; }
+.lb-track { overflow-x: auto; scroll-snap-type: x mandatory; padding: 30px var(--gr) 30px var(--gl); transform: none !important; scrollbar-width: none; }
+.lb-track::-webkit-scrollbar { display: none; }
+.lb-track > * { scroll-snap-align: start; }
+.lookbook .lb-bar { display: none; }

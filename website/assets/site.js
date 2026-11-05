@@ -11,7 +11,7 @@
   if (curtain) {
     var seen = false;
     try { seen = sessionStorage.getItem('bb-seen') === '1'; sessionStorage.setItem('bb-seen', '1'); } catch (e) {}
-    if (!seen && !reduce) { document.documentElement.classList.add('js-curtain'); setTimeout(function () { curtain.remove(); }, 2900); }
+    if (false) { document.documentElement.classList.add('js-curtain'); setTimeout(function () { curtain.remove(); }, 2900); }
     else curtain.remove();
   }
   var introDelay = document.documentElement.classList.contains('js-curtain') ? 1500 : 0;
@@ -139,8 +139,8 @@
     rail.addEventListener('click', function (e) { if (moved) { e.preventDefault(); moved = false; } }, true);
   });
 
-  // Cursor and magnetic buttons
-  if (fine && !reduce) {
+  // Cursor and magnetic buttons (off)
+  if (false) {
     var cur = document.createElement('div'); cur.className = 'cursor'; cur.innerHTML = '<span></span>'; document.body.appendChild(cur);
     var lab = $('span', cur), x = -100, y = -100, cx = x, cy = y;
     addEventListener('mousemove', function (e) { x = e.clientX; y = e.clientY; cur.classList.add('on'); }, { passive: true });
@@ -156,8 +156,8 @@
     });
   }
 
-  // Page transitions
-  if (!reduce) {
+  // Page transitions (off: keep navigation instant)
+  if (false) {
     var pt = document.createElement('div'); pt.className = 'pt'; pt.setAttribute('aria-hidden', 'true');
     if (!curtain || !document.documentElement.classList.contains('js-curtain')) { pt.classList.add('cover'); requestAnimationFrame(function () { requestAnimationFrame(function () { pt.classList.add('out'); }); }); }
     document.body.appendChild(pt);
@@ -191,7 +191,7 @@
   var wideLb = matchMedia('(min-width: 901px)');
   var sizeLb = function () {
     if (!lb) return;
-    if (!wideLb.matches || reduce) { lb.style.height = ''; lt.style.transform = ''; return; }
+    { lb.style.height = ''; lt.style.transform = ''; return; }
     var extra = lt.scrollWidth - innerWidth; lb.style.height = (innerHeight + Math.max(0, extra)) + 'px'; moveLb();
   };
   var moveLb = function () {
@@ -232,7 +232,7 @@
   }
   // Gold dust drifting up through the light
   var dust = $('.hero canvas.dust');
-  if (dust && !reduce && dust.getContext) {
+  if (false) {
     var dc = dust.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2), motes = [], dw, dh, live = true;
     var size = function () { dw = dust.clientWidth; dh = dust.clientHeight; dust.width = dw * dpr; dust.height = dh * dpr; dc.setTransform(dpr, 0, 0, dpr, 0, 0); };
     size(); addEventListener('resize', size);
@@ -292,13 +292,13 @@
     (function spin() { var an = track.getAnimations()[0]; if (an) { boost *= .94; an.playbackRate = 1 + boost; } requestAnimationFrame(spin); })();
   }
   // A soft light follows the cursor across dark sections
-  if (fine && !reduce) $$('.night, .plum, .chapter, .series, .ftr').forEach(function (sec) {
+  if (false) $$('.night, .plum, .chapter, .series, .ftr').forEach(function (sec) {
     sec.classList.add('glow');
     sec.addEventListener('pointermove', function (e) { var r = sec.getBoundingClientRect(); sec.style.setProperty('--mx', (e.clientX - r.left) + 'px'); sec.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
     sec.addEventListener('pointerleave', function () { sec.style.setProperty('--mx', '-999px'); });
   });
   // Photos lean toward the cursor
-  if (fine && !reduce) $$('.pf button, .lb-card .lb-img, .shot, .entry .ei, .out-strip a').forEach(function (el) {
+  if (false) $$('.pf button, .lb-card .lb-img, .shot, .entry .ei, .out-strip a').forEach(function (el) {
     el.classList.add('tilt');
     el.addEventListener('pointermove', function (e) { var r = el.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; el.classList.add('live'); el.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg'); el.style.setProperty('--rx', (-y * 7).toFixed(2) + 'deg'); });
     el.addEventListener('pointerleave', function () { el.classList.remove('live'); el.style.setProperty('--ry', '0deg'); el.style.setProperty('--rx', '0deg'); });

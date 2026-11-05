@@ -9,7 +9,7 @@
 
   // Smooth, weighted scrolling on desktop
   var lenis = null;
-  if (!reduce && fine && window.Lenis) {
+  if (false) {
     lenis = new window.Lenis({ lerp: 0.09, smoothWheel: true, wheelMultiplier: 0.95 });
     root.classList.add('lenis-on');
     (function raf(t) { lenis.raf(t); requestAnimationFrame(raf); })(performance.now());
