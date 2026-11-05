@@ -258,3 +258,40 @@
   // Filters reveal tiles that were hidden
   q('.reel-tabs button, .filters button').forEach(function (b) { b.addEventListener('click', function () { q('.stagger').forEach(function (s) { s.classList.add('seen'); }); }); });
 })();
+
+/* Motion layer, round two: gentle parallax on photos, staggered grids */
+(function () {
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var q = function (s) { return Array.prototype.slice.call(document.querySelectorAll(s)); };
+  if (reduce) return;
+  // Parallax: large section photos only (not the opening, cards, or grids)
+  var els = q('.sec .rv-img, .ch .interlude .rv-img, .know-vid .rv-img, .cr-img .rv-img, .duo .rv-img').filter(function (el) {
+    return !el.closest('.hero, .pf, .lb-track, .vids, .deck, .story-f');
+  });
+  els.forEach(function (el) { el.classList.add('px'); });
+  var ticking = false;
+  var update = function () {
+    ticking = false;
+    var vh = innerHeight;
+    els.forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.bottom < -100 || r.top > vh + 100) return;
+      var p = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1..1
+      el.style.setProperty('--py', (Math.max(-1, Math.min(1, p)) * -3).toFixed(2) + '%');
+    });
+  };
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update); update();
+  // Photo grids rise in, one after another
+  if ('IntersectionObserver' in window) {
+    q('.pf').forEach(function (g) {
+      var tiles = Array.prototype.slice.call(g.children);
+      tiles.forEach(function (t, i) { t.style.transition = 'opacity .8s cubic-bezier(.2,.7,.1,1), transform .9s cubic-bezier(.2,.7,.1,1)'; t.style.transitionDelay = (i % 6) * 60 + 'ms'; t.style.opacity = '0'; t.style.transform = 'translateY(24px)'; });
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; io.unobserve(e.target); } });
+      }, { threshold: 0.08 });
+      tiles.forEach(function (t) { io.observe(t); });
+      setTimeout(function () { tiles.forEach(function (t) { var r = t.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) { t.style.opacity = '1'; t.style.transform = 'none'; } }); }, 150);
+    });
+  }
+})();

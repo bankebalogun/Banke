@@ -522,3 +522,45 @@ h1, h2, h3, .h-l, .h-m { text-wrap: balance; }
 }
 .ftr nav a, .ftr .base a { display: inline-block; padding-block: 8px; }
 .reel-tabs button, .filters button { min-height: 44px; }
+
+/* ===== Motion layer, round two ===== */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: no-preference) {
+
+  /* A band of gold light sweeps across the name once */
+  .hero .copy { position: relative; }
+  .hero h1 { position: relative; }
+  .hero h1::before {
+    content: ""; position: absolute; top: -10%; bottom: -10%; left: -30%; width: 30%; z-index: 2; pointer-events: none;
+    background: linear-gradient(100deg, transparent, rgba(243, 226, 184, .55), transparent);
+    mix-blend-mode: soft-light; transform: skewX(-18deg); opacity: 0;
+    animation: sweep 2.4s var(--ease) 1.4s forwards;
+  }
+
+  /* Photos drift a touch slower than the page */
+  .px img { scale: 1.08; translate: 0 var(--py, 0px); will-change: translate; }
+
+  /* Portfolio and Out and about grids: gold frame and soft zoom on hover */
+  .pf button img { transition: transform 1.2s var(--ease), filter .8s var(--ease); }
+  .pf button::after { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(243, 226, 184, 0); transition: border-color .6s var(--ease), inset .6s var(--ease); pointer-events: none; }
+  .pf button:hover img { transform: scale(1.05); }
+  .pf button:hover::after { border-color: rgba(243, 226, 184, .7); inset: 12px; }
+
+  /* Gold italic words breathe a little light */
+  h1 em, h2 em { animation: glint 6s ease-in-out infinite; }
+
+  /* The header settles in on load */
+  .hdr { animation: hdrIn 1s var(--ease) .1s both; }
+
+  /* Flashcard backs land with a soft bounce */
+  .kcard[aria-pressed="true"] .kb { animation: land .7s var(--ease) both; }
+
+  /* Video row and The Muse: a gentle hint that they scroll */
+  .vrow .vbtn.next:not([disabled]) { animation: nudge 2.8s ease-in-out 2s 3; }
+}
+
+@keyframes sweep { 0% { left: -30%; opacity: 0; } 15% { opacity: 1; } 100% { left: 110%; opacity: 0; } }
+@keyframes glint { 0%, 100% { text-shadow: 0 0 0 rgba(243, 226, 184, 0); } 50% { text-shadow: 0 0 18px rgba(243, 226, 184, .28); } }
+@keyframes hdrIn { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: none; } }
+@keyframes land { 0% { transform: rotateY(0) scale(.96); } 60% { transform: rotateY(0) scale(1.015); } 100% { transform: rotateY(0) scale(1); } }
+@keyframes nudge { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(6px); } }
