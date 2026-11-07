@@ -308,3 +308,18 @@
   els.forEach(function (el) { io.observe(el); });
   setTimeout(function () { els.forEach(function (el) { var r = el.getBoundingClientRect(); if (r.top < innerHeight && r.bottom > 0) el.classList.add('seen'); }); }, 200);
 })();
+
+/* Home: arts slideshow section */
+(function () {
+  var film = document.querySelector('.arts-reel .film'); if (!film) return;
+  var fr = Array.prototype.slice.call(film.querySelectorAll('img')), fi = 0;
+  var load = function (im) { if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); } };
+  load(fr[1]);
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches || fr.length < 2) return;
+  setInterval(function () {
+    var cur = fr[fi]; fi = (fi + 1) % fr.length; var nx = fr[fi];
+    load(nx); load(fr[(fi + 1) % fr.length]);
+    nx.classList.remove('on'); void nx.offsetWidth; nx.classList.add('on');
+    setTimeout(function () { cur.classList.remove('on'); }, 2400);
+  }, 6000);
+})();
