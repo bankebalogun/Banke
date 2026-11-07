@@ -672,3 +672,5 @@ html { scroll-behavior: smooth; }
 .hero .media .hero-me .hm-bg { display: none; }
 @media (min-width: 861px) { .hero .tint { background: linear-gradient(90deg, rgba(22, 8, 50, .78) 0%, rgba(22, 8, 50, .35) 45%, rgba(22, 8, 50, 0) 70%), linear-gradient(0deg, rgba(22, 8, 50, .75) 0%, transparent 40%) !important; } }
 @media (min-width: 861px) { .hero:has(.hero-me) .media { top: 70px; } }
+@media (min-width: 861px) { .hero:has(.hero-me) .media { top: 0 !important; } .hero .media img.me { object-position: 50% 0% !important; } }
+.hero:has(.hero-me) { background: transparent; }
