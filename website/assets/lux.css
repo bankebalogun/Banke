@@ -674,3 +674,8 @@ html { scroll-behavior: smooth; }
 @media (min-width: 861px) { .hero:has(.hero-me) .media { top: 70px; } }
 @media (min-width: 861px) { .hero:has(.hero-me) .media { top: 0 !important; } .hero .media img.me { object-position: 50% 0% !important; } }
 .hero:has(.hero-me) { background: transparent; }
+
+/* Home: press strip back, scrolling */
+.marquee { display: block !important; }
+.home-play .player { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: clamp(20px, 3vw, 40px); align-items: center; }
+@media (max-width: 760px) { .home-play .player { grid-template-columns: minmax(0, 1fr); } }
