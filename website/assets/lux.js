@@ -323,3 +323,19 @@
     setTimeout(function () { cur.classList.remove('on'); }, 2400);
   }, 6000);
 })();
+
+/* Content page: progress bar and edge fade for the video row */
+(function () {
+  document.querySelectorAll('.vrow').forEach(function (row) {
+    var list = row.querySelector('.vscroll'), bar = row.parentNode.querySelector('.vprog i');
+    if (!list) return;
+    var sync = function () {
+      var max = list.scrollWidth - list.clientWidth, f = max > 0 ? list.scrollLeft / max : 1, w = Math.max(.12, Math.min(1, list.clientWidth / list.scrollWidth));
+      if (bar) { bar.style.width = (w * 100) + '%'; bar.style.marginLeft = (f * (1 - w) * 100) + '%'; }
+      row.classList.toggle('end', f > .98);
+    };
+    list.addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); setTimeout(sync, 300);
+    var tabs = row.parentNode.querySelector('.reel-tabs');
+    if (tabs) tabs.addEventListener('click', function () { setTimeout(sync, 60); });
+  });
+})();
