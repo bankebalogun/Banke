@@ -717,3 +717,6 @@ html { scroll-behavior: smooth; }
 .steps4 b { font: 400 clamp(22px, 1.9vw, 28px)/1.2 var(--display); color: var(--ivory); }
 .steps4 p { margin: 0; color: var(--mute-d); font-size: 15px; }
 @media (max-width: 860px) { .steps4 { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .steps4 li { border-right: 0; border-bottom: 1px solid var(--line-d); padding: 18px 12px 16px 0 !important; } }
+/* These two always move, gently, even with Reduce Motion on */
+.arts-reel .film img { transition: opacity 1.6s ease !important; transition-duration: 1.6s !important; }
+.marquee .track { animation-name: mq !important; animation-duration: 40s !important; animation-iteration-count: infinite !important; animation-timing-function: linear !important; }

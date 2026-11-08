@@ -315,13 +315,13 @@
   var fr = Array.prototype.slice.call(film.querySelectorAll('img')), fi = 0;
   var load = function (im) { if (im && im.dataset.src) { im.src = im.dataset.src; im.removeAttribute('data-src'); } };
   load(fr[1]);
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches || fr.length < 2) return;
+  if (fr.length < 2) return;
   setInterval(function () {
     var cur = fr[fi]; fi = (fi + 1) % fr.length; var nx = fr[fi];
     load(nx); load(fr[(fi + 1) % fr.length]);
     nx.classList.remove('on'); void nx.offsetWidth; nx.classList.add('on');
-    setTimeout(function () { cur.classList.remove('on'); }, 2400);
-  }, 6000);
+    setTimeout(function () { cur.classList.remove('on'); }, 1600);
+  }, 4000);
 })();
 
 /* Content page: progress bar and edge fade for the video row */
