@@ -720,3 +720,35 @@ html { scroll-behavior: smooth; }
 /* These two always move, gently, even with Reduce Motion on */
 .arts-reel .film img { transition: opacity 1.6s ease !important; transition-duration: 1.6s !important; }
 .marquee .track { animation-name: mq !important; animation-duration: 40s !important; animation-iteration-count: infinite !important; animation-timing-function: linear !important; }
+
+/* Home: a little about me */
+.home-about .h-l { margin-bottom: clamp(26px, 3vw, 40px); }
+.ha-photo .rv-img { aspect-ratio: 16 / 8; width: 100%; height: auto; min-height: 0; border-radius: 4px; outline: 0; }
+.ha-photo video, .ha-photo img { object-position: 50% 18% !important; }
+.ha-text { max-width: 760px; margin-top: clamp(30px, 4vw, 52px); }
+.ha-text p { color: var(--mute-d); font-size: clamp(17px, 1.3vw, 19px); line-height: 1.8; }
+.ha-text p + p { margin-top: 1em; }
+.ha-text .ha-lead { font: 400 clamp(24px, 2.3vw, 34px)/1.35 var(--display); color: var(--ivory); }
+@media (max-width: 760px) { .ha-photo .rv-img { aspect-ratio: 4 / 5; } }
+
+/* Content page: flowing text, not boxes */
+.c-flow { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(26px, 4vw, 60px); align-items: center; margin-bottom: clamp(40px, 5vw, 64px); }
+.cf-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%; border-radius: 4px; display: block; }
+.cf-text p { font: 400 clamp(19px, 1.6vw, 24px)/1.55 var(--display); color: var(--ivory); margin: 0; }
+.cf-text p + p { margin-top: 1em; color: var(--mute-d); font: 300 clamp(17px, 1.3vw, 19px)/1.75 var(--body); }
+@media (max-width: 760px) { .c-flow { grid-template-columns: minmax(0, 1fr); } .cf-photo img { aspect-ratio: 16 / 11; } }
+.c-prose .narrow-prose { max-width: 820px; }
+.c-prose .h-l { margin-bottom: 24px; }
+.c-prose p { color: #3B2A4D; font-size: clamp(18px, 1.35vw, 20px); line-height: 1.8; margin: 0 0 1.1em; }
+.c-prose p b { font-family: var(--display); font-weight: 400; font-size: 1.12em; color: var(--ink); }
+.c-brands-flow { border: 0 !important; background: none !important; padding: 0 !important; display: block !important; max-width: 820px; }
+.c-brands-flow ul { display: block !important; margin: 18px 0 26px !important; }
+.c-brands-flow li { border: 0 !important; padding: 0 0 0 20px !important; border-radius: 0 !important; margin: 0 0 8px; font: 400 17px/1.5 var(--body) !important; position: relative; }
+.c-brands-flow li::before { display: block !important; content: ""; position: absolute; left: 0; top: .75em; width: 10px; height: 1px; background: var(--gold); }
+
+/* Never crop heads: Banke's photos sit from the top */
+img[src*="/model/"], img[src*="wixstatic.com"], img[src*="/content/"], video[poster*="wixstatic.com"] { object-position: 50% 12% !important; }
+.hero .media img.me { object-position: 50% 0% !important; }
+.cf-photo { max-width: 420px; }
+.cf-photo img { aspect-ratio: 395 / 607 !important; object-position: 50% 0% !important; }
+@media (max-width: 760px) { .cf-photo { max-width: 300px; margin-inline: auto; } }
