@@ -752,3 +752,28 @@ img[src*="/model/"], img[src*="wixstatic.com"], img[src*="/content/"], video[pos
 .cf-photo { max-width: 420px; }
 .cf-photo img { aspect-ratio: 395 / 607 !important; object-position: 50% 0% !important; }
 @media (max-width: 760px) { .cf-photo { max-width: 300px; margin-inline: auto; } }
+/* Home about photo: the whole wide photo, never cropped */
+.ha-photo img { display: block; width: 100%; height: auto; aspect-ratio: 2400 / 1601; object-fit: cover; object-position: 50% 0% !important; border-radius: 4px; }
+
+/* Circles: still, even, each word centered in its own part, Banke in the middle */
+.venn .c { animation: none !important; }
+.venn .c span { transform: translate(-50%, -50%) !important; right: auto !important; bottom: auto !important; white-space: nowrap; }
+.venn .c-arts span { left: 34% !important; top: 40% !important; }
+.venn .c-tech span { left: 66% !important; top: 40% !important; }
+.venn .c-fashion span { left: 50% !important; top: 70% !important; }
+.venn .core { top: 43% !important; transform: translate(-50%, -50%) !important; }
+/* Slideshow: less zoom so the photos stay crisp */
+.arts-reel .film img { inset: 0 !important; width: 100% !important; height: 100% !important; }
+.arts-reel .film img.on { animation: none !important; }
+/* Content: the two text parts side by side, compact */
+.sec.c-prose { padding-block: clamp(50px, 6vw, 80px); }
+.cp-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 80px); align-items: start; }
+.c-prose .h-m { font-size: clamp(28px, 2.6vw, 38px); margin-bottom: 18px; }
+.c-prose p { font-size: 16.5px; line-height: 1.7; margin: 0 0 .9em; }
+@media (max-width: 860px) { .cp-grid { grid-template-columns: minmax(0, 1fr); gap: 34px; } }
+/* Content photo is small at the source: keep it near its real size so it stays sharp */
+.c-flow { grid-template-columns: minmax(0, 260px) minmax(0, 1fr); }
+.cf-photo { max-width: 260px; }
+@media (max-width: 760px) { .cf-photo { max-width: 220px; margin-inline: 0; } }
+.venn .core { background: #F6F0E8; padding: 2px 12px 6px; border-radius: 999px; z-index: 3; font-size: clamp(22px, 2.1vw, 30px) !important; }
+.ha-photo img { aspect-ratio: 2400 / 1350; object-position: 50% 70% !important; }
