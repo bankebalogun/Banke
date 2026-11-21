@@ -14,7 +14,7 @@
 <meta property="og:title" content="Speaking · Banke Balogun">
 <meta property="og:description" content="Book Banke Balogun for keynotes, panels, workshops and fireside chats on health tech, AI, personal branding and career growth.">
 <meta property="og:image" content="https://static.wixstatic.com/media/328fff_fa008ac3d42c44d798425ec34c0e657e~mv2.jpg">
-<link rel="icon" href="https://cdn.jsdelivr.net/gh/bankebalogun/Banke@abd6d65b2f7ddde94d698409314b67f35375c5e0/website/assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://static.wixstatic.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1802,6 +1802,15 @@ img[src*="/model/"], img[src*="wixstatic.com"], img[src*="/content/"], video[pos
   a, button, [role="tab"], label, summary, .kcard, .pf button, .vids a, .lb-card { cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='14' fill='rgba(243,226,184,0.18)' stroke='%23D9B46C' stroke-width='1.5'/%3E%3Cpath d='M18 11 C18.6 15.6 20.4 17.4 25 18 C20.4 18.6 18.6 20.4 18 25 C17.4 20.4 15.6 18.6 11 18 C15.6 17.4 17.4 15.6 18 11Z' fill='%23D9B46C'/%3E%3C/svg%3E") 18 18, pointer !important; }
   input, textarea, select { cursor: text; }
 }
+
+/* Audit fixes: easier tapping on phones, and a music player that stays out of the way */
+@media (max-width: 860px) {
+  .lockup { display: inline-flex; align-items: center; min-height: 44px; }
+  a.ln, button.ln, a.mail, footer a, .sec a:not(.btn):not(.mk-p):not([class*="card"]) { padding-block: 10px; margin-block: -10px; display: inline-block; }
+  .tape-btn { min-height: 44px; padding: 6px; gap: 0; border-radius: 999px; }
+  .tape-txt { display: none !important; }
+  .tape { left: max(12px, env(safe-area-inset-left, 0px)); bottom: max(12px, env(safe-area-inset-bottom, 0px)); }
+}
 </style>
 </head>
 <body>
@@ -1818,7 +1827,7 @@ img[src*="/model/"], img[src*="wixstatic.com"], img[src*="/content/"], video[pos
 
 <section class="phero grain"><div class="wrap"><div class="grid">
 <div><h1 data-split>Speaking</h1><p class="lede fade">Keynotes, panels, fireside chats, workshops and moderation on health tech, AI, personal branding and career growth.</p><p class="fade" style="margin-top:30px"><a class="btn solid" href="work.html#contact">Send a speaking request <span class="arw" aria-hidden="true">→</span></a></p></div>
-<div class="rv-img vid ph"><video muted loop playsinline preload="none" poster="https://static.wixstatic.com/media/328fff_b05225cc3f1b495bbbfca318b7f8eecc~mv2.jpg/v1/fit/w_2560,h_2560,q_90/328fff_b05225cc3f1b495bbbfca318b7f8eecc~mv2.jpg" aria-hidden="true"><source src="https://cdn.jsdelivr.net/gh/bankebalogun/Banke@abd6d65b2f7ddde94d698409314b67f35375c5e0/website/assets/video/reel-stage.mp4" type="video/mp4"></video><span class="stamp" aria-hidden="true">'26  5 02</span></div>
+<div class="rv-img vid ph"><video muted loop playsinline preload="none" poster="https://static.wixstatic.com/media/328fff_b05225cc3f1b495bbbfca318b7f8eecc~mv2.jpg/v1/fit/w_2560,h_2560,q_90/328fff_b05225cc3f1b495bbbfca318b7f8eecc~mv2.jpg" aria-hidden="true"><source src="assets/video/reel-stage.mp4" type="video/mp4"></video><span class="stamp" aria-hidden="true">'26  5 02</span></div>
 </div></div></section>
 <section class="sec night" style="padding-top:clamp(40px,5vw,70px)"><div class="wrap">
 <a class="reel rv-img" href="https://www.youtube.com/watch?v=zwheXPB5b8M" data-reel="zwheXPB5b8M" data-cursor="Play" aria-label="Play Banke Balogun’s speaker reel"><img src="https://static.wixstatic.com/media/328fff_6bed1ed394924dc090fd4494cbf0bde1~mv2.jpg/v1/fit/w_2560,h_2560,q_90/328fff_6bed1ed394924dc090fd4494cbf0bde1~mv2.jpg" alt="" loading="lazy" style="object-position:50% 40%"><span class="play">Play the<br>reel</span></a>
